@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="twoson UI Framework 만들기~"/>
+  <HelloWorld msg="twoson UI Framework 만들기!"/>
 </template>
 
 <script>
