@@ -1,0 +1,12 @@
+@import "./common/font.scss"; // font
+@import "./common/reset.scss";
+
+// component
+@import "./components/tsInput.scss";
+@import "./components/tsRadio.scss";
+
+// ui
+@import "./ui/ui.scss";
+
+// guide
+@import "./guidePage/guide.scss";
