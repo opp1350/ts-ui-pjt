@@ -1,10 +1,10 @@
 // 가이드 화면에 대한 스타일 작성예정
 .ts-guide {
-    padding: 60px 20px 20px;
+    padding: 6rem 2rem 2rem;
     h1 {
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: bold;
         text-align: center;
-        color: #2c3e50;
+        color: var(--dark);
     }
 }
