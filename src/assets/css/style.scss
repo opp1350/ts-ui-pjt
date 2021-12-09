@@ -1,9 +1,10 @@
-@import "./common/font.scss"; // font
+// base
+@import "./base/font.scss"; // font
+@import "./base/reset.scss";
 
-// common
-@import "./common/reset.scss";
-@import "./common/root.scss";
-@import "./common/variables.scss";
+// utilities
+@import "./util/root.scss";
+@import "./util/variables.scss";
 
 // component
 @import "./components/tsInput.scss";
