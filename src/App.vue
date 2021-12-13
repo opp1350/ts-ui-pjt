@@ -5,6 +5,11 @@
     <router-link to="/about">About</router-link>
 </div>
 <router-view />
+<div>
+  <p>PrimeVUE TEST</p>
+  <InputText />
+  <ts-Button></ts-Button>
+</div>
 </template>
 
 <script>
