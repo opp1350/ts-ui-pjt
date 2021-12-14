@@ -1,5 +1,16 @@
 // 가이드 화면에 대한 스타일 작성예정
 .ts-guide {
+    // 공통 
+    h2 {
+        padding-bottom: 1.6rem;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--dark);
+    }
+    .guide-title {
+        border-bottom: 1px solid #cdcdcd;
+        margin-bottom: 1.6rem;
+    }
     .ts-guide-head {
         position: fixed;
         top: 0;
@@ -12,7 +23,7 @@
         background-color: white;
         border-bottom: 1px solid #cdcdcd;
         h1 {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: bold;
             text-align: center;
             color: var(--dark);
@@ -22,20 +33,20 @@
         display: flex;
         padding-top: 6rem;
         aside {
-            width: 30%;
+            flex:1;
             min-width: 20rem;
             max-width: 24rem;
             height: calc(100vh - 6rem);
-            background-color:#e5f5f5;
+            background-color:#edefef;
             ul {
                 li {
                     a {
                         display: block;
                         padding: 1.2rem;
-                        // background-color:#e5f5f5;
-                        border-bottom: 1px solid #cdcdcd;
+                        color: #666;
                         &.on {
-                            background-color: lightblue;
+                            color: var(--dark);
+                            background-color: #CFD8DC;
                             font-weight: bold;
                         }
                     }
@@ -43,6 +54,7 @@
             }
         }
         .ts-guide-cont {
+            flex: 4;
             padding: 2rem;
         }
     }

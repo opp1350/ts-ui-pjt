@@ -1,1 +1,7 @@
 // 컨포넌트 tsInput에 대한 스타일 작성예정
+.ts-input {
+    font-size: 1.6rem;
+    &::placeholder {
+        font-size: 1.6rem;
+    }
+}

@@ -7,7 +7,7 @@ import tsInput from './ts/components/tsInput.vue'
 
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
 import 'primevue/resources/primevue.min.css' //core css
-// import 'primeicons/primeicons.css' //icons
+import 'primeicons/primeicons.css' //icons
 import './assets/css/style.scss' // ts
 
 const app = createApp(App);
