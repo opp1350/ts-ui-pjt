@@ -5,14 +5,15 @@
         </header>
         <div class="ts-guide-body">
             <aside>
-                <ul>
+                <!-- <ul>
                     <li
                         v-for="(item, index) in guideLink"
                         :key="index"
                         @click.stop="selectMenu(index)">
                         <router-link :to="'/GuideMain/'+ item.link" :class="{'on' : this.selectedNum === index}">{{ item.menuName }}</router-link>
                     </li>
-                </ul>
+                </ul> -->
+                <Menu></Menu>
             </aside>
             <router-view class="ts-guide-cont"></router-view>
         </div>
@@ -20,9 +21,11 @@
 </template>
 
 <script>
+import Menu from './Menu.vue'
 export default {
     name: 'GuideMain',
     components: {
+        Menu
     },
     data() {
         return {

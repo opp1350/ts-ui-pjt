@@ -15,5 +15,3 @@ app.use(PrimeVue);
 app.component('ts-button', tsButton);
 app.component('ts-input', tsInput);
 app.use(router).mount('#app');
-
-//createApp(App).use(router).mount('#app')
