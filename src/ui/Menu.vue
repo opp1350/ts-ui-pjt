@@ -8,15 +8,15 @@
 <script>
 import Menu from 'primevue/menu';
 import PanelMenu from 'primevue/panelmenu';
+import { ref } from 'vue'
 export default {
     components: {
         Menu,
         PanelMenu
     },
-    data() {
-        return {
-            items: [
-                {
+    setup () {
+        const items = ref([
+            {
                     label: 'Components',
                     items: [{label: 'tsInput', to: 'tsInput' },
                             {label: 'tsRadio', to: 'tsRadio' }]
@@ -26,10 +26,10 @@ export default {
                     items: [{label: '기본페이지', to: ''},
                             {label: '팝업페이지', to: ''} ]
                 }
-            ]
+        ])
+        return {
+            items
         }
-    },
-    methods: {
     }
 }
 </script>
