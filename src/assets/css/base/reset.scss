@@ -4,7 +4,7 @@
 html {
     font-size: 62.5%; // 1rem => 10px
     * {
-        font-size: 1.6rem;
+        font-size: 1.6rem; // 기본 16px
     }
 }
 
@@ -26,6 +26,12 @@ html {
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+// 접근성을 위해 추가함, 필요 없으면 삭제
+*:focus:not(input) {
+    box-shadow: 0 0 0 0.2rem #a6d5fa !important;
+    outline: 1px solid #2196F3 !important;
 }
 
 /* Remove list styles (bullets/numbers) */

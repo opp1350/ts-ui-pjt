@@ -41,9 +41,9 @@
             ul {
                 li {
                     a {
-                        display: block;
                         padding: 1.2rem;
                         color: #666;
+                        display: block;
                         &.on {
                             color: var(--dark);
                             background-color: #CFD8DC;

@@ -1,14 +1,4 @@
 <template>
-    <!-- <InputMask
-        class="ts-input"
-        :disabled="disabled"
-        v-if="inputType === 'mask'"
-    />
-    <InputNumber
-        class="ts-input"
-        :disabled="disabled"
-        v-if="inputType === 'number'"
-    /> -->
     <InputText
         class="ts-input"
         :disabled="disabled"

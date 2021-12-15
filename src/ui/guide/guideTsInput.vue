@@ -1,21 +1,24 @@
 <template>
     <div>
-        <h2 class="guide-title">tsinput 가이드</h2>
+        <h2 class="guide-title">
+            <a href="javascript:void(0);">tsinput 가이드</a></h2>
         <div>
             <label for="myCustomInput">접두, 접미사가 붙은 input</label>
-            <div class="p-inputgroup">
-                <span class="p-inputgroup-addon">
-                    <i class="pi pi-search" />
-                </span>
+            <ts-input-group prefix suffix>
+                <template v-slot:prefix>
+                    <span>검색</span>
+                </template>
                 <ts-input
                     placeholder="플레이스홀더 입력"
                     v-model="inputData1"
                     id="myCustomInput"
                 />
-                <span class="p-inputgroup-addon">
-                    <i class="pi pi-spin pi-spinner" />
-                </span>
-            </div>
+                <template v-slot:suffix>
+                    <button type="button">
+                        <i class="pi pi-search" />
+                    </button>
+                </template>
+            </ts-input-group>
         </div>
         <div>
             <label for="myInput">disabled</label>
@@ -32,7 +35,7 @@
                 v-model="inputDataNum"
                 id="myInput1"
                 readonly
-                type="password"
+                type="number"
             />
         </div>
     </div>

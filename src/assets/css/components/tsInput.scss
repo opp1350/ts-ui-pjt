@@ -1,4 +1,21 @@
 // 컨포넌트 tsInput에 대한 스타일 작성예정
+
+.ts-inputgroup {
+    .p-inputgroup {
+        // 접두, 접미
+        .p-inputgroup-addon {
+            // padding:0;
+            background-color: white;
+        }
+        input[type=text],
+        input[type=number],
+        input[type=passward],
+        .ts-input {
+            border-left: none;
+            border-right: none;
+        }
+    }
+}
 .ts-input {
     font-size: 1.6rem;
     &::placeholder {
