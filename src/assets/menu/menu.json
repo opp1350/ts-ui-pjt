@@ -1,5 +1,9 @@
 {
     "data": [{
+            "name": "Home",
+            "meta": ["home"]
+        },
+        {
             "name": "Components",
             "meta": ["components"],
             "children": [{
