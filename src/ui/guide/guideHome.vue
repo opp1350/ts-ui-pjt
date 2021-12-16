@@ -13,15 +13,18 @@
                         <router-link :to="'/components/' + item.link" :class="{'on' : this.selectedNum === index}">{{ item.menuName }}</router-link>
                     </li>
                 </ul>
+                <app-menu></app-menu>
             </aside>
             <router-view class="ts-guide-cont"></router-view>
         </div>
     </div>
 </template>
 <script>
+import AppMenu from '@/AppMenu.vue';
 export default {
     name: 'tsGudieHome',
     components: {
+        'app-menu': AppMenu,
     },
     data() {
         return {

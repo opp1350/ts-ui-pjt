@@ -4,13 +4,13 @@
             <div>
                 {{item.name}}
             </div>
-            <div>
-                <template v-for="child of item.children" :key="child.name">
+            <ul>
+                <li v-for="child of item.children" :key="child.name">
                     <router-link v-if="child.to" :to="child.to">
                         {{child.name}}
                     </router-link>
-                </template>
-            </div>
+                </li>
+            </ul>
         </template>
     </div>
 </template>
