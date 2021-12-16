@@ -1,19 +1,37 @@
 {
     "data": [{
-        "name": "Components",
-        "meta": ["components"],
-        "children": [{
-                "name": "TsInput",
-                "to": "/components/tsInput"
-            },
-            {
-                "name": "TsButton",
-                "to": "/components/tsButton"
-            },
-            {
-                "name": "TsRadio",
-                "to": "/components/tsRadio"
-            }
-        ]
-    }]
+            "name": "Components",
+            "meta": ["components"],
+            "children": [{
+                    "name": "TsInput",
+                    "to": "/components/tsInput"
+                },
+                {
+                    "name": "TsButton",
+                    "to": "/components/tsButton"
+                },
+                {
+                    "name": "TsRadio",
+                    "to": "/components/tsRadio"
+                }
+            ]
+        },
+        {
+            "name": "Template Pages",
+            "meta": ["template"],
+            "children": [{
+                    "name": "TsInput",
+                    "to": "/components/tsInput"
+                },
+                {
+                    "name": "TsButton",
+                    "to": "/components/tsButton"
+                },
+                {
+                    "name": "TsRadio",
+                    "to": "/components/tsRadio"
+                }
+            ]
+        }
+    ]
 }
