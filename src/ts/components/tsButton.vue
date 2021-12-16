@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Button class="button button-close" :label="labelTxt"></Button>
-  </div>
+  <Button class="button button-close" :label="labelTxt"></Button>
 </template>
  
 <script>
