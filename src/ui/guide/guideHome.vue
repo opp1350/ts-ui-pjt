@@ -41,6 +41,11 @@ export default {
                     link: 'tsRadio',
                     menuName: 'tsRadio',
                     selected: false
+                },
+                {
+                    link: 'tsButton',
+                    menuName: 'tsButton',
+                    selected: false
                 }
             ]
         }

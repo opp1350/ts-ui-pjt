@@ -1,7 +1,8 @@
 // 가이드 라우터만 따로 모을 수 없는지?
 import GuideHome from "@/ui/guide/guideHome.vue";
-import GuideTsInput from "@/ui/guide/guideTsInput.vue";
-import GuideTsRadio from "@/ui/guide/guideTsRadio.vue";
+import TsInputDemo from "@/ui/demo/tsInput/tsInputDemo.vue";
+import TsRadioDemo from "@/ui/demo/tsRadio/tsRadioDemo.vue";
+import TsButtonDemo from "@/ui/demo/tsButton/tsButtonDemo.vue";
 
 const routes = [{
         path: "/",
@@ -15,12 +16,17 @@ const routes = [{
         children: [{
                 path: 'tsInput',
                 name: 'tsInput',
-                component: GuideTsInput
+                component: TsInputDemo
             },
             {
                 path: 'tsRadio',
                 name: 'tsRadio',
-                component: GuideTsRadio
+                component: TsRadioDemo
+            },
+            {
+                path: 'tsButton',
+                name: 'tsButton',
+                component: TsButtonDemo
             }
         ]
     }
