@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Button class="button button-close" label="button"></Button>
-  </div>
+  <Button class="button button-close" label="button"></Button>
 </template>
  
 <script>

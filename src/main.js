@@ -3,9 +3,9 @@ import App from './App.vue'
 import router from './config/router/rootRoutes.js'
 import PrimeVue from 'primevue/config'
 // components
-import tsButton from './ts/components/tsButton.vue'
-import tsInput from './ts/components/tsInput.vue'
-import tsInputGroup from './ts/components/tsInputGroup.vue'
+import tsButton from './ts/components/tsButton/tsButton.vue'
+import tsInput from './ts/components/tsInput/tsInput.vue'
+import tsInputGroup from './ts/components/tsInput/tsInputGroup.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -20,5 +20,3 @@ app.use(router).mount('#app');
 app.component('ts-button', tsButton);
 app.component('ts-input', tsInput);
 app.component('ts-input-group', tsInputGroup);
-
-//createApp(App).use(router).mount('#app')
