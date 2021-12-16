@@ -14,7 +14,52 @@ import 'primeicons/primeicons.css' //icons
 import './assets/css/style.scss' // ts
 
 const app = createApp(App);
-app.use(PrimeVue);
+app.use(PrimeVue, {
+    ripple: true,
+    locale: {
+        startsWith: 'Starts with',
+        contains: 'Contains',
+        notContains: 'Not contains',
+        endsWith: 'Ends with',
+        equals: 'Equals',
+        notEquals: 'Not equals',
+        noFilter: 'No Filter',
+        lt: 'Less than',
+        lte: 'Less than or equal to',
+        gt: 'Greater than',
+        gte: 'Greater than or equal to',
+        dateIs: 'Date is',
+        dateIsNot: 'Date is not',
+        dateBefore: 'Date is before',
+        dateAfter: 'Date is after',
+        clear: 'Clear',
+        apply: '적용',
+        matchAll: 'Match All',
+        matchAny: 'Match Any',
+        addRule: 'Add Rule',
+        removeRule: 'Remove Rule',
+        accept: '예',
+        reject: '아니오',
+        choose: '선택',
+        upload: '업로드',
+        cancel: '취소',
+        dayNames: ["일", "월", "화", "수", "목", "금", "토"],
+        dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        today: 'Today',
+        weekHeader: 'Wk',
+        firstDayOfWeek: 0,
+        dateFormat: 'yy/mm/dd',
+        weak: 'Weak',
+        medium: 'Medium',
+        strong: 'Strong',
+        passwordPrompt: 'Enter a password',
+        emptyFilterMessage: 'No results found',
+        emptyMessage: 'No available options'
+    }
+});
 app.use(router).mount('#app');
 // components
 app.component('ts-button', tsButton);
