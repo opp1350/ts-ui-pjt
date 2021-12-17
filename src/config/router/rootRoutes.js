@@ -5,6 +5,11 @@ import tsGudieHome from "@/ui/guide/guideHome.vue";
 import GuideTsInput from "@/ui/guide/guideTsInput.vue";
 import GuideTsRadio from "@/ui/guide/guideTsRadio.vue";
 import NotFound from "@/ui/error/page404.vue";
+//2021-12-16 김연숙
+import GuideTsCheckbox from "@/ui/guide/guidTsCheckbox.vue";
+import GuideTsForm from "@/ui/guide/guideTsForm.vue";
+import GuideTsButton from "@/ui/guide/guideTsButton.vue";
+import GuideTsPanel from "@/ui/guide/guideTsPanel.vue";
 
 const routes = [{
         path: "/",
@@ -27,6 +32,27 @@ const routes = [{
             {
                 path: 'tsRadio',
                 component: GuideTsRadio,
+                meta: { requiresAuth: false }
+            },
+            //2021-12-16 김연숙
+            {
+                path: 'tsCheckbox',
+                component: GuideTsCheckbox,
+                meta: { requiresAuth: false }
+            },
+            {
+                path: 'tsForm',
+                component: GuideTsForm,
+                meta: { requiresAuth: false }
+            },
+            {
+                path: 'tsButton',
+                component: GuideTsButton,
+                meta: { requiresAuth: false }
+            },
+            {
+                path: 'tsPanel',
+                component: GuideTsPanel,
                 meta: { requiresAuth: false }
             }
         ]

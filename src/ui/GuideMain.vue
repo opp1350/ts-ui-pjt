@@ -42,6 +42,26 @@ export default {
                     link: 'tsRadio',
                     menuName: 'tsRadio',
                     selected: false
+                },
+                {
+                    link: 'tsCheckbox',
+                    menuName: 'tsCheckbox',
+                    selected: false
+                },
+                {
+                    link: 'tsForm',
+                    menuName: 'tsForm',
+                    selected: false
+                },
+                {
+                    link: 'tsButton',
+                    menuName: 'tsButton',
+                    selected: false
+                },
+                {
+                    link: 'tsPanel',
+                    menuName: 'tsPanel',
+                    selected: false
                 }
             ]
         }
