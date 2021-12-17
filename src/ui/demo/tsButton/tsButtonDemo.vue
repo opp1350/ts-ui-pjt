@@ -2,18 +2,20 @@
 <template>
     <div>
         tsButtonDemo입니당
-        <app-menu></app-menu>
+        <ts-button :label="label"></ts-button>
+        <ts-checkbox></ts-checkbox>
     </div>
 </template>
 
 <script>
-import AppMenu from '@/AppMenu.vue';
 export default {
     components: {
-        'app-menu': AppMenu,
     },
     setup() {
-        
+        const label = 'tsButton'
+        return {
+            label
+        }
     },
 }
 </script>
