@@ -7,6 +7,7 @@ import tsButton from './ts/components/tsButton/tsButton.vue'
 import tsInput from './ts/components/tsInput/tsInput.vue'
 import tsInputGroup from './ts/components/tsInput/tsInputGroup.vue'
 import tsCheckBox from './ts/components/tsCheckBox/tsCheckbox.vue'
+import tsInputText from './ts/components/tsInput/tsInputText.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -67,3 +68,4 @@ app.component('ts-button', tsButton);
 app.component('ts-input', tsInput);
 app.component('ts-input-group', tsInputGroup);
 app.component('ts-checkbox', tsCheckBox);
+app.component('ts-input-text', tsInputText);
