@@ -7,8 +7,8 @@
             "name": "Components",
             "meta": ["components"],
             "children": [{
-                    "name": "TsInput",
-                    "to": "/components/tsInput"
+                    "name": "tsInputText",
+                    "to": "/components/tsInputText"
                 },
                 {
                     "name": "TsButton",
@@ -17,6 +17,10 @@
                 {
                     "name": "TsRadio",
                     "to": "/components/tsRadio"
+                },
+                {
+                    "name": "TsCheckbox",
+                    "to": "/components/tsCheckbox"
                 }
             ]
         },
@@ -24,8 +28,8 @@
             "name": "Template Pages",
             "meta": ["template"],
             "children": [{
-                    "name": "TsInput",
-                    "to": "/components/tsInput"
+                    "name": "tsInputText",
+                    "to": "/components/tsInputText"
                 },
                 {
                     "name": "TsButton",

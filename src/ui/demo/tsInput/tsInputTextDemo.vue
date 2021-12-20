@@ -1,12 +1,5 @@
 <template>
     <div>
-        <!-- tsInputDemo입니당
-        <ts-input-text 
-            v-model="value1"
-            placeholder="입력하세요"
-            disabled
-        />
-        <p>{{value1}}</p> -->
         <h5>Basic</h5>
         <ts-input-text type="text" v-model="value1" />
         <span :style="{marginLeft: '.5em'}">{{value1}}</span>
@@ -29,15 +22,29 @@
             <ts-input-text type="text" v-model="value4" />
         </span>
 
-        <!-- <h5>Help Text</h5>
+        <h5>Help Text</h5>
         <div class="p-field">
             <label for="username1">Username</label>
             <ts-input-text id="username1" type="username" aria-describedby="username1-help" />
             <small id="username1-help">Enter your username to reset your password.</small>
-        </div> -->
+        </div>
+
+        <h5>Invalid</h5>
+        <div class="p-field">
+            <label for="username2">Username</label>
+            <ts-input-text id="username2" type="username" aria-describedby="username2-help" class="p-invalid" />
+            <small id="username2-help" class="p-error">Username is not available.</small>
+        </div>
 
         <h5>Disabled</h5>
         <ts-input-text type="text" v-model="value5" disabled />
+
+        <h5>Sizes</h5>
+        <div class="sizes">
+            <ts-input-text type="text" class="p-inputtext-sm" placeholder="Small"></ts-input-text>
+            <ts-input-text type="text" placeholder="Normal"></ts-input-text>
+            <ts-input-text type="text" class="p-inputtext-lg"  placeholder="Large"></ts-input-text>
+        </div>
     </div>
 </template>
 <script>

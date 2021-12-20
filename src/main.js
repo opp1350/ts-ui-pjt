@@ -6,7 +6,7 @@ import PrimeVue from 'primevue/config'
 import tsButton from './ts/components/tsButton/tsButton.vue'
 import tsInput from './ts/components/tsInput/tsInput.vue'
 import tsInputGroup from './ts/components/tsInput/tsInputGroup.vue'
-import tsCheckBox from './ts/components/tsCheckBox/tsCheckbox.vue'
+import tsCheckbox from './ts/components/tsCheckBox/tsCheckbox.vue'
 import tsInputText from './ts/components/tsInput/tsInputText.vue'
 
 // css
@@ -67,5 +67,5 @@ app.use(router).mount('#app');
 app.component('ts-button', tsButton);
 app.component('ts-input', tsInput);
 app.component('ts-input-group', tsInputGroup);
-app.component('ts-checkbox', tsCheckBox);
+app.component('ts-checkbox', tsCheckbox);
 app.component('ts-input-text', tsInputText);
