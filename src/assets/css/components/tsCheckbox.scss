@@ -7,12 +7,19 @@
             width: 2.4rem;
             height: 2.4rem;
             border-radius: 50%;
-            // checked 되었을 때
-            &.p-highlight {
-                border-color: var(--primary);
-                background: var(--primary);
+            border-color: #CCCCCC;
+            // 체크 아이콘 기본스타일
+            .p-checkbox-icon {
+                display: inline-block;
+                font-family: 'primeicons';
+                font-weight: 600;
+                color: #CCCCCC;
+                &:before {
+                    content: "\e909";
+                }
             }
         }
+        // disabled 상태 제외 hover, focus style
         &:not(.p-checkbox-disabled) {
             .p-checkbox-box {
                 &:hover {
@@ -20,14 +27,41 @@
                 }
                 &.p-highlight{
                     &:hover {
-                        border-color: #5812BC;
+                        border-color: var(--primary-dark);
                         // background: var(--secondary);
-                        background: #5812BC;
+                        background: var(--primary-dark);
                     }
                 }
                 &.p-focus {
-                    box-shadow: 0 0 0 0.2rem var(--light-secondary);
+                    box-shadow: 0 0 0 0.2rem var(--secondary-light);
                     border-color: var(--primary);
+                }
+            }
+        }
+        // checked
+        &.p-checkbox-checked {
+            .p-checkbox-box {
+                &.p-highlight {
+                    border-color: var(--primary);
+                    background: var(--primary);
+                    // 체크 아이콘
+                    .p-checkbox-icon {
+                        color: white;
+                    }
+                }
+            }
+        }
+        // disabled
+        &.p-checkbox-disabled {
+            .p-checkbox-box {
+                background: #F2F2F2;
+            }
+            &.p-checkbox-checked {
+                .p-checkbox-box {
+                    &.p-highlight {
+                        border-color: #ABAFC7;
+                        background: #ABAFC7;
+                    }
                 }
             }
         }
