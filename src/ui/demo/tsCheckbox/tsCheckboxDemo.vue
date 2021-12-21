@@ -30,17 +30,12 @@
             <ts-checkbox :id="category.key" name="category" :value="category" v-model="selectedCategories" :disabled="category.key === 'R'"></ts-checkbox>
             <label :for="category.key">{{category.name}}</label>
         </div>
-        <Checkbox v-model="checked" :binary="true"/>
     </div>
 </template>
 
 <script>
 import { ref } from 'vue'
-import Checkbox from 'primevue/checkbox';
 export default {
-    components: {
-        Checkbox
-    },
     setup() {
         const checked = ref(false);
         const cities = ref([]);
