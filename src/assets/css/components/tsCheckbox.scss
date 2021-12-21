@@ -1,0 +1,35 @@
+// 컨포넌트 tsCheckbox에 대한 스타일 작성예정
+.ts-checkbox {
+    &.p-checkbox {
+        width: 2.4rem;
+        height: 2.4rem;
+        .p-checkbox-box {
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            // checked 되었을 때
+            &.p-highlight {
+                border-color: var(--primary);
+                background: var(--primary);
+            }
+        }
+        &:not(.p-checkbox-disabled) {
+            .p-checkbox-box {
+                &:hover {
+                    border-color: var(--secondary);
+                }
+                &.p-highlight{
+                    &:hover {
+                        border-color: #5812BC;
+                        // background: var(--secondary);
+                        background: #5812BC;
+                    }
+                }
+                &.p-focus {
+                    box-shadow: 0 0 0 0.2rem var(--light-secondary);
+                    border-color: var(--primary);
+                }
+            }
+        }
+    }
+}
