@@ -3,7 +3,9 @@
     @click="$emit('click', $event)"
     @update:modelValue="$emit('update:modelValue', $event)"
     @change="$emit('change', $event)"
-    @input="$emit('input', $event)" />
+    @input="$emit('input', $event)"
+    class="ts-checkbox"
+    />
 </template>
  
 <script>

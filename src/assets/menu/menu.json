@@ -7,7 +7,7 @@
             "name": "Components",
             "meta": ["components"],
             "children": [{
-                    "name": "tsInputText",
+                    "name": "TsInputText",
                     "to": "/components/tsInputText"
                 },
                 {
@@ -15,12 +15,12 @@
                     "to": "/components/tsButton"
                 },
                 {
-                    "name": "TsRadio",
-                    "to": "/components/tsRadio"
-                },
-                {
                     "name": "TsCheckbox",
                     "to": "/components/tsCheckbox"
+                },
+                {
+                    "name": "TsRadioButton",
+                    "to": "/components/tsRadioButton"
                 }
             ]
         },

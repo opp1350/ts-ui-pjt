@@ -1,9 +1,9 @@
 // 가이드 라우터만 따로 모을 수 없는지?
 import GuideHome from "@/ui/guide/guideHome.vue";
 import TsInputTextDemo from "@/ui/demo/tsInput/tsInputTextDemo.vue";
-import TsRadioDemo from "@/ui/demo/tsRadio/tsRadioDemo.vue";
 import TsButtonDemo from "@/ui/demo/tsButton/tsButtonDemo.vue";
 import TsCheckboxDemo from "@/ui/demo/tsCheckbox/tsCheckboxDemo.vue";
+import tsRadioButtonDemo from "@/ui/demo/tsRadio/tsRadioButtonDemo.vue";
 
 const routes = [{
         path: "/",
@@ -20,11 +20,6 @@ const routes = [{
                 component: TsInputTextDemo
             },
             {
-                path: 'tsRadio',
-                name: 'tsRadio',
-                component: TsRadioDemo
-            },
-            {
                 path: 'tsButton',
                 name: 'tsButton',
                 component: TsButtonDemo
@@ -33,6 +28,11 @@ const routes = [{
                 path: 'tsCheckbox',
                 name: 'tsCheckbox',
                 component: TsCheckboxDemo
+            },
+            {
+                path: 'tsRadioButton',
+                name: 'tsRadioButton',
+                component: tsRadioButtonDemo
             }
         ]
     }
