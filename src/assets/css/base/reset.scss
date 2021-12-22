@@ -8,6 +8,7 @@ html {
         font-family: "NotoSansKR", sans-serif;
         font-weight: normal;
         color: var(--font-color-normal);
+        background-color: var(--background-color-normal);
         // 과한 깜빡임 방지로 추가함, 문제시 삭제
         transition: background-color 0.4s, color 0.4s, border-color 0.4s, box-shadow 0.4s;
     }
