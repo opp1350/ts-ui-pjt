@@ -5,6 +5,7 @@
         @update:modelValue="$emit('update:modelValue', $event)"
         @click="$emit('click', $event)"
         @change="$emit('change', $event)"
+        class="ts-radiobutton"
     />
     <label>{{value}}</label>
 </template>

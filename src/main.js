@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './config/router/rootRoutes.js'
 import PrimeVue from 'primevue/config'
+import DarkMode from './ui/theme/darkMode.vue'
 // components
 import tsButton from './ts/components/tsButton/tsButton.vue'
 import tsInput from './ts/components/tsInput/tsInput.vue'
@@ -13,6 +14,7 @@ import tsCalendar from './ts/components/tsCalendar/tsCalendar.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
+// import 'primevue/resources/themes/vela-blue/theme.css' // default dark theme
 import 'primevue/resources/primevue.min.css' // primevue core css
 import 'primeicons/primeicons.css' //icons
 import './assets/css/style.scss' // ts
@@ -73,3 +75,4 @@ app.component('ts-checkbox', tsCheckbox);
 app.component('ts-input-text', tsInputText);
 app.component('ts-radio-button', tsRadioButton);
 app.component('ts-calendar', tsCalendar);
+app.component('dark-mode', DarkMode);

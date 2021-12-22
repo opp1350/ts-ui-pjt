@@ -1,24 +1,24 @@
 :root {
     //임시
-    --blue:#007bff;
-    --indigo:#6610f2;
-    --purple:#6f42c1;
-    --pink:#e83e8c;
-    --red:#dc3545;
-    --orange:#fd7e14;
-    --yellow:#ffc107;
-    --green:#28a745;
-    --teal:#20c997;
-    --cyan:#17a2b8;
+    --blue:#0E89FF;
+    --purple:#6200EE;
+    // pjt
+    --primary-dark: #4501A5;
+    --primary:#6200EE;
+    --secondary:#8E40FF;
+    --secondary-light:#D5B8FF;
+    --success:#0CD68A;
+    --info:#0E89FF;
+    --error:#FF895B;
+    // pjt-gray
     --white:#fff;
-    --gray:#6c757d;
-    --gray-dark:#343a40;
-    --primary:#007bff;
-    --secondary:#6c757d;
-    --success:#28a745;
-    --info:#17a2b8;
-    --warning:#ffc107;
-    --danger:#dc3545;
-    --light:#f8f9fa;
+    --light:#F2F2F2;
+    --gray:#ABAFC7;
+    --gray-dark:#70798B;
     --dark:#343a40;
+    --black:#161616;
+}
+// dark mode
+html[data-mode='dark'] {
+    // --primary:red;
 }

@@ -29,10 +29,10 @@ html {
 }
 
 // 접근성을 위해 추가함, 필요 없으면 삭제
-*:focus:not(input) {
-    box-shadow: 0 0 0 0.2rem #a6d5fa !important;
-    outline: 1px solid #2196F3 !important;
-}
+// *:focus:not(input) {
+//     box-shadow: 0 0 0 0.2rem #a6d5fa !important;
+//     outline: 1px solid #2196F3 !important;
+// }
 
 /* Remove list styles (bullets/numbers) */
 ol, ul, menu {

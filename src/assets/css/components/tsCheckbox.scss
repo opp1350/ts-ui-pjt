@@ -1,25 +1,27 @@
-// 컨포넌트 tsRadio에 대한 스타일 작성예정
-.ts-radiobutton {
-    // disabled opacity 스타일 초기화
-    .p-disabled, .p-component:disabled {
-        opacity: initial !important;
-    }
-    &.p-radiobutton {
+// 컨포넌트 tsCheckbox에 대한 스타일 작성예정
+.ts-checkbox {
+    &.p-checkbox {
         width: 2.4rem;
         height: 2.4rem;
-        .p-radiobutton-box {
+        .p-checkbox-box {
             width: 2.4rem;
             height: 2.4rem;
-            border: 2px solid #ccc;
+            border-radius: 50%;
+            border-color: #CCCCCC;
             // 체크 아이콘 기본스타일
-            .p-radiobutton-icon {
-                width: 1rem;
-                height: 1rem;
+            .p-checkbox-icon {
+                display: inline-block;
+                font-family: 'primeicons';
+                font-weight: 600;
+                color: #CCCCCC;
+                &:before {
+                    content: "\e909";
+                }
             }
         }
         // disabled 상태 제외 hover, focus style
-        &:not(.p-radiobutton-disabled) {
-            .p-radiobutton-box {
+        &:not(.p-checkbox-disabled) {
+            .p-checkbox-box {
                 &:hover {
                     border-color: var(--secondary);
                 }
@@ -37,24 +39,28 @@
             }
         }
         // checked
-        &.p-radiobutton-checked {
-            .p-radiobutton-box {
+        &.p-checkbox-checked {
+            .p-checkbox-box {
                 &.p-highlight {
                     border-color: var(--primary);
                     background: var(--primary);
+                    // 체크 아이콘
+                    .p-checkbox-icon {
+                        color: white;
+                    }
                 }
             }
         }
         // disabled
-        &.p-radiobutton-disabled {
-            .p-radiobutton-box {
+        &.p-checkbox-disabled {
+            .p-checkbox-box {
                 background: #F2F2F2;
             }
-            &.p-radiobutton-checked {
-                .p-radiobutton-box {
+            &.p-checkbox-checked {
+                .p-checkbox-box {
                     &.p-highlight {
-                        border-color: #ccc;
-                        background: #ccc;
+                        border-color: #ABAFC7;
+                        background: #ABAFC7;
                     }
                 }
             }
