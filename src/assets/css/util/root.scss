@@ -1,11 +1,12 @@
 :root {
-    //임시
     --blue:#0E89FF;
     --purple:#6200EE;
+    --green: #0CD68A;
+    --orange: #FF895B;
     // pjt
-    --primary-dark: #4501A5;
+    --primary-dark: #3700B3;
     --primary:#6200EE;
-    --secondary:#8E40FF;
+    --secondary:#9F5BFF;
     --secondary-light:#D5B8FF;
     --success:#0CD68A;
     --info:#0E89FF;
@@ -17,8 +18,15 @@
     --gray-dark:#70798B;
     --dark:#343a40;
     --black:#161616;
+    // theme 컨트롤
+    --font-color-normal: #161616;
+    --background-color-normal: #ffffff;
 }
 // dark mode
 html[data-mode='dark'] {
-    // --primary:red;
+    --background-color-normal: #22272D;
+    --font-color-normal: #E2E2E3;
+    --primary-dark: #794ABA;
+    --primary:#A46FF0;
+    --secondary-light:rgb(121 74 186 / 40%);
 }

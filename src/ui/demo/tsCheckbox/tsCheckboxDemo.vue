@@ -7,10 +7,10 @@
             <label for="binary">{{checked}}</label>
         </div>
 
-        <h5>Multiple</h5>
+        <h5>Multipdddle</h5>
         <div class="p-field-checkbox">
-            <ts-checkbox id="city1" name="city" value="Chicago" v-model="cities"></ts-checkbox>
-            <label for="city1">Chicago</label>
+            <ts-checkbox id="city1" name="city" value="Chicago" v-model="cities" disabled>Chicago</ts-checkbox>
+            <!-- <label for="city1">Chicago</label> -->
         </div>
         <div class="p-field-checkbox">
             <ts-checkbox id="city2" name="city" value="Los Angeles" v-model="cities"></ts-checkbox>
@@ -38,7 +38,7 @@ import { ref } from 'vue'
 export default {
     setup() {
         const checked = ref(false);
-        const cities = ref([]);
+        const cities = ref(['Chicago']);
         const categories = ref([
             {name: 'Accounting', key: 'A'},
             {name: 'Marketing', key: 'M'},

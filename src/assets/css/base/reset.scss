@@ -3,13 +3,14 @@
 /* 임시 추가 */
 html {
     font-size: 62.5%; // 1rem => 10px
-    * {
+    body {
         font-size: 1.6rem; // 기본 16px
+        font-family: "NotoSansKR", sans-serif;
+        font-weight: normal;
+        color: var(--font-color-normal);
+        // 과한 깜빡임 방지로 추가함, 문제시 삭제
+        transition: background-color 0.4s, color 0.4s, border-color 0.4s, box-shadow 0.4s;
     }
-}
-
-* {
-    font-family: "NotoSansKR", sans-serif;
 }
 
 /*
@@ -29,10 +30,10 @@ html {
 }
 
 // 접근성을 위해 추가함, 필요 없으면 삭제
-// *:focus:not(input) {
-//     box-shadow: 0 0 0 0.2rem #a6d5fa !important;
-//     outline: 1px solid #2196F3 !important;
-// }
+*:focus:not(input) {
+    box-shadow: initial !important;
+    outline: initial !important;
+}
 
 /* Remove list styles (bullets/numbers) */
 ol, ul, menu {

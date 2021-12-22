@@ -1,6 +1,9 @@
 <template>
     <div class="switch:check">
-        <ts-checkbox title="다크 모드로 변경" ref="switchRef" :binary="true" @change="switchEvent" v-model="darkMode"/>
+        <div class="p-field-checkbox">
+            <label for="darkModeSwitch">{{ darkMode ? '라이트 모드로 변경' : '다크 모드로 변경' }}</label>
+            <ts-checkbox title="다크 모드로 변경" ref="switchRef" id="darkModeSwitch" :binary="true" @change="switchEvent" v-model="darkMode"/>
+        </div>
     </div>
 </template>
 <script>
@@ -51,11 +54,3 @@ export default defineComponent({
     }
 })
 </script>
-<style scoped>
-    @media(prefers-color-scheme: dark) {
-        [data-mode='dark'] .darker {
-            background: var(--dark);
-            color: var(--light);
-        }
-    }
-</style>
