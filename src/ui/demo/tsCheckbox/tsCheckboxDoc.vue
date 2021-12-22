@@ -3,33 +3,21 @@
         <div class="card">
             <TabView>
                 <TabPanel header="Documentation">
-                    <h5>Import via Module</h5>
-<pre v-code.script><code>
-import Checkbox from 'primevue/checkbox';
-
-</code></pre>
-
-        <h5>Import via CDN</h5>
-<pre v-code><code>
-&lt;script src="https://unpkg.com/primevue@^3/core/core.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/primevue@^3/checkbox/checkbox.min.js"&gt;&lt;/script&gt;
-
-</code></pre>
 
 		<h5>Getting Started</h5>
 		<p>Checkbox can either be used in multiple selection with other checkboxes or as a single checkbox to provide a boolean value.</p>
 <pre v-code><code>
-&lt;Checkbox v-model="checked" :binary="true" /&gt;
+&lt;ts-checkbox v-model="checked" :binary="true" /&gt;
 
 </code></pre>
 
 		<h5>Multiple Values</h5>
 		<p>Multiple mode is enabled by default, v-model property refers to an array to bind the selected values.</p>
 <pre v-code><code>
-&lt;Checkbox name="city" value="Chicago" v-model="cities" /&gt;
-&lt;Checkbox name="city" value="Los Angeles" v-model="cities" /&gt;
-&lt;Checkbox name="city" value="New York" v-model="cities" /&gt;
-&lt;Checkbox name="city" value="San Francisco" v-model="cities" /&gt;
+&lt;ts-checkbox name="city" value="Chicago" v-model="cities" label="Chicago"/&gt;
+&lt;ts-checkbox name="city" value="Los Angeles" v-model="cities"label="Los Angeles" /&gt;
+&lt;ts-checkbox name="city" value="New York" v-model="cities" label="New York"/&gt;
+&lt;ts-checkbox name="city" value="San Francisco" v-model="cities" label="San Francisco"/&gt;
 
 </code></pre>
 
@@ -168,7 +156,9 @@ export default {
 		<p>None.</p>
                 </TabPanel>
                 <TabPanel header="Compositon API Source">
-                    <p>{{ content }}</p>
+                    <pre v-code><code>
+                            {{ content }}
+                        </code></pre>
                 </TabPanel>
             </TabView>
         </div>
