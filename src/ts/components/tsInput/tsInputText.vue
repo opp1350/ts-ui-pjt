@@ -1,7 +1,8 @@
 <template>
     <InputText
-        :value="modelValue"
-        @input="$emit('update:modelValue', $event.target.value)"
+        :modelValue="modelValue"
+        @update:modelValue="$emit('update:modelValue', $event)"
+        class="ts-input-text"
     />
 </template>
 <script>
@@ -12,10 +13,7 @@ export default {
         InputText
     },
     props: {
-        modelValue: {
-            type: String,
-            default: ""
-        }
+        modelValue: null
     },
     emits: ["update:modelValue"],
     setup() {

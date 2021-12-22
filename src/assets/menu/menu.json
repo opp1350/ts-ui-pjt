@@ -21,6 +21,10 @@
                 {
                     "name": "TsRadioButton",
                     "to": "/components/tsRadioButton"
+                },
+                {
+                    "name": "TsCalendar",
+                    "to": "/components/tsCalendar"
                 }
             ]
         },

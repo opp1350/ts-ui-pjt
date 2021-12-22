@@ -1,5 +1,8 @@
 <template>
-  <Button class="button button-close" :label="label"></Button>
+  <Button 
+    :label="label"
+    class="ts-button"
+  />
 </template>
  
 <script>
@@ -10,7 +13,31 @@ export default {
       Button
   },
   props: {
-    label: String
+    label: {
+            type: String
+        },
+        icon: {
+            type: String
+        },
+        iconPos: {
+            type: String,
+            default: 'left'
+        },
+        badge: {
+            type: String
+        },
+        badgeClass: {
+            type: String,
+            default: null
+        },
+        loading: {
+            type: Boolean,
+            default: false
+        },
+        loadingIcon: {
+            type: String,
+            default: 'pi pi-spinner pi-spin'
+        }
   },
   setup () {
   }
