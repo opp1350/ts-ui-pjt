@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ts-tabview></ts-tabview>
+        tsButtonDoc
     </div>
 </template>
 
