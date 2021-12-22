@@ -1,5 +1,5 @@
 <template>
-  <Fieldset :legend="legend" :toggleable="toggleable" :collapsed="collapsed" />
+  <Fieldset v-model="value" :legend="legend" :toggleable="toggleable" :collapsed="collapsed" />
 </template>
  
 <script>
@@ -11,6 +11,7 @@ export default {
   },
   data() {
       return {
+        value: null
       }
   },
   props: {

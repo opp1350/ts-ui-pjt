@@ -1,5 +1,5 @@
 <template>
-  <ScrollPanel />
+  <ScrollPanel v-model="value"/>
 </template>
  
 <script>
@@ -14,6 +14,7 @@ export default {
   },
   data() {
       return {
+        value: null
       }
   }
 }

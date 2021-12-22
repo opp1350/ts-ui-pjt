@@ -1,5 +1,5 @@
 <template>
-  <MultiSelect :modelValue="modelValue" :options="options" :optionLabel="optionLabel" :optionValue="optionValue" :optionDisabled="optionDisabled" :optionGroupLabel="optionGroupLabel"
+  <MultiSelect v-model="val" :modelValue="modelValue" :options="options" :optionLabel="optionLabel" :optionValue="optionValue" :optionDisabled="optionDisabled" :optionGroupLabel="optionGroupLabel"
   :optionGroupChildren="optionGroupChildren" :scrollHeight="scrollHeight" :placeholder="placeholder" :disabled="disabled" :tabindex="tabindex" :inputId="inputId" :dataKey="dataKey"
   :filter="filter" :filterPlaceholder="filterPlaceholder" :filterLocale="filterLocale" :filterMatchMode="filterMatchMode" :filterFields="filterFields" :ariaLabelledBy="ariaLabelledBy"
   :appendTo="appendTo" :emptyFilterMessage="emptyFilterMessage" :emptyMessage="emptyMessage" :display="display" :panelClass="panelClass" :selectedItemsLabel="selectedItemsLabel"
@@ -16,6 +16,7 @@ export default {
   },
   data() {
       return {
+        val: null
       }
   },
   props: {

@@ -1,5 +1,5 @@
 <template>
-  <Panel :header="header" :toggleable="toggleable" :collapsed="collapsed" />
+  <Panel v-model="value" :header="header" :toggleable="toggleable" :collapsed="collapsed" />
 </template>
  
 <script>
@@ -15,8 +15,9 @@ export default {
     collapsed: Boolean
   },
   data() {
-      return {
-      }
+    return {
+      value: null
+    }
   }
 }
 </script>

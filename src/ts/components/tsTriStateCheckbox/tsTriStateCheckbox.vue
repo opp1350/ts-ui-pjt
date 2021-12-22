@@ -1,5 +1,5 @@
 <template>
-  <TriStateCheckbox :modelValue="modelValue" :style="style" />
+  <TriStateCheckbox v-model="value" :modelValue="modelValue" :style="style" />
 </template>
  
 <script>
@@ -11,6 +11,7 @@ export default {
   },
   data() {
       return {
+        value: null
       }
   },
   props: {

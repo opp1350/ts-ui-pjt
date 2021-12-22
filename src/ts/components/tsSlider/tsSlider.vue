@@ -1,5 +1,5 @@
 <template>
-  <Slider :modelValue="modelValue" :min="min" :max="max" :orientation="orientation" :step="step" :range="range" :disabled="disabled" :ariaLabelledBy="ariaLabelledBy" />
+  <Slider v-model="value" :modelValue="modelValue" :min="min" :max="max" :orientation="orientation" :step="step" :range="range" :disabled="disabled" :ariaLabelledBy="ariaLabelledBy" />
 </template>
  
 <script>
@@ -11,6 +11,7 @@ export default {
   },
   data() {
       return {
+        value: null
       }
   },
   props: {
