@@ -5,7 +5,8 @@
     @change="$emit('change', $event)"
     @input="$emit('input', $event)"
     class="ts-checkbox"
-    />
+  />
+  <label>{{label}}</label>
 </template>
  
 <script>
@@ -17,6 +18,9 @@ export default {
   },
   emits: ['click', 'update:modelValue', 'change', 'input'],
   props: {
+    id: null,
+    label: null,
+    name: null,
     value: null,
     modelValue: null,
     binary: Boolean,

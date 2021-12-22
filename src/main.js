@@ -9,6 +9,7 @@ import tsInputGroup from './ts/components/tsInput/tsInputGroup.vue'
 import tsCheckbox from './ts/components/tsCheckBox/tsCheckbox.vue'
 import tsInputText from './ts/components/tsInput/tsInputText.vue'
 import tsRadioButton from './ts/components/tsRadio/tsRadioButton.vue'
+import tsCalendar from './ts/components/tsCalendar/tsCalendar.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -71,3 +72,4 @@ app.component('ts-input-group', tsInputGroup);
 app.component('ts-checkbox', tsCheckbox);
 app.component('ts-input-text', tsInputText);
 app.component('ts-radio-button', tsRadioButton);
+app.component('ts-calendar', tsCalendar);

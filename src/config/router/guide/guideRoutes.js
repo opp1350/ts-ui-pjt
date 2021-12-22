@@ -4,6 +4,7 @@ import TsInputTextDemo from "@/ui/demo/tsInput/tsInputTextDemo.vue";
 import TsButtonDemo from "@/ui/demo/tsButton/tsButtonDemo.vue";
 import TsCheckboxDemo from "@/ui/demo/tsCheckbox/tsCheckboxDemo.vue";
 import tsRadioButtonDemo from "@/ui/demo/tsRadio/tsRadioButtonDemo.vue";
+import tsCalendarDemo from "@/ui/demo/tsCalendar/tsCalendarDemo.vue";
 
 const routes = [{
         path: "/",
@@ -33,6 +34,11 @@ const routes = [{
                 path: 'tsRadioButton',
                 name: 'tsRadioButton',
                 component: tsRadioButtonDemo
+            },
+            {
+                path: 'tsCalendar',
+                name: 'tsCalendar',
+                component: tsCalendarDemo
             }
         ]
     }

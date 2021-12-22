@@ -4,19 +4,15 @@
         <h5>Basic</h5>
         <div class="p-field-radiobutton">
             <ts-radio-button id="city1" name="city" value="Chicago" v-model="city" />
-            <label for="city1">Chicago</label>
         </div>
         <div class="p-field-radiobutton">
             <ts-radio-button id="city2" name="city" value="Los Angeles" v-model="city" />
-            <label for="city2">Los Angeles</label>
         </div>
         <div class="p-field-radiobutton">
             <ts-radio-button id="city3" name="city" value="New York" v-model="city" />
-            <label for="city3">New York</label>
         </div>
         <div class="p-field-radiobutton">
             <ts-radio-button id="city4" name="city" value="San Francisco" v-model="city" />
-            <label for="city4">San Francisco</label>
         </div>
 
         <h5>Dynamic Values, Preselection, Value Binding and Disabled Option</h5>
