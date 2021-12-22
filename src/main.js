@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './config/router/rootRoutes.js'
 import PrimeVue from 'primevue/config'
 import DarkMode from './ui/theme/darkMode.vue'
+import CodeHighlight from './AppCodeHighlight';
 // components
 import tsButton from './ts/components/tsButton/tsButton.vue'
 import tsInput from './ts/components/tsInput/tsInput.vue'
@@ -11,12 +12,16 @@ import tsCheckbox from './ts/components/tsCheckBox/tsCheckbox.vue'
 import tsInputText from './ts/components/tsInput/tsInputText.vue'
 import tsRadioButton from './ts/components/tsRadio/tsRadioButton.vue'
 import tsCalendar from './ts/components/tsCalendar/tsCalendar.vue'
+import tsTabView from './ts/components/tsTabView/tsTabView.vue'
+import TabView from 'primevue/tabview';
+import TabPanel from 'primevue/tabpanel';
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
 // import 'primevue/resources/themes/vela-blue/theme.css' // default dark theme
 import 'primevue/resources/primevue.min.css' // primevue core css
 import 'primeicons/primeicons.css' //icons
+import 'prismjs/themes/prism-coy.css' // prismjs
 import './assets/css/style.scss' // ts
 
 const app = createApp(App);
@@ -76,3 +81,8 @@ app.component('ts-input-text', tsInputText);
 app.component('ts-radio-button', tsRadioButton);
 app.component('ts-calendar', tsCalendar);
 app.component('dark-mode', DarkMode);
+app.component('ts-tabview', tsTabView);
+app.component('TabView', TabView);
+app.component('TabPanel', TabPanel);
+
+app.directive('code', CodeHighlight);

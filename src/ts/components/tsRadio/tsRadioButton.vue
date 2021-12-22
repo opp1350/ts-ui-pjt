@@ -2,14 +2,13 @@
     <RadioButton
         :value="value"
         :modelValue="modelValue"
+        :disabled="disabled"
         @update:modelValue="$emit('update:modelValue', $event)"
         @click="$emit('click', $event)"
         @change="$emit('change', $event)"
         class="ts-radiobutton"
-        :id="id"
-        :name="name"
     />
-    <label :for="id" class="ts-radiobutton-label">{{value}}</label>
+    <label :for="id" class="ts-radiobutton-label">{{ label }}</label>
 </template>
 
 <script>
@@ -25,6 +24,7 @@ export default {
         id: null,
         name: null,
         value: null,
+        label: null,
         modelValue: null,
         class: null,
         style: null,

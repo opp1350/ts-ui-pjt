@@ -3,22 +3,21 @@
     <div>
         <h5>Basic</h5>
         <div class="p-field-radiobutton">
-            <ts-radio-button id="city1" name="city" value="Chicago" v-model="city" />
+            <ts-radio-button id="city1" name="city" value="Chicago" v-model="city" label="Chicago"/>
         </div>
         <div class="p-field-radiobutton">
-            <ts-radio-button id="city2" name="city" value="Los Angeles" v-model="city" />
+            <ts-radio-button id="city2" name="city" value="Los Angeles" v-model="city" label="Los Angeles"/>
         </div>
         <div class="p-field-radiobutton">
-            <ts-radio-button id="city3" name="city" value="New York" v-model="city" />
+            <ts-radio-button id="city3" name="city" value="New York" v-model="city" label="New York"/>
         </div>
         <div class="p-field-radiobutton">
-            <ts-radio-button id="city4" name="city" value="San Francisco" v-model="city" />
+            <ts-radio-button id="city4" name="city" value="San Francisco" v-model="city" label="San Francisco"/>
         </div>
 
         <h5>Dynamic Values, Preselection, Value Binding and Disabled Option</h5>
         <div v-for="category of categories" :key="category.key" class="p-field-radiobutton">
-            <ts-radio-button :id="category.key" name="category" :value="category" v-model="selectedCategory" :disabled="category.key === 'R'" />
-            <label :for="category.key">{{category.name}}</label>
+            <ts-radio-button :id="category.key" name="category" :value="category" v-model="selectedCategory" :disabled="category.key === 'R'" :label="category.name"/>
         </div>
     </div>
 </template>

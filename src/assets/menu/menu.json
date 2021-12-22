@@ -25,6 +25,10 @@
                 {
                     "name": "TsCalendar",
                     "to": "/components/tsCalendar"
+                },
+                {
+                    "name": "TsTabView",
+                    "to": "/components/tsTabView"
                 }
             ]
         },

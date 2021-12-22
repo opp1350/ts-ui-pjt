@@ -5,11 +5,17 @@
         <ts-button label="Submit" />
         <ts-button label="Disabled" disabled="disabled" />
         <ts-button label="Link" class="p-button-link" />
+
+        <TsButtonDoc />
     </div>
 </template>
 
 <script>
+import TsButtonDoc from './tsButtonDoc.vue'
 export default {
+    components: {
+        TsButtonDoc
+    },
     setup() {
     }
 }

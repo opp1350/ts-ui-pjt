@@ -1,1 +1,14 @@
-// tsButton에 대한 Document
+<template>
+    <div>
+        <ts-tabview></ts-tabview>
+    </div>
+</template>
+
+<script>
+
+export default {
+    setup() {
+        
+    },
+}
+</script>
