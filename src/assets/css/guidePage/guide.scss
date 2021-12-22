@@ -37,14 +37,48 @@
             height: calc(100vh - 7.2rem);
             padding: 3.6rem;
             background-color:#F8F7FC;
-            ul {
-                li {
-                    a {
-                        padding: 1.2rem;
-                        color: #666;
+            .app-manu {
+                .first-depth {
+                    padding-bottom: 2.4rem;
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                    .first-depth-item {
+                        position: relative;
                         display: block;
-                        &.on {
-                            font-weight: bold;
+                        padding-left: 3rem;
+                        font-weight: bold;
+                        &:before {
+                            position: absolute;
+                            left: 0;
+                            display: block;
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            background-image: icon(arrow);
+                            background-repeat: no-repeat;
+                            background-size: 2.4rem 2.4rem;
+                            content: "";
+                        }
+                        &.home {
+                            &:before {
+                                background-image: icon(home);
+                            }
+                        }
+                    }
+                    .second-depth {
+                        padding: .8rem 0 0 3rem;
+                    }
+                }
+                .second-depth {
+                    .second-depth-item {
+                        color: #666;
+                        a {
+                            &.on {
+                                text-decoration: underline;
+                            }
+                        }
+                        + .second-depth-item {
+                            padding-top: .8rem;
                         }
                     }
                 }
@@ -65,15 +99,25 @@ html[data-mode='dark'] {
         .ts-guide-body {
             aside {
                 background-color:#1C2127;
-                ul {
-                    li {
-                        a {
+                .app-manu {
+                    .first-depth {
+                        .first-depth-item {
+                            &:before {
+                                background-image: icon(arrow, E2E2E3);
+                            }
+                            &.home {
+                                &:before {
+                                    background-image: icon(home, E2E2E3);
+                                }
+                            }
+                        }
+                    }
+                    .second-depth {
+                        .second-depth-item {
                             color: #ABAFC7;
                         }
                     }
                 }
-            }
-            .ts-guide-cont {
             }
         }
     }
