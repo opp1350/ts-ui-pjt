@@ -5,10 +5,12 @@
     @change="$emit('change', $event)"
     @input="$emit('input', $event)"
     class="ts-checkbox"
+    :id="id"
+    :name="name"
   />
-  <label>{{label}}</label>
+  <label :for="id" class="ts-checkbox-label">{{label}}</label>
 </template>
- 
+
 <script>
 import Checkbox from 'primevue/checkbox';
 export default {

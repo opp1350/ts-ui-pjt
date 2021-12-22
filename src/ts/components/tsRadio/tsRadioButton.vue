@@ -6,8 +6,10 @@
         @click="$emit('click', $event)"
         @change="$emit('change', $event)"
         class="ts-radiobutton"
+        :id="id"
+        :name="name"
     />
-    <label>{{value}}</label>
+    <label :for="id" class="ts-radiobutton-label">{{value}}</label>
 </template>
 
 <script>
