@@ -1,10 +1,13 @@
 // utilities
-@import "./util/root.scss";
 @import "./util/variables.scss";
+@import "./util/root.scss";
 
 // base
 @import "./base/font.scss"; // font
 @import "./base/reset.scss";
+
+// svg
+@import "./util/svg.scss";
 
 // component
 @import "./components/components.scss";

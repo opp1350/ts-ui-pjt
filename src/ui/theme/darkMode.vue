@@ -20,14 +20,12 @@ export default defineComponent({
             console.log(`nextTick 이전 darkMode.value = ${darkMode.value}`) // darkMode.value가 false로 초기화 됨
             nextTick(() => {
                 darkMode.value = true // darkMode.value가 false인 현상을 수정
-                switchRef.value.checked = true
                 darkAttrs()
             })
         // 다크모드가 false일 때
         } else {
             if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
                 nextTick(() => {
-                    switchRef.value.checked = false
                     darkAttrs()
                 })
             }
@@ -47,7 +45,7 @@ export default defineComponent({
             
         }
         const switchToggle = () => {
-            if (switchRef.value.checked) {
+            if (darkMode.value) {
                 darkAttrs()
                 window.alert('테마를 다크모드로 변경합니다.')
             } else {

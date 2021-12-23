@@ -13,7 +13,6 @@
     </div>
 </template>
 <script>
-// import { ref } from 'vue';
 import AppMenu from '@/AppMenu.vue';
 
 export default {
@@ -23,17 +22,5 @@ export default {
     },
     setup () {
     },
-    // data() {
-    //     return {
-    //         selectedNum: 0
-    //     }
-    // },
-    computed: {
-    },
-    methods: {
-        // selectMenu(idx) {
-        //     this.selectedNum = idx;
-        // }
-    }
 }
 </script>
