@@ -5,8 +5,6 @@
     @change="$emit('change', $event)"
     @input="$emit('input', $event)"
     class="ts-checkbox"
-    :id="id"
-    :name="name"
   />
   <label :for="id" class="ts-checkbox-label">{{label}}</label>
 </template>
