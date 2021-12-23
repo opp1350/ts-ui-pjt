@@ -1,11 +1,16 @@
 <template>
-  <Chips v-model="value" :modelValue="modelValue" :max="max" :separator="separator" :addOnBlur="addOnBlur" :allowDuplicate="allowDuplicate" />
+  <Chips v-model="value" :modelValue="modelValue" :max="max" :separator="separator" :addOnBlur="addOnBlur" :allowDuplicate="allowDuplicate" 
+  @update:modelValue="$emit('update:modelValue', $event)"
+  @add="$emit('add', $event)"
+  @remove="$emit('remove', $event)"
+  class="ts-chips" />
 </template>
  
 <script>
 import Chips from 'primevue/chips';
 export default {
   name: 'tsChips',
+  emits: ['update:modelValue', 'add', 'remove'],
   components: {
     Chips
   },

@@ -3,13 +3,24 @@
   :optionGroupChildren="optionGroupChildren" :scrollHeight="scrollHeight" :filter="filter" :filterPlaceholder="filterPlaceholder" :filterLocale="filterLocale" 
   :filterMatchMode="filterMatchMode" :filterFields="filterFields" :editable="editable" :placeholder="placeholder" :disabled="disabled" :dataKey="dataKey" :showClear="showClear"
   :inputId="inputId" :tabindex="tabindex" :ariaLabelledBy="ariaLabelledBy" :appendTo="appendTo" :emptyFilterMessage="emptyFilterMessage" :emptyMessage="emptyMessage"
-  :panelClass="panelClass" :loading="loading" :loadingIcon="loadingIcon" :virtualScrollerOptions="virtualScrollerOptions" />
+  :panelClass="panelClass" :loading="loading" :loadingIcon="loadingIcon" :virtualScrollerOptions="virtualScrollerOptions"
+  @update:modelValue="$emit('update:modelValue', $event)"
+  @before-show="$emit('before-show', $event)"
+  @before-hide="$emit('before-hide', $event)"
+  @show="$emit('show', $event)"
+  @hide="$emit('hide', $event)"
+  @change="$emit('change', $event)"
+  @filter="$emit('filter', $event)"
+  @focus="$emit('focus', $event)"
+  @blur="$emit('blur', $event)"
+  class="ts-dropdown" />
 </template>
  
 <script>
 import Dropdown from 'primevue/dropdown';
 export default {
   name: 'tsDropdown',
+  emits: ['update:modelValue', 'before-show', 'before-hide', 'show', 'hide', 'change', 'filter', 'focus', 'blur'],
   components: {
     Dropdown
   },

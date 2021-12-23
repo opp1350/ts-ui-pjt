@@ -4,13 +4,23 @@
   :filter="filter" :filterPlaceholder="filterPlaceholder" :filterLocale="filterLocale" :filterMatchMode="filterMatchMode" :filterFields="filterFields" :ariaLabelledBy="ariaLabelledBy"
   :appendTo="appendTo" :emptyFilterMessage="emptyFilterMessage" :emptyMessage="emptyMessage" :display="display" :panelClass="panelClass" :selectedItemsLabel="selectedItemsLabel"
   :maxSelectedLabels="maxSelectedLabels" :selectionLimit="selectionLimit" :showToggleAll="showToggleAll" :loading="loading" :loadingIcon="loadingIcon" 
-  :virtualScrollerOptions="virtualScrollerOptions" :selectAll="selectAll" />
+  :virtualScrollerOptions="virtualScrollerOptions" :selectAll="selectAll"
+  @update:modelValue="$emit('update:modelValue', $event)"
+  @before-show="$emit('before-show', $event)"
+  @before-hide="$emit('before-hide', $event)"
+  @change="$emit('change', $event)"
+  @show="$emit('show', $event)"
+  @hide="$emit('hide', $event)"
+  @filter="$emit('filter', $event)"
+  @selectall-change="$emit('selectall-change', $event)"
+  class="ts-multiselect" />
 </template>
  
 <script>
 import MultiSelect from 'primevue/multiselect';
 export default {
   name: 'tsMultiSelect',
+  emits: ['update:modelValue', 'before-show', 'before-hide', 'change', 'show', 'hide', 'filter', 'selectall-change'],
   components: {
     MultiSelect
   },

@@ -1,11 +1,15 @@
 <template>
-  <Panel v-model="value" :header="header" :toggleable="toggleable" :collapsed="collapsed" />
+  <Panel v-model="value" :header="header" :toggleable="toggleable" :collapsed="collapsed"
+  @update:collapsed="$emit('update:collapsed', $event)"
+  @toggle="$emit('toggle', $event)"
+  class="ts-panel" />
 </template>
  
 <script>
 import Panel from 'primevue/panel';
 export default {
   name: 'tsPanel',
+  emits: ['update:collapsed', 'toggle'],
   components: {
     Panel
   },

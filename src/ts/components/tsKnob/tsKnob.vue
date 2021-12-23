@@ -1,12 +1,16 @@
 <template>
   <Knob v-model="value" :modelValue="modelValue" :size="size" :disabled="disabled" :readonly="readonly" :step="step" :min="min" :max="max" :valueColor="valueColor"
-  :rangeColor="rangeColor" :textColor="textColor" :strokeWidth="strokeWidth" :showValue="showValue" :valueTemplate="valueTemplate" />
+  :rangeColor="rangeColor" :textColor="textColor" :strokeWidth="strokeWidth" :showValue="showValue" :valueTemplate="valueTemplate"
+  @update:modelValue="$emit('update:modelValue', $event)"
+  @change="$emit('change', $event)"
+  class="ts-knob" />
 </template>
  
 <script>
 import Knob from 'primevue/knob';
 export default {
   name: 'tsKnob',
+  emits: ['update:modelValue', 'change'],
   components: {
     Knob
   },

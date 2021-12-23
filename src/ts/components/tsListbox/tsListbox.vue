@@ -2,13 +2,18 @@
   <Listbox :modelValue="modelValue" :options="options" :optionLabel="optionLabel" :optionValue="optionValue" :optionDisabled="optionDisabled" :optionGroupLabel="optionGroupLabel"
   :optionGroupChildren="optionGroupChildren" :listStyle="listStyle" :disabled="disabled" :dataKey="dataKey" :multiple="multiple" :metaKeySelection="metaKeySelection" :filter="filter"
   :filterPlaceholder="filterPlaceholder" :filterLocale="filterLocale" :filterMatchMode="filterMatchMode" :filterFields="filterFields" :emptyFilterMessage="emptyFilterMessage"
-  :emptyMessage="emptyMessage" :virtualScrollerOptions="virtualScrollerOptions" />
+  :emptyMessage="emptyMessage" :virtualScrollerOptions="virtualScrollerOptions"
+  @update:modelValue="$emit('update:modelValue', $event)"
+  @change="$emit('change', $event)"
+  @filter="$emit('filter', $event)"
+  class="ts-listbox" />
 </template>
  
 <script>
 import Listbox from 'primevue/listbox';
 export default {
   name: 'tsListbox',
+  emits: ['update:modelValue', 'change', 'filter'],
   components: {
     Listbox
   },

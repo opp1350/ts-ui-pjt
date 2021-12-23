@@ -1,11 +1,16 @@
 <template>
-  <Slider v-model="value" :modelValue="modelValue" :min="min" :max="max" :orientation="orientation" :step="step" :range="range" :disabled="disabled" :ariaLabelledBy="ariaLabelledBy" />
+  <Slider v-model="value" :modelValue="modelValue" :min="min" :max="max" :orientation="orientation" :step="step" :range="range" :disabled="disabled" :ariaLabelledBy="ariaLabelledBy"
+  @update:modelValue="$emit('update:modelValue', $event)"
+  @change="$emit('change', $event)"
+  @slideend="$emit('slideend', $event)"
+  class="ts-slider" />
 </template>
  
 <script>
 import Slider from 'primevue/slider';
 export default {
   name: 'tsSlider',
+  emits: ['update:modelValue', 'change', 'slideend'],
   components: {
     Slider
   },

@@ -1,5 +1,6 @@
 <template>
-  <SplitButton :label="label" :icon="icon" :model="model" :autoZIndex="autoZIndex" :baseZIndex="baseZIndex" :appendTo="appendTo" :style="style" />
+  <SplitButton :label="label" :icon="icon" :model="model" :autoZIndex="autoZIndex" :baseZIndex="baseZIndex" :appendTo="appendTo" :style="style"
+  class="ts-split-button" />
 </template>
  
 <script>

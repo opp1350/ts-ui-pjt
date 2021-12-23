@@ -1,13 +1,16 @@
 <template>
   <Password v-model="value" :modelValue="modelValue" :promptLabel="promptLabel" :mediumRegex="mediumRegex" :strongRegex="strongRegex" :weakLabel="weakLabel" :mediumLabel="mediumLabel"
   :strongLabel="strongLabel" :feedback="feedback" :appendTo="appendTo" :toggleMask="toggleMask" :hideIcon="hideIcon" :showIcon="showIcon" :inputClass="inputClass"
-  :inputStyle="inputStyle" :panelClass="panelClass" />
+  :inputStyle="inputStyle" :panelClass="panelClass"
+  @update:modelValue="$emit('update:modelValue', $event)"
+  class="password" />
 </template>
  
 <script>
 import Password from 'primevue/password';
 export default {
   name: 'tsPassword',
+  emits: ['update:modelValue'],
   components: {
     Password
   },

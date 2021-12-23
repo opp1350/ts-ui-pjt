@@ -1,12 +1,18 @@
 <template>
   <ColorPicker :modelValue="modelValue" :defaultColor="defaultColor" :inline="inline" :format="format" :disabled="disabled" :tabindex="tabindex" :autoZIndex="autoZIndex"
-  :baseZIndex="baseZIndex" :ariaLabelledBy="ariaLabelledBy" :appendTo="appendTo" :panelClass="panelClass" />
+  :baseZIndex="baseZIndex" :ariaLabelledBy="ariaLabelledBy" :appendTo="appendTo" :panelClass="panelClass"
+  @update:modelValue="$emit('update:modelValue', $event)"
+  @change="$emit('change', $event)"
+  @show="$emit('show', $event)"
+  @hide="$emit('hide', $event)"
+  class="ts-colorpicker" />
 </template>
  
 <script>
 import ColorPicker from 'primevue/colorpicker';
 export default {
   name: 'tsColorPicker',
+  emits: ['update:modelValue', 'change', 'show', 'hide'],
   components: {
     ColorPicker
   },

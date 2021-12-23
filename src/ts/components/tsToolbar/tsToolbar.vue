@@ -1,20 +1,14 @@
 <template>
-    <div class="p-toolbar p-component" role="toolbar">
-        <div class="p-toolbar-group-left">
-             <slot name="start"></slot>
-        </div>
-        <div class="p-toolbar-group-right">
-             <slot name="end"></slot>
-        </div>
-    </div>
+    <Toolbar 
+    class="ts-toolbar"/>
 </template>
  
 <script>
-// import Toolbar from 'primevue/toolbar';
+import Toolbar from 'primevue/toolbar';
 export default {
   name: 'tsToolbar',
   components: {
-    // Toolbar
+    Toolbar
   },
   props: {
   },

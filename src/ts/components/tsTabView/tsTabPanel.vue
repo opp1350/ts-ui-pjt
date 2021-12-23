@@ -1,5 +1,6 @@
 <template>
-  <TabPanel :header="header" :disabled="disabled" />
+  <TabPanel :header="header" :disabled="disabled"
+  class="ts-tab-panel" />
 </template>
  
 <script>
