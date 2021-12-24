@@ -19,13 +19,18 @@
         <div v-for="category of categories" :key="category.key" class="p-field-radiobutton">
             <ts-radio-button :id="category.key" name="category" :value="category" v-model="selectedCategory" :disabled="category.key === 'R'" :label="category.name"/>
         </div>
+
+        <TsRadioButtonDoc />
     </div>
 </template>
 
 <script>
 import { ref } from 'vue';
-
+import TsRadioButtonDoc from './tsRadioButtonDoc.vue';
 export default {
+    components: {
+        TsRadioButtonDoc
+    },
     setup() {
         const city = ref();
         const categories = ref([

@@ -3,9 +3,10 @@ import GuideHome from "@/ui/guide/guideHome.vue";
 import TsInputTextDemo from "@/ui/demo/tsInput/tsInputTextDemo.vue";
 import TsButtonDemo from "@/ui/demo/tsButton/tsButtonDemo.vue";
 import TsCheckboxDemo from "@/ui/demo/tsCheckbox/tsCheckboxDemo.vue";
-import tsRadioButtonDemo from "@/ui/demo/tsRadio/tsRadioButtonDemo.vue";
-import tsCalendarDemo from "@/ui/demo/tsCalendar/tsCalendarDemo.vue";
-import tsTabViewDemo from "@/ui/demo/tsTabView/tsTabViewDemo.vue";
+import TsRadioButtonDemo from "@/ui/demo/tsRadio/tsRadioButtonDemo.vue";
+import TsCalendarDemo from "@/ui/demo/tsCalendar/tsCalendarDemo.vue";
+import TsTabViewDemo from "@/ui/demo/tsTabView/tsTabViewDemo.vue";
+import TsInputMaskDemo from "@/ui/demo/tsInput/tsInputMaskDemo.vue";
 
 const routes = [{
         path: "/",
@@ -22,6 +23,11 @@ const routes = [{
                 component: TsInputTextDemo
             },
             {
+                path: 'tsInputMask',
+                name: 'tsInputMask',
+                component: TsInputMaskDemo
+            },
+            {
                 path: 'tsButton',
                 name: 'tsButton',
                 component: TsButtonDemo
@@ -34,17 +40,17 @@ const routes = [{
             {
                 path: 'tsRadioButton',
                 name: 'tsRadioButton',
-                component: tsRadioButtonDemo
+                component: TsRadioButtonDemo
             },
             {
                 path: 'tsCalendar',
                 name: 'tsCalendar',
-                component: tsCalendarDemo
+                component: TsCalendarDemo
             },
             {
                 path: 'tsTabView',
                 name: 'tsTabView',
-                component: tsTabViewDemo
+                component: TsTabViewDemo
             }
         ]
     }

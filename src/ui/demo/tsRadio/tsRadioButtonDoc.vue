@@ -5,39 +5,38 @@
                 <TabPanel header="Documentation">
 
 		<h5>Getting Started</h5>
-		<p>Checkbox can either be used in multiple selection with other checkboxes or as a single checkbox to provide a boolean value.</p>
+		<p>Two-way value binding is defined using the standard v-model directive.</p>
 <pre v-code><code>
-&lt;ts-checkbox v-model="checked" :binary="true" /&gt;
+&lt;ts-radio-button name="city" value="Chicago" v-model="city" label="Chicago" /&gt;
+&lt;ts-radio-button name="city" value="Los Angeles" v-model="city" label="Los Angeles" /&gt;
 
 </code></pre>
-
-		<h5>Multiple Values</h5>
-		<p>Multiple mode is enabled by default, v-model property refers to an array to bind the selected values.</p>
-<pre v-code><code>
-&lt;ts-checkbox name="city" value="Chicago" v-model="cities" label="Chicago"/&gt;
-&lt;ts-checkbox name="city" value="Los Angeles" v-model="cities"label="Los Angeles" /&gt;
-&lt;ts-checkbox name="city" value="New York" v-model="cities" label="New York"/&gt;
-&lt;ts-checkbox name="city" value="San Francisco" v-model="cities" label="San Francisco"/&gt;
-
-</code></pre>
-
 <pre v-code.script><code>
 export default {
 	setup() {
-        const cities = ref([]);
+        const cities = ref();
 		return {
-			cities
+			city
+		}
+	}
+}
+
+</code></pre>
+				<p>As model is two-way binding enabled, giving a default value to the model is enough to display a radio button as checked by default.</p>
+<pre v-code.script><code>
+export default {
+    setup() {
+        const city = ref('Chicago');
+		return {
+			city
 		}
 	}
 }
 
 </code></pre>
 
-		<p>As v-model is two-way binding enabled, prepopulating the model array with values is enough to display the related
-			checkboxes as checked by default.</p>
-
 		<h5>Properties</h5>
-        <p>Any property such as name and autofocus are passed to the underlying input element. Following are the additional properties to configure the component.</p>
+        <p>Any property such as name and autofocus are passed to the underlying input element. Following is the additional property to configure the component.</p>
 		<div class="doc-tablewrapper">
 			<table class="doc-table">
 				<thead>
@@ -62,12 +61,6 @@ export default {
                         <td>Value binding of the checkbox.</td>
                     </tr>
                     <tr>
-                        <td>binary</td>
-                        <td>boolean</td>
-                        <td>false</td>
-                        <td>Allows to select a boolean value instead of multiple values.</td>
-                    </tr>
-                    <tr>
                         <td>style</td>
                         <td>any</td>
                         <td>null</td>
@@ -80,18 +73,6 @@ export default {
                         <td>Inline style of the component.</td>
                     </tr>
                     <tr>
-                        <td>trueValue</td>
-                        <td>any</td>
-                        <td>null</td>
-                        <td>Value in checked state.</td>
-                    </tr>
-                    <tr>
-                        <td>falseValue</td>
-                        <td>any</td>
-                        <td>null</td>
-                        <td>Value in unchecked state.</td>
-                    </tr>
-                    <tr>
                         <td>label</td>
                         <td>any</td>
                         <td>null</td>
@@ -102,7 +83,7 @@ export default {
 		</div>
 
 		<h5>Events</h5>
-        <p>In addition to the following events, any other valid events such as focus and blur are passed implicitly.</p>
+        <p>Any valid event such as focus and blur.</p>
         <div class="doc-tablewrapper">
             <table class="doc-table">
                 <thead>
@@ -115,19 +96,14 @@ export default {
                 <tbody>
                     <tr>
                         <td>click</td>
-                        <td>event: Browser event</td>
-                        <td>Callback to invoke on value click.</td>
+                        <td>-</td>
+                        <td>Callback to invoke on radio button click.</td>
                     </tr>
                     <tr>
                         <td>change</td>
-                        <td>event: Browser event</td>
-                        <td>Callback to invoke on value change.</td>
+                        <td>-</td>
+                        <td>Callback to invoke on radio button value change.</td>
                     </tr>
-					<tr>
-						<td>input</td>
-						<td>value: New value</td>
-						<td>Callback to invoke on value change.</td>
-					</tr>
                 </tbody>
             </table>
         </div>
@@ -144,16 +120,20 @@ export default {
 				</thead>
 				<tbody>
                     <tr>
-                        <td>p-checkbox</td>
+                        <td>p-radiobutton</td>
                         <td>Container element</td>
                     </tr>
                     <tr>
-                        <td>p-checkbox-box</td>
+                        <td>p-radiobutton-box</td>
                         <td>Container of icon.</td>
                     </tr>
                     <tr>
-                        <td>p-checkbox-icon</td>
+                        <td>p-radiobutton-icon</td>
                         <td>Icon element.</td>
+                    </tr>
+                    <tr>
+                        <td>p-radiobutton-label</td>
+                        <td>Label element.</td>
                     </tr>
 				</tbody>
 			</table>
@@ -180,56 +160,46 @@ export default {
 <template>
     <div>
         <h5>Basic</h5>
-        <div class="p-field-checkbox">
-            <ts-checkbox id="binary" v-model="checked" :binary="true" :label="checked"></ts-checkbox>
+        <div class="p-field-radiobutton">
+            <ts-radio-button id="city1" name="city" value="Chicago" v-model="city" label="Chicago"/>
         </div>
-
-         <h5>Multiple</h5>
-        <div class="p-field-checkbox">
-            <ts-checkbox id="city1" name="city" value="Chicago" v-model="cities" label="Chicago"></ts-checkbox>
+        <div class="p-field-radiobutton">
+            <ts-radio-button id="city2" name="city" value="Los Angeles" v-model="city" label="Los Angeles"/>
         </div>
-       <div class="p-field-checkbox">
-            <ts-checkbox id="city2" name="city" value="Los Angeles" v-model="cities" label="Los Angeles"></ts-checkbox>
+        <div class="p-field-radiobutton">
+            <ts-radio-button id="city3" name="city" value="New York" v-model="city" label="New York"/>
         </div>
-        <div class="p-field-checkbox">
-            <ts-checkbox id="city3" name="city" value="New York" v-model="cities" label="New York"></ts-checkbox>
-        </div>
-        <div class="p-field-checkbox">
-            <ts-checkbox id="city4" name="city" value="San Francisco" v-model="cities" label="San Francisco"></ts-checkbox>
+        <div class="p-field-radiobutton">
+            <ts-radio-button id="city4" name="city" value="San Francisco" v-model="city" label="San Francisco"/>
         </div>
 
         <h5>Dynamic Values, Preselection, Value Binding and Disabled Option</h5>
-        <div v-for="category of categories" :key="category.key" class="p-field-checkbox">
-            <ts-checkbox :id="category.key" name="category" :value="category" v-model="selectedCategories" :disabled="category.key === 'R'" :label="category.name"></ts-checkbox>
+        <div v-for="category of categories" :key="category.key" class="p-field-radiobutton">
+            <ts-radio-button :id="category.key" name="category" :value="category" v-model="selectedCategory" :disabled="category.key === 'R'" :label="category.name"/>
         </div>
 
-        <TsCheckboxDoc />
+        <TsRadioButtonDoc />
     </div>
 </template>
 
 <script>
-import { ref } from 'vue'
-import TsCheckboxDoc from './tsCheckboxDoc.vue'
+import { ref } from 'vue';
+import TsRadioButtonDoc from './tsRadioButtonDoc.vue';
 export default {
     components: {
-        TsCheckboxDoc
+        TsRadioButtonDoc
     },
     setup() {
-        const checked = ref(false);
-        const cities = ref([]);
+        const city = ref();
         const categories = ref([
-            {name: 'Accoundddting', key: 'A'},
-            {name: 'Marketing', key: 'M'},
-            {name: 'Production', key: 'P'},
+            {name: 'Accounting', key: 'A'}, 
+            {name: 'Marketing', key: 'M'}, 
+            {name: 'Production', key: 'P'}, 
             {name: 'Research', key: 'R'}
         ]);
-        const selectedCategories = ref(categories.value.slice(1,3));
-        return {
-            checked,
-            cities,
-            categories,
-            selectedCategories
-        }
+        const selectedCategory = ref(categories.value[1]);
+
+        return { city, categories, selectedCategory }
     }
 }
 <\\/script>

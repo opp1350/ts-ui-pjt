@@ -11,6 +11,10 @@
                     "to": "/components/tsInputText"
                 },
                 {
+                    "name": "TsInputMask",
+                    "to": "/components/tsInputMask"
+                },
+                {
                     "name": "TsButton",
                     "to": "/components/tsButton"
                 },

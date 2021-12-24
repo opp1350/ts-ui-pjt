@@ -15,6 +15,7 @@ import tsCalendar from './ts/components/tsCalendar/tsCalendar.vue'
 import tsTabView from './ts/components/tsTabView/tsTabView.vue'
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
+import tsInputMask from './ts/components/tsInput/tsInputMask.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -84,5 +85,6 @@ app.component('dark-mode', DarkMode);
 app.component('ts-tabview', tsTabView);
 app.component('TabView', TabView);
 app.component('TabPanel', TabPanel);
+app.component('ts-input-mask', tsInputMask);
 
 app.directive('code', CodeHighlight);
