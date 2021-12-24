@@ -16,6 +16,8 @@ import tsTabView from './ts/components/tsTabView/tsTabView.vue'
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
 import tsInputMask from './ts/components/tsInput/tsInputMask.vue'
+import tsAccordion from './ts/components/tsAccordion/tsAccordion.vue'
+import tsAccordionTab from './ts/components/tsAccordion/tsAccordionTab.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -86,5 +88,7 @@ app.component('ts-tabview', tsTabView);
 app.component('TabView', TabView);
 app.component('TabPanel', TabPanel);
 app.component('ts-input-mask', tsInputMask);
+app.component('ts-accordion', tsAccordion);
+app.component('ts-accordiontab', tsAccordionTab);
 
 app.directive('code', CodeHighlight);

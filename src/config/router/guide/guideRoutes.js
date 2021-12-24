@@ -7,6 +7,7 @@ import TsRadioButtonDemo from "@/ui/demo/tsRadio/tsRadioButtonDemo.vue";
 import TsCalendarDemo from "@/ui/demo/tsCalendar/tsCalendarDemo.vue";
 import TsTabViewDemo from "@/ui/demo/tsTabView/tsTabViewDemo.vue";
 import TsInputMaskDemo from "@/ui/demo/tsInput/tsInputMaskDemo.vue";
+import TsAccordionDemo from "@/ui/demo/tsAccordion/tsAccordionDemo.vue";
 
 const routes = [{
         path: "/",
@@ -18,6 +19,26 @@ const routes = [{
         name: 'components',
         component: GuideHome,
         children: [{
+                path: 'tsAccordion',
+                name: 'tsAccordion',
+                component: TsAccordionDemo
+            },
+            {
+                path: 'tsButton',
+                name: 'tsButton',
+                component: TsButtonDemo
+            },
+            {
+                path: 'tsCalendar',
+                name: 'tsCalendar',
+                component: TsCalendarDemo
+            },
+            {
+                path: 'tsCheckbox',
+                name: 'tsCheckbox',
+                component: TsCheckboxDemo
+            },
+            {
                 path: 'tsInputText',
                 name: 'tsInputText',
                 component: TsInputTextDemo
@@ -28,24 +49,9 @@ const routes = [{
                 component: TsInputMaskDemo
             },
             {
-                path: 'tsButton',
-                name: 'tsButton',
-                component: TsButtonDemo
-            },
-            {
-                path: 'tsCheckbox',
-                name: 'tsCheckbox',
-                component: TsCheckboxDemo
-            },
-            {
                 path: 'tsRadioButton',
                 name: 'tsRadioButton',
                 component: TsRadioButtonDemo
-            },
-            {
-                path: 'tsCalendar',
-                name: 'tsCalendar',
-                component: TsCalendarDemo
             },
             {
                 path: 'tsTabView',
