@@ -1,5 +1,6 @@
 <template>
-  <SplitterPanel :size="size" :minSize="minSize" />
+  <SplitterPanel :size="size" :minSize="minSize"
+  class="ts-splitter-panel" />
 </template>
  
 <script>

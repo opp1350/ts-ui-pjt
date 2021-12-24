@@ -1,5 +1,6 @@
 <template>
-  <Divider :align="align" :layout="layout" :type="type" />
+  <Divider :align="align" :layout="layout" :type="type"
+  class="ts-divider" />
 </template>
  
 <script>

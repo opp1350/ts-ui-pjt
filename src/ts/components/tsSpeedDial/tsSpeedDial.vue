@@ -1,13 +1,18 @@
 <template>
   <SpeedDial :model="model" :visible="visible" :direction="direction" :transitionDelay="transitionDelay" :type="type" :radius="radius" :mask="mask" :disabled="disabled"
   :hideOnClickOutside="hideOnClickOutside" :buttonClass="buttonClass" :maskStyle="maskStyle" :maskClass="maskClass" :showIcon="showIcon" :hideIcon="hideIcon" 
-  :rotateAnimation="rotateAnimation" :tooltipOptions="tooltipOptions" :style="style" />
+  :rotateAnimation="rotateAnimation" :tooltipOptions="tooltipOptions" :style="style"
+  @click="$emit('click', $event)"
+  @show="$emit('show', $event)"
+  @hide="$emit('hide', $event)"
+  class="ts-speed-dial" />
 </template>
  
 <script>
 import SpeedDial from 'primevue/speeddial';
 export default {
   name: 'tsSpeedDial',
+  emits: ['click', 'show', 'hide'],
   components: {
     SpeedDial
   },

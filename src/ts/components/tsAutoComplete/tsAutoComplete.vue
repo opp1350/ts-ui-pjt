@@ -1,14 +1,22 @@
 <template>
-  <AutoComplete v-model="value" class="ts-auto-complete" :modelValue="modelValue" :suggestions="suggestions" :field="field" :optionGroupLabel="optionGroupLabel" 
+  <AutoComplete v-model="value" :modelValue="modelValue" :suggestions="suggestions" :field="field" :optionGroupLabel="optionGroupLabel" 
   :optionGroupChildren="optionGroupChildren" :scrollHeight="scrollHeight" :dropdown="dropdown" :dropdownMode="dropdownMode" :autoHighlight="autoHighlight" :multiple="multiple"
   :minLength="minLength" :delay="delay" :appendTo="appendTo" :forceSelection="forceSelection" :completeOnFocus="completeOnFocus" :inputClass="inputClass" :inputStyle="inputStyle"
-  :style="style" :panelClass="panelClass" :virtualScrollerOptions="virtualScrollerOptions" />
+  :style="style" :panelClass="panelClass" :virtualScrollerOptions="virtualScrollerOptions" 
+  @update:modelValue="$emit('update:modelValue', $event)"
+  @item-select="$emit('item-select', $event)"
+  @item-unselect="$emit('item-unselect', $event)"
+  @dropdown-click="$emit('dropdown-click', $event)"
+  @clear="$emit('clear', $event)"
+  @complete="$emit('complete', $event)"
+  class="ts-auto-complete" />
 </template>
  
 <script>
 import AutoComplete from 'primevue/autocomplete';
 export default {
     name: 'tsAutoComplete',
+    emits: ['update:modelValue', 'item-select', 'item-unselect', 'dropdown-click', 'clear', 'complete'],
     components: {
         AutoComplete
     },

@@ -1,5 +1,6 @@
 <template>
-  <ScrollPanel v-model="value"/>
+  <ScrollPanel v-model="value"
+  class="ts-scrollpanel" />
 </template>
  
 <script>

@@ -1,11 +1,15 @@
 <template>
-  <Rating v-model="value" :modelValue="modelValue" :disabled="disabled" :readonly="readonly" :stars="stars" :cancel="cancel" />
+  <Rating v-model="value" :modelValue="modelValue" :disabled="disabled" :readonly="readonly" :stars="stars" :cancel="cancel"
+  @update:modelValue="$emit('update:modelValue', $event)"
+  @change="$emit('change', $event)"
+  class="ts-rating" />
 </template>
  
 <script>
 import Rating from 'primevue/rating';
 export default {
   name: 'tsRating',
+  emits: ['update:modelValue', 'change'],
   components: {
     Rating
   },

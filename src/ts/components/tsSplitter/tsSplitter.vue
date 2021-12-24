@@ -1,11 +1,14 @@
 <template>
-  <Splitter :layout="layout" :gutterSize="gutterSize" :stateKey="stateKey" :stateStorage="stateStorage" />
+  <Splitter :layout="layout" :gutterSize="gutterSize" :stateKey="stateKey" :stateStorage="stateStorage"
+  @resizeend="$emit('resizeend', $event)"
+  class="ts-splitter" />
 </template>
  
 <script>
 import Splitter from 'primevue/splitter';
 export default {
   name: 'tsSplitter',
+  emits: ['resizeend'],
   components: {
     Splitter
   },

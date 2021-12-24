@@ -1,6 +1,6 @@
 <template>
     <!-- <slot></slot> -->
-    <AccordionTab />
+    <AccordionTab class="ts-accordion-tab" :header="header" :disabled="disabled" />
 </template>
  
 <script>
