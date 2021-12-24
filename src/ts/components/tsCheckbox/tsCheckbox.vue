@@ -25,6 +25,7 @@ export default {
     value: null,
     modelValue: null,
     label: null,
+    id: null,
     binary: Boolean,
     class: null,
     style: null,
