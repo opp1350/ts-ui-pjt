@@ -1,5 +1,5 @@
 <template>
-  <Knob v-model="value" :modelValue="modelValue" :size="size" :disabled="disabled" :readonly="readonly" :step="step" :min="min" :max="max" :valueColor="valueColor"
+  <Knob :modelValue="modelValue" :size="size" :disabled="disabled" :readonly="readonly" :step="step" :min="min" :max="max" :valueColor="valueColor"
   :rangeColor="rangeColor" :textColor="textColor" :strokeWidth="strokeWidth" :showValue="showValue" :valueTemplate="valueTemplate"
   @update:modelValue="$emit('update:modelValue', $event)"
   @change="$emit('change', $event)"
@@ -70,7 +70,6 @@ export default {
   },
   data() {
       return {
-        value: 0
       }
   }
 }

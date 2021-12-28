@@ -33,6 +33,38 @@
                 {
                     "name": "TsTabView",
                     "to": "/components/tsTabView"
+                },
+                {
+                    "name": "TsKnob",
+                    "to": "/components/tsKnob"
+                },
+                {
+                    "name": "TsListbox",
+                    "to": "/components/tsListbox"
+                },
+                {
+                    "name": "TsMultiSelect",
+                    "to": "/components/tsMultiSelect"
+                },
+                {
+                    "name": "TsPanel",
+                    "to": "/components/tsPanel"
+                },
+                {
+                    "name": "TsPassword",
+                    "to": "/components/tsPassword"
+                },
+                {
+                    "name": "TsRating",
+                    "to": "/components/tsRating"
+                },
+                {
+                    "name": "TsScrollPanel",
+                    "to": "/components/tsScrollPanel"
+                },
+                {
+                    "name": "TsSelectButton",
+                    "to": "/components/tsSelectButton"
                 }
             ]
         },

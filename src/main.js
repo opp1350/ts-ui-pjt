@@ -16,6 +16,14 @@ import tsTabView from './ts/components/tsTabView/tsTabView.vue'
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
 import tsInputMask from './ts/components/tsInput/tsInputMask.vue'
+import tsKnob from './ts/components/tsKnob/tsKnob.vue'
+import tsListbox from './ts/components/tsListbox/tsListbox.vue'
+import tsMultiSelect from './ts/components/tsMultiSelect/tsMultiSelect.vue'
+import tsPanel from './ts/components/tsPanel/tsPanel.vue'
+import tsPassword from './ts/components/tsPassword/tsPassword.vue'
+import tsRating from './ts/components/tsRating/tsRating.vue'
+import tsScrollPanel from './ts/components/tsScrollPanel/tsScrollPanel.vue'
+import tsSelectButton from './ts/components/tsSelectButton/tsSelectButton.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -86,5 +94,13 @@ app.component('ts-tabview', tsTabView);
 app.component('TabView', TabView);
 app.component('TabPanel', TabPanel);
 app.component('ts-input-mask', tsInputMask);
+app.component('ts-knob', tsKnob);
+app.component('ts-listbox', tsListbox);
+app.component('ts-multi-select', tsMultiSelect);
+app.component('ts-panel', tsPanel);
+app.component('ts-password', tsPassword);
+app.component('ts-rating', tsRating);
+app.component('ts-scroll-panel', tsScrollPanel);
+app.component('ts-select-button', tsSelectButton);
 
 app.directive('code', CodeHighlight);

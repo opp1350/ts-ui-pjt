@@ -1,5 +1,5 @@
 <template>
-  <Rating v-model="value" :modelValue="modelValue" :disabled="disabled" :readonly="readonly" :stars="stars" :cancel="cancel"
+  <Rating :modelValue="modelValue" :disabled="disabled" :readonly="readonly" :stars="stars" :cancel="cancel"
   @update:modelValue="$emit('update:modelValue', $event)"
   @change="$emit('change', $event)"
   class="ts-rating" />
@@ -15,7 +15,6 @@ export default {
   },
   data() {
       return {
-        value: 0
       }
   },
   props: {
