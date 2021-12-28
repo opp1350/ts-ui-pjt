@@ -1,5 +1,8 @@
 <template>
-  <Checkbox :value="value" :modelValue="modelValue" :binary="binary" :disabled="disabled" :trueValue="trueValue" :falseValue="falseValue"
+  <Checkbox 
+    :id="id"
+    :name="name"
+    :value="value" :modelValue="modelValue" :binary="binary" :disabled="disabled" :trueValue="trueValue" :falseValue="falseValue"
     @click="$emit('click', $event)"
     @update:modelValue="$emit('update:modelValue', $event)"
     @change="$emit('change', $event)"
@@ -8,7 +11,7 @@
   />
   <label :for="id" class="ts-checkbox-label">{{label}}</label>
 </template>
- 
+
 <script>
 import Checkbox from 'primevue/checkbox';
 export default {

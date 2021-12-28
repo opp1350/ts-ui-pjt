@@ -22,6 +22,7 @@
         padding: 0 3.6rem;
         background-color: var(--background-color-normal);
         border-bottom: 1px solid #e2e2e2;
+        z-index: 2;
         h1 {
             font-size: 1.8rem;
             font-weight: bold;
@@ -31,12 +32,13 @@
         display: flex;
         padding-top: 7.2rem;
         aside {
-            flex:1;
-            min-width: 20rem;
-            max-width: 24rem;
+            position: fixed;
+            left: 0;
+            width: 24rem;
             height: calc(100vh - 7.2rem);
             padding: 3.6rem;
             background-color:#F8F7FC;
+            z-index: 1;
             .app-manu {
                 .first-depth {
                     padding-bottom: 2.4rem;
@@ -85,8 +87,7 @@
             }
         }
         .ts-guide-cont {
-            flex: 4;
-            padding: 2.4rem 3.6rem;
+            padding: 2.4rem 3.6rem 2.4rem 27.6rem;
         }
     }
 }
