@@ -1,22 +1,13 @@
 <template>
-    <!-- <slot></slot> -->
-    <AccordionTab class="ts-accordion-tab" :header="header" :disabled="disabled" />
+    <slot></slot>
 </template>
- 
+
 <script>
-import AccordionTab from 'primevue/accordiontab';
 export default {
-  name: 'tsAccordionTab',
-  components: {
-    AccordionTab
-  },
-  data() {
-      return {
-      }
-  },
-  props: {
-    header: null,
-    disabled: Boolean
-  }
+    name: 'tsAccordionTab',
+    props: {
+        header: null,
+        disabled: Boolean
+    }
 }
 </script>

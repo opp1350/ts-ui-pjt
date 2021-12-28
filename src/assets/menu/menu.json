@@ -7,6 +7,22 @@
             "name": "Components",
             "meta": ["components"],
             "children": [{
+                    "name": "TsAccordion",
+                    "to": "/components/tsAccordion"
+                },
+                {
+                    "name": "TsButton",
+                    "to": "/components/tsButton"
+                },
+                {
+                    "name": "TsCalendar",
+                    "to": "/components/tsCalendar"
+                },
+                {
+                    "name": "TsCheckbox",
+                    "to": "/components/tsCheckbox"
+                },
+                {
                     "name": "TsInputText",
                     "to": "/components/tsInputText"
                 },
@@ -15,20 +31,8 @@
                     "to": "/components/tsInputMask"
                 },
                 {
-                    "name": "TsButton",
-                    "to": "/components/tsButton"
-                },
-                {
-                    "name": "TsCheckbox",
-                    "to": "/components/tsCheckbox"
-                },
-                {
                     "name": "TsRadioButton",
                     "to": "/components/tsRadioButton"
-                },
-                {
-                    "name": "TsCalendar",
-                    "to": "/components/tsCalendar"
                 },
                 {
                     "name": "TsTabView",
@@ -66,6 +70,7 @@
                     "name": "TsSelectButton",
                     "to": "/components/tsSelectButton"
                 }
+
             ]
         },
         {

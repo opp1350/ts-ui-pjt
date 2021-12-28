@@ -1,5 +1,7 @@
 <template>
     <RadioButton
+        :id="id"
+        :name="name"
         :value="value"
         :modelValue="modelValue"
         :disabled="disabled"
@@ -21,7 +23,10 @@ export default {
     },
     emits: ['click', 'change', 'update:modelValue'],
     props: {
-        id: null,
+        id: {
+            type: String,
+            required: true
+        },
         name: null,
         value: null,
         label: null,

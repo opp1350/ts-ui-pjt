@@ -45,11 +45,18 @@
             <ts-input-text type="text" placeholder="Normal"></ts-input-text>
             <ts-input-text type="text" class="p-inputtext-lg"  placeholder="Large"></ts-input-text>
         </div>
+
+        <TsInputTextDoc />
     </div>
 </template>
 <script>
 import { ref } from 'vue'
+import TsInputTextDoc from './tsInputTextDoc.vue'
+
 export default {
+    components: {
+        TsInputTextDoc
+    },
     setup() {
         const value1 = ref();
         const value2 = ref();

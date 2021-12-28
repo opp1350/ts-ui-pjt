@@ -8,7 +8,7 @@ import CodeHighlight from './AppCodeHighlight';
 import tsButton from './ts/components/tsButton/tsButton.vue'
 import tsInput from './ts/components/tsInput/tsInput.vue'
 import tsInputGroup from './ts/components/tsInput/tsInputGroup.vue'
-import tsCheckbox from './ts/components/tsCheckBox/tsCheckbox.vue'
+import tsCheckbox from './ts/components/tsCheckbox/tsCheckbox.vue'
 import tsInputText from './ts/components/tsInput/tsInputText.vue'
 import tsRadioButton from './ts/components/tsRadio/tsRadioButton.vue'
 import tsCalendar from './ts/components/tsCalendar/tsCalendar.vue'
@@ -24,10 +24,11 @@ import tsPassword from './ts/components/tsPassword/tsPassword.vue'
 import tsRating from './ts/components/tsRating/tsRating.vue'
 import tsScrollPanel from './ts/components/tsScrollPanel/tsScrollPanel.vue'
 import tsSelectButton from './ts/components/tsSelectButton/tsSelectButton.vue'
+import tsAccordion from './ts/components/tsAccordion/tsAccordion.vue'
+import tsAccordionTab from './ts/components/tsAccordion/tsAccordionTab.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
-// import 'primevue/resources/themes/vela-blue/theme.css' // default dark theme
 import 'primevue/resources/primevue.min.css' // primevue core css
 import 'primeicons/primeicons.css' //icons
 import 'prismjs/themes/prism-coy.css' // prismjs
@@ -102,5 +103,7 @@ app.component('ts-password', tsPassword);
 app.component('ts-rating', tsRating);
 app.component('ts-scroll-panel', tsScrollPanel);
 app.component('ts-select-button', tsSelectButton);
+app.component('ts-accordion', tsAccordion);
+app.component('ts-accordiontab', tsAccordionTab);
 
 app.directive('code', CodeHighlight);
