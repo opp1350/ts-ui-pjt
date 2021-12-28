@@ -24,7 +24,6 @@ export default {
   props: {
     value: null,
     modelValue: null,
-    label: null,
     binary: Boolean,
     class: null,
     style: null,
