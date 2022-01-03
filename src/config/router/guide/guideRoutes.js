@@ -16,6 +16,7 @@ import TsRatingDemo from "@/ui/demo/tsRating/tsRatingDemo.vue";
 import TsScrollPanelDemo from "@/ui/demo/tsScrollPanel/tsScrollPanelDemo.vue";
 import TsSelectButtonDemo from "@/ui/demo/tsSelectButton/tsSelectButtonDemo.vue";
 import TsAccordionDemo from "@/ui/demo/tsAccordion/tsAccordionDemo.vue";
+import TsInputNumberDemo from "@/ui/demo/tsInput/tsInputNumberDemo.vue";
 
 const routes = [{
         path: "/",
@@ -105,6 +106,11 @@ const routes = [{
                 path: 'tsSelectButton',
                 name: 'tsSelectButton',
                 component: TsSelectButtonDemo
+            },
+            {
+                path: 'tsInputNumber',
+                name: 'tsInputNumber',
+                component: TsInputNumberDemo
             }
         ]
     }

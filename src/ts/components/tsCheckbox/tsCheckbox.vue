@@ -19,6 +19,7 @@ export default {
   components: {
       Checkbox
   },
+  emits: ['click', 'update:modelValue', 'change', 'input'],
   data() {
       return {
           checked: false
@@ -29,6 +30,7 @@ export default {
     modelValue: null,
     label: null,
     id: null,
+    name: null,
     binary: Boolean,
     class: null,
     style: null,

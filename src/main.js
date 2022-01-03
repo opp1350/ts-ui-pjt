@@ -26,6 +26,7 @@ import tsScrollPanel from './ts/components/tsScrollPanel/tsScrollPanel.vue'
 import tsSelectButton from './ts/components/tsSelectButton/tsSelectButton.vue'
 import tsAccordion from './ts/components/tsAccordion/tsAccordion.vue'
 import tsAccordionTab from './ts/components/tsAccordion/tsAccordionTab.vue'
+import tsInputNumber from './ts/components/tsInput/tsInputNumber.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -105,5 +106,6 @@ app.component('ts-scroll-panel', tsScrollPanel);
 app.component('ts-select-button', tsSelectButton);
 app.component('ts-accordion', tsAccordion);
 app.component('ts-accordiontab', tsAccordionTab);
+app.component('ts-input-number', tsInputNumber);
 
 app.directive('code', CodeHighlight);

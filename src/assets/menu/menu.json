@@ -27,6 +27,10 @@
                     "to": "/components/tsInputText"
                 },
                 {
+                    "name": "TsInputNumber",
+                    "to": "/components/tsInputNumber"
+                },
+                {
                     "name": "TsInputMask",
                     "to": "/components/tsInputMask"
                 },
