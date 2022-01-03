@@ -1,5 +1,6 @@
 {
-    "data": [{
+    "data": [
+        {
             "name": "Home",
             "meta": ["home"]
         },
