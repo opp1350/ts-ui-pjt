@@ -25,7 +25,7 @@
         :inputStyle="inputStyle"
         :inputClass="inputClass"
         :style="style"
-        class="ts-input-number"
+        class="ts-input ts-input-number"
         @update:modelValue="$emit('update:modelValue', $event)"
         @input="$emit('input', $event)"
     />

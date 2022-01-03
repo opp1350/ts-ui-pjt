@@ -2,7 +2,7 @@
     <InputText
         :modelValue="modelValue"
         @update:modelValue="$emit('update:modelValue', $event)"
-        class="ts-input-text"
+        class="ts-input ts-input-text"
     />
 </template>
 <script>

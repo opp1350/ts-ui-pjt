@@ -22,3 +22,44 @@
         font-size: 1.6rem;
     }
 }
+.ts-input {
+    &.p-inputtext,
+    .p-inputtext {
+        padding: 0.8rem 1.2rem;
+        font-size: 1.6rem;
+        background-color: var(--background-color-normal);
+        color: var(--font-color-normal);
+        border-color: #ABAFC7;
+        &::placeholder {
+            color: #ABAFC7;
+        }
+        &:enabled {
+            &:hover {
+                border-color: var(--primary);
+            }
+            &:focus {
+                box-shadow: 0 0 0 0.2rem var(--secondary-light);
+                border-color: var(--primary);
+            }
+        }
+        &:disabled {
+            background-color: var(--light);
+        }
+    }
+}
+
+// dark mode
+html[data-mode='dark'] {
+    .ts-input {
+        &.p-inputtext,
+        .p-inputtext {
+            border-color: #444C56;
+            &::placeholder {
+                color: #ABAFC7;
+            }
+            &:disabled {
+                background-color: #3B4148;
+            }
+        }
+    }
+}

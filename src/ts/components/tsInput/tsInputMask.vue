@@ -6,7 +6,7 @@
         :autoClear="autoClear"
         :unmask="unmask"
         @update:modelValue="$emit('update:modelValue', $event)"
-        class="ts-input-mask"
+        class="ts-input ts-input-mask"
     />
 </template>
 <script>
