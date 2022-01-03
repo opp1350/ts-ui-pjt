@@ -8,7 +8,7 @@ import CodeHighlight from './AppCodeHighlight';
 import tsButton from './ts/components/tsButton/tsButton.vue'
 import tsInput from './ts/components/tsInput/tsInput.vue'
 import tsInputGroup from './ts/components/tsInput/tsInputGroup.vue'
-// import tsCheckbox from './ts/components/tsCheckbox/tsCheckbox.vue'
+import tsCheckbox from './ts/components/tsCheckbox/tsCheckbox.vue'
 import tsInputText from './ts/components/tsInput/tsInputText.vue'
 import tsRadioButton from './ts/components/tsRadio/tsRadioButton.vue'
 import tsCalendar from './ts/components/tsCalendar/tsCalendar.vue'
@@ -86,7 +86,7 @@ app.use(router).mount('#app');
 app.component('ts-button', tsButton);
 app.component('ts-input', tsInput);
 app.component('ts-input-group', tsInputGroup);
-// app.component('ts-checkbox', tsCheckbox);
+app.component('ts-checkbox', tsCheckbox);
 app.component('ts-input-text', tsInputText);
 app.component('ts-radio-button', tsRadioButton);
 app.component('ts-calendar', tsCalendar);
