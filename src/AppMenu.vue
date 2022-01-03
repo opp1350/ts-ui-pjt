@@ -5,8 +5,8 @@
                 class="first-depth-item"
                 :class="{'home' : item.name == 'Home'}"
                 @click="selectTab(perantIndex)"
-                :aria-expanded="item.name !== 'Home' ? item.show : undefined"
-                :role="item.name !== 'Home' ? 'tab' : undefined"
+                :aria-expanded="item.children ? item.show : undefined"
+                :role="item.children ? 'tab' : undefined"
             >
                 <span>{{item.name}}</span>
             </a>
@@ -38,8 +38,7 @@ import { ref } from 'vue';
 import menudata from '@/assets/menu/menu.json';
 export default {
     setup() {
-        const menuArr = ref([...menudata.data])
-        const menu = ref(menuArr.value.map(obj=> ({ ...obj, show: true })))
+        const menu = ref([...menudata.data])
         const selectedNum = ref(0)
         const selectedParentNum = ref(1)
 
@@ -48,7 +47,6 @@ export default {
             selectedNum.value = idx
         }
         const selectTab = (parentIdx) => {
-            console.log(parentIdx, menu.value[parentIdx])
             menu.value[parentIdx].show = !menu.value[parentIdx].show
         }
         return {
