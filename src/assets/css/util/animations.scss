@@ -1,0 +1,15 @@
+// slide-up
+// 애니메이션 시작 (느리게 열기)
+.slide-up-enter-active {
+    transition: all .8s ease-out;
+}
+// 애니메이션 끝 (빠르게 닫기)
+.slide-up-leave-active {
+    transition: all 0.45s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+.slide-up-enter-to, .slide-up-leave-from {
+    max-height: 1000px;
+}
+.slide-up-leave-to, .slide-up-enter-from {
+    max-height: 1px;
+}
