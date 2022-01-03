@@ -66,21 +66,27 @@
                                 background-image: icon(home);
                             }
                         }
+                        &[aria-expanded="true"] {
+                            &:not(.home) {
+                                &:before {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
                     }
                     .second-depth {
-                        padding: .8rem 0 0 3rem;
+                        padding-left: 3rem;
                     }
                 }
                 .second-depth {
+                    overflow: hidden;
                     .second-depth-item {
                         color: #666;
+                        padding-top: .8rem;
                         a {
                             &.on {
                                 text-decoration: underline;
                             }
-                        }
-                        + .second-depth-item {
-                            padding-top: .8rem;
                         }
                     }
                 }

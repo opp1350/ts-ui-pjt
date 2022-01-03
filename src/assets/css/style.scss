@@ -1,6 +1,7 @@
 // utilities
 @import "./util/variables.scss";
 @import "./util/root.scss";
+@import "./util/mixins.scss";
 
 // base
 @import "./base/font.scss"; // font
@@ -8,6 +9,10 @@
 
 // svg
 @import "./util/svg.scss";
+
+// common
+@import "./util/animations.scss";
+@import "./util/common.scss";
 
 // component
 @import "./components/components.scss";

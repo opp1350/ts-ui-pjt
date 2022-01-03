@@ -1,7 +1,9 @@
 {
-    "data": [{
+    "data": [
+        {
             "name": "Home",
-            "meta": ["home"]
+            "meta": ["home"],
+            "show": true
         },
         {
             "name": "Components",
@@ -75,7 +77,8 @@
                     "to": "/components/tsSelectButton"
                 }
 
-            ]
+            ],
+            "show": true
         },
         {
             "name": "Template Pages",
@@ -92,7 +95,8 @@
                     "name": "TsRadio",
                     "to": "/components/tsRadio"
                 }
-            ]
+            ],
+            "show": true
         }
     ]
 }
