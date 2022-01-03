@@ -9,7 +9,7 @@
     @input="$emit('input', $event)"
     class="ts-checkbox"
   />
-  <label :for="id" class="ts-checkbox-label">{{label}}</label>
+  <label v-if="label !== undefined" :for="id" class="ts-checkbox-label" :class="{hidden : hideLabel}">{{label}}</label>
 </template>
 
 <script>
@@ -19,18 +19,17 @@ export default {
   components: {
       Checkbox
   },
-  data() {
-      return {
-          checked: false
-      }
-  },
   props: {
     value: null,
     modelValue: null,
     label: null,
-    id: null,
+    hideLabel: Boolean,
+    id: {
+        type: null,
+        required: true
+    },
+    name: null,
     binary: Boolean,
-    class: null,
     style: null,
     trueValue: {
         type: null,
