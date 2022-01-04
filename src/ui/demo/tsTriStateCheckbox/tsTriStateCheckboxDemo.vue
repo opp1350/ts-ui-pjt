@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="p-field-checkbox p-m-0">
-            <ts-tristate-checkbox v-model="value"/>
+            <ts-tristatecheckbox v-model="value"/>
             <label>{{value == null ? 'null' : value}}</label>
         </div>
         <TsTriStateCheckboxDoc/>

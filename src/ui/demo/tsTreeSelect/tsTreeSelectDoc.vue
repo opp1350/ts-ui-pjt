@@ -5,10 +5,10 @@
             <TabPanel header="Documentation">
 
         <h5>Getting Started</h5>
-		<p>TreeSelect component requires an array of TreeNode objects as its <i>options</i> and keys of the nodes as its value.</p>
+		<p>ts-treeselect component requires an array of TreeNode objects as its <i>options</i> and keys of the nodes as its value.</p>
 
 <pre v-code><code>
-&lt;TreeSelect v-model="selectedNodeKey" :options="nodes" placeholder="Select Item" /&gt;
+&lt;ts-treeselect v-model="selectedNodeKey" :options="nodes" placeholder="Select Item" /&gt;
 
 </code></pre>
 
@@ -106,7 +106,7 @@ export default class NodeService {
 
 </code></pre>
 
-        <h5>TreeNode API utilized by the TreeSelect</h5>
+        <h5>TreeNode API utilized by the ts-treeselect</h5>
         <div class="doc-tablewrapper">
             <table class="doc-table">
                 <thead>
@@ -185,18 +185,18 @@ export default class NodeService {
         <h5>Selection Mode</h5>
         <p>TreeSelects offers "single", "multiple" and "checkbox" alternatives for the selection behavior that is defined by the <i>selectionMode</i> option.</p>
 <pre v-code><code>
-&lt;TreeSelect v-model="selectedValue1" :options="nodes" selectionMode="single" placeholder="Select Item" /&gt;
+&lt;ts-treeselect v-model="selectedValue1" :options="nodes" selectionMode="single" placeholder="Select Item" /&gt;
 
-&lt;TreeSelect v-model="selectedValue2" :options="nodes" selectionMode="multiple" placeholder="Select Items" /&gt;
+&lt;ts-treeselect v-model="selectedValue2" :options="nodes" selectionMode="multiple" placeholder="Select Items" /&gt;
 
-&lt;TreeSelect v-model="selectedValue3" :options="nodes" selectionMode="checkbox" placeholder="Select Items" /&gt;
+&lt;ts-treeselect v-model="selectedValue3" :options="nodes" selectionMode="checkbox" placeholder="Select Items" /&gt;
 
 </code></pre>
 
         <h5>Value Format</h5>
-        <p>Value passed to and from the TreeSelect via the v-model directive should be a an object with key-value pairs where key is the node key and
+        <p>Value passed to and from the ts-treeselect via the v-model directive should be a an object with key-value pairs where key is the node key and
             value is a boolean to indicate selection. On the other hand
-        in "checkbox" mode, instead of a boolean, value should be an object that has "checked" and "partialChecked" properties to represent the checked state of a node. Best way to clarify it is prepopulating a TreeSelect with an existing value.</p>
+        in "checkbox" mode, instead of a boolean, value should be an object that has "checked" and "partialChecked" properties to represent the checked state of a node. Best way to clarify it is prepopulating a ts-treeselect with an existing value.</p>
 
 <pre v-code.script><code>
 data() {
@@ -212,7 +212,7 @@ data() {
         <h5>Chips Display</h5>
         <p>A comma separated list is used by default to display selected items whereas alternative chip mode is provided using the <i>display</i> property to visualize the items as tokens.</p>
 <pre v-code><code>
-&lt;TreeSelect v-model="selectedValue" display="chip" :options="nodes" selectionMode="multiple" placeholder="Select Items" /&gt;
+&lt;ts-treeselect v-model="selectedValue" display="chip" :options="nodes" selectionMode="multiple" placeholder="Select Items" /&gt;
 
 </code></pre>
 
@@ -220,11 +220,11 @@ data() {
 		<p>Label of an option is used as the display text of an item by default, for custom content support define a <i>value</i> template that gets the selected nodes as a parameter.
         In addition <i>header</i>, <i>footer</i> and <i>empty</i> slots are provided for further customization.</p>
 <pre v-code><code><template v-pre>
-&lt;TreeSelect v-model="selectedNodes" :options="nodes" placeholder="Select Items"&gt;
+&lt;ts-treeselect v-model="selectedNodes" :options="nodes" placeholder="Select Items"&gt;
 	&lt;template #value="{value}"&gt;
 		Custom Content
 	&lt;/template&gt;
-&lt;/TreeSelect&gt;
+&lt;/ts-treeselect&gt;
 </template>
 </code></pre>
 
@@ -494,7 +494,12 @@ data() {
 
 		<h5>Dependencies</h5>
 		<p>None.</p>
-        </TabPanel>
+            </TabPanel>
+            <TabPanel header="Composition API Source">
+                <pre v-code><code>
+                    {{ compositionContent }}
+                </code></pre>
+            </TabPanel>
         </TabView>
     </div>
 </div>
@@ -502,88 +507,87 @@ data() {
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
-    data() {
-        return {
-            sources: {
-                'options-api': {
-                    tabName: 'Options API Source',
-                    content: `
+   setup() {
+       const source = ref(`
 <template>
     <div>
-        <h5>Single</h5>
-        <TreeSelect v-model="selectedNode" :options="nodes" placeholder="Select Item"></TreeSelect>
+        <div>
+            <h5>Single</h5>
+            <ts-treeselect v-model="selectedNode" :options="nodes" placeholder="Select Item"></ts-treeselect>
+            
+            <h5>Multiple</h5>
+            <ts-treeselect v-model="selectedNodes1" :options="nodes" selectionMode="multiple" :metaKeySelection="false" placeholder="Select Items"></ts-treeselect>
 
-        <h5>Multiple</h5>
-        <TreeSelect v-model="selectedNodes1" :options="nodes" selectionMode="multiple" :metaKeySelection="false" placeholder="Select Items"></TreeSelect>
-
-        <h5>Checkbox</h5>
-        <TreeSelect v-model="selectedNodes2" :options="nodes" display="chip" selectionMode="checkbox"  placeholder="Select Items"></TreeSelect>
+            <h5>Checkbox</h5>
+            <ts-treeselect v-model="selectedNodes2" :options="nodes" display="chip" selectionMode="checkbox"  placeholder="Select Items"></ts-treeselect>
+        </div>
+        <TsTreeSelectDoc />
     </div>
 </template>
 
 <script>
-import NodeService from './service/NodeService';
+import { ref } from "vue"
+import TsTreeSelectDoc from './tsTreeSelectDoc.vue'
 
 export default {
-    data() {
-        return {
-            nodes: null,
-            selectedNode: null,
-            selectedNodes1: null,
-            selectedNodes2: null
-        }
+    components: {
+        TsTreeSelectDoc
     },
-    nodeService: null,
-    created() {
-        this.nodeService = new NodeService();
-    },
-    mounted() {
-        this.nodeService.getTreeNodes().then(data => this.nodes = data);
-    }
-}
-<\\/script>
-
-<style lang="scss" scoped>
-.p-treeselect {
-    width:20rem;
-}
-
-@media screen and (max-width: 640px) {
-    .p-treeselect {
-        width: 100%;
-    }
-}
-</style>`
-                },
-                'composition-api': {
-                    tabName: 'Composition API Source',
-                    content: `
-<template>
-    <div>
-        <h5>Single</h5>
-        <TreeSelect v-model="selectedNode" :options="nodes" placeholder="Select Item"></TreeSelect>
-
-        <h5>Multiple</h5>
-        <TreeSelect v-model="selectedNodes1" :options="nodes" selectionMode="multiple" :metaKeySelection="false" placeholder="Select Items"></TreeSelect>
-
-        <h5>Checkbox</h5>
-        <TreeSelect v-model="selectedNodes2" :options="nodes" display="chip" selectionMode="checkbox"  placeholder="Select Items"></TreeSelect>
-    </div>
-</template>
-
-<script>
-import { ref, onMounted } from "vue";
-import NodeService from './service/NodeService';
-
-export default {
     setup() {
-         onMounted(() => {
-            nodeService.value.getTreeNodes().then(data => nodes.value = data);
-        });
-
-        const nodes = ref();
-        const nodeService = ref(new NodeService());
+        const nodes = ref([
+            {
+                "key": "0",
+                "label": "Documents",
+                "data": "Documents Folder",
+                "icon": "pi pi-fw pi-inbox",
+                "children": [{
+                    "key": "0-0",
+                    "label": "Work",
+                    "data": "Work Folder",
+                    "icon": "pi pi-fw pi-cog",
+                    "children": [{ "key": "0-0-0", "label": "Expenses.doc", "icon": "pi pi-fw pi-file", "data": "Expenses Document" }, { "key": "0-0-1", "label": "Resume.doc", "icon": "pi pi-fw pi-file", "data": "Resume Document" }]
+                },
+                {
+                    "key": "0-1",
+                    "label": "Home",
+                    "data": "Home Folder",
+                    "icon": "pi pi-fw pi-home",
+                    "children": [{ "key": "0-1-0", "label": "Invoices.txt", "icon": "pi pi-fw pi-file", "data": "Invoices for this month" }]
+                }]
+            },
+            {
+                "key": "1",
+                "label": "Events",
+                "data": "Events Folder",
+                "icon": "pi pi-fw pi-calendar",
+                "children": [
+                    { "key": "1-0", "label": "Meeting", "icon": "pi pi-fw pi-calendar-plus", "data": "Meeting" },
+                    { "key": "1-1", "label": "Product Launch", "icon": "pi pi-fw pi-calendar-plus", "data": "Product Launch" },
+                    { "key": "1-2", "label": "Report Review", "icon": "pi pi-fw pi-calendar-plus", "data": "Report Review" }]
+            },
+            {
+                "key": "2",
+                "label": "Movies",
+                "data": "Movies Folder",
+                "icon": "pi pi-fw pi-star-fill",
+                "children": [{
+                    "key": "2-0",
+                    "icon": "pi pi-fw pi-star-fill",
+                    "label": "Al Pacino",
+                    "data": "Pacino Movies",
+                    "children": [{ "key": "2-0-0", "label": "Scarface", "icon": "pi pi-fw pi-video", "data": "Scarface Movie" }, { "key": "2-0-1", "label": "Serpico", "icon": "pi pi-fw pi-video", "data": "Serpico Movie" }]
+                },
+                {
+                    "key": "2-1",
+                    "label": "Robert De Niro",
+                    "icon": "pi pi-fw pi-star-fill",
+                    "data": "De Niro Movies",
+                    "children": [{ "key": "2-1-0", "label": "Goodfellas", "icon": "pi pi-fw pi-video", "data": "Goodfellas Movie" }, { "key": "2-1-1", "label": "Untouchables", "icon": "pi pi-fw pi-video", "data": "Untouchables Movie" }]
+                }]
+            }
+        ]);
 
         const selectedNode = ref();
         const selectedNodes1 = ref();
@@ -593,76 +597,10 @@ export default {
     }
 }
 <\\/script>
-
-<style lang="scss" scoped>
-.p-treeselect {
-    width:20rem;
-}
-
-@media screen and (max-width: 640px) {
-    .p-treeselect {
-        width: 100%;
-    }
-}
-</style>`
-                },
-                'browser-source': {
-                    tabName: 'Browser Source',
-                    imports: `<script src="https://unpkg.com/primevue@^3/treeselect/treeselect.min.js"><\\/script>
-        <script src="./NodeService.js"><\\/script>`,
-                    content: `<div id="app">
-            <h5>Single</h5>
-            <p-treeselect v-model="selectedNode" :options="nodes" placeholder="Select Item"></p-treeselect>
-
-            <h5>Multiple</h5>
-            <p-treeselect v-model="selectedNodes1" :options="nodes" selection-mode="multiple" :meta-key-selection="false" placeholder="Select Items"></p-treeselect>
-
-            <h5>Checkbox</h5>
-            <p-treeselect v-model="selectedNodes2" :options="nodes" display="chip" selection-mode="checkbox" placeholder="Select Items"></p-treeselect>
-        </div>
-
-        <script type="module">
-        const { createApp, ref, onMounted } = Vue;
-
-        const App = {
-            setup() {
-                onMounted(() => {
-                    nodeService.value.getTreeNodes().then(data => nodes.value = data);
-                });
-
-                const nodes = ref();
-                const nodeService = ref(new NodeService());
-
-                const selectedNode = ref();
-                const selectedNodes1 = ref();
-                const selectedNodes2 = ref();
-
-                return { nodes, selectedNode, selectedNodes1, selectedNodes2 };
-            },
-            components: {
-                "p-treeselect": primevue.treeselect
-            }
-        };
-
-        createApp(App)
-            .use(primevue.config.default)
-            .mount("#app");
-        <\\/script>
-
-        <style>
-        .p-treeselect {
-            width:20rem;
-        }
-
-        @media screen and (max-width: 640px) {
-            .p-treeselect {
-                width: 100%;
-            }
-        }
-        </style>`
-                }
-            }
-        }
-    }
+       `)
+       // eslint-disable-next-line no-useless-escape
+       const compositionContent = ref(source.value.replace('<\\/script>', '<\/script>'))
+       return { compositionContent }
+   }
 }
 </script>

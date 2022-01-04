@@ -8,7 +8,7 @@
 		<h5>Getting Started</h5>
 		<p>A model can be bound using the standard v-model directive.</p>
 <pre v-code><code>
-&lt;ts-tristate-checkbox v-model="value" /&gt;
+&lt;ts-tristatecheckbox v-model="value" /&gt;
 
 </code></pre>
 
