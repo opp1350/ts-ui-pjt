@@ -27,6 +27,25 @@ import tsSelectButton from './ts/components/tsSelectButton/tsSelectButton.vue'
 import tsAccordion from './ts/components/tsAccordion/tsAccordion.vue'
 import tsAccordionTab from './ts/components/tsAccordion/tsAccordionTab.vue'
 import tsInputNumber from './ts/components/tsInput/tsInputNumber.vue'
+import tsAutoComplete from './ts/components/tsAutoComplete/tsAutoComplete.vue'
+import tsCard from './ts/components/tsCard/tsCard.vue'
+import tsCascadeSelect from './ts/components/tsCascadeSelect/tsCascadeSelect.vue'
+import tsChips from './ts/components/tsChips/tsChips.vue'
+import tsColorPicker from './ts/components/tsColorPicker/tsColorPicker.vue'
+import tsDeferredContent from './ts/components/tsDeferredContent/tsDeferredContent.vue'
+import tsDivider from './ts/components/tsDivider/tsDivider.vue'
+import tsDropdown from './ts/components/tsDropdown/tsDropdown.vue'
+import tsEditor from './ts/components/tsEditor/tsEditor.vue'
+import tsFieldset from './ts/components/tsFieldset/tsFieldset.vue'
+import tsSlider from './ts/components/tsSlider/tsSlider.vue'
+import tsSpeedDial from './ts/components/tsSpeedDial/tsSpeedDial.vue'
+import tsSplitButton from './ts/components/tsSplitButton/tsSplitButton.vue'
+import tsSplitter from './ts/components/tsSplitter/tsSplitter.vue'
+import tsTextarea from './ts/components/tsTextarea/tsTextarea.vue'
+import tsToggleButton from './ts/components/tsToggleButton/tsToggleButton.vue'
+import tsToolbar from './ts/components/tsToolbar/tsToolbar.vue'
+import tsTreeSelect from './ts/components/tsTreeSelect/tsTreeSelect.vue'
+import tsTriStateCheckbox from './ts/components/tsTriStateCheckbox/tsTriStateCheckbox.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -107,5 +126,24 @@ app.component('ts-select-button', tsSelectButton);
 app.component('ts-accordion', tsAccordion);
 app.component('ts-accordiontab', tsAccordionTab);
 app.component('ts-input-number', tsInputNumber);
+app.component('ts-accordion', tsAutoComplete);
+app.component('ts-card', tsCard);
+app.component('ts-cascadeselect', tsCascadeSelect);
+app.component('ts-chips', tsChips);
+app.component('ts-colorpicker', tsColorPicker);
+app.component('ts-deferredcontent', tsDeferredContent);
+app.component('ts-divider', tsDivider);
+app.component('ts-dropdown', tsDropdown);
+app.component('ts-editor', tsEditor);
+app.component('ts-fieldset', tsFieldset);
+app.component('ts-slider', tsSlider);
+app.component('ts-speeddial', tsSpeedDial);
+app.component('ts-splitbutton', tsSplitButton);
+app.component('ts-splitter', tsSplitter);
+app.component('ts-textarea', tsTextarea);
+app.component('ts-togglebutton', tsToggleButton);
+app.component('ts-toolbar', tsToolbar);
+app.component('ts-treeselect', tsTreeSelect);
+app.component('ts-tristatecheckbox', tsTriStateCheckbox);
 
 app.directive('code', CodeHighlight);
