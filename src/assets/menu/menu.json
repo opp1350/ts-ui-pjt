@@ -1,6 +1,5 @@
 {
-    "data": [
-        {
+    "data": [{
             "name": "Home",
             "meta": ["home"],
             "show": true
@@ -13,6 +12,10 @@
                     "to": "/components/tsAccordion"
                 },
                 {
+                    "name": "TsAutoComplete",
+                    "to": "/components/tsAutoComplete"
+                },
+                {
                     "name": "TsButton",
                     "to": "/components/tsButton"
                 },
@@ -21,8 +24,44 @@
                     "to": "/components/tsCalendar"
                 },
                 {
+                    "name": "TsCard",
+                    "to": "/components/tsCard"
+                },
+                {
+                    "name": "TsCascadeSelect",
+                    "to": "/components/tsCascadeSelect"
+                },
+                {
                     "name": "TsCheckbox",
                     "to": "/components/tsCheckbox"
+                },
+                {
+                    "name": "TsChips",
+                    "to": "/components/tsChips"
+                },
+                {
+                    "name": "TsColorPicker",
+                    "to": "/components/tsColorPicker"
+                },
+                {
+                    "name": "TsDeferredContent",
+                    "to": "/components/tsDeferredContent"
+                },
+                {
+                    "name": "TsDivider",
+                    "to": "/components/tsDivider"
+                },
+                {
+                    "name": "TsDropdown",
+                    "to": "/components/tsDropdown"
+                },
+                {
+                    "name": "TsEditor",
+                    "to": "/components/tsEditor"
+                },
+                {
+                    "name": "TsFieldset",
+                    "to": "/components/tsFieldset"
                 },
                 {
                     "name": "TsInputText",
@@ -35,14 +74,6 @@
                 {
                     "name": "TsInputMask",
                     "to": "/components/tsInputMask"
-                },
-                {
-                    "name": "TsRadioButton",
-                    "to": "/components/tsRadioButton"
-                },
-                {
-                    "name": "TsTabView",
-                    "to": "/components/tsTabView"
                 },
                 {
                     "name": "TsKnob",
@@ -65,6 +96,10 @@
                     "to": "/components/tsPassword"
                 },
                 {
+                    "name": "TsRadioButton",
+                    "to": "/components/tsRadioButton"
+                },
+                {
                     "name": "TsRating",
                     "to": "/components/tsRating"
                 },
@@ -75,6 +110,50 @@
                 {
                     "name": "TsSelectButton",
                     "to": "/components/tsSelectButton"
+                },
+                {
+                    "name": "TsSlider",
+                    "to": "/components/tsSlider"
+                },
+                {
+                    "name": "TsSpeedDial",
+                    "to": "/components/tsSpeedDial"
+                },
+                {
+                    "name": "TsSplitButton",
+                    "to": "/components/tsSplitButton"
+                },
+                {
+                    "name": "TsSplitter",
+                    "to": "/components/tsSplitter"
+                },
+                {
+                    "name": "TsSplitter",
+                    "to": "/components/tsSplitter"
+                },
+                {
+                    "name": "TsTabView",
+                    "to": "/components/tsTabView"
+                },
+                {
+                    "name": "TsTextarea",
+                    "to": "/components/tsTextarea"
+                },
+                {
+                    "name": "TsToggleButton",
+                    "to": "/components/tsToggleButton"
+                },
+                {
+                    "name": "TsToolbar",
+                    "to": "/components/tsToolbar"
+                },
+                {
+                    "name": "TsTreeSelect",
+                    "to": "/components/tsTreeSelect"
+                },
+                {
+                    "name": "TsTriStateCheckbox",
+                    "to": "/components/tsTriStateCheckbox"
                 }
 
             ],
