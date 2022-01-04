@@ -1,8 +1,152 @@
 // 컨포넌트 tsButton에 대한 스타일 작성예정
-.button {
-    border: none;
-    border-radius: 5px;
-}
-.button-close {
-    background-color: red;
+.ts-button {
+    &.p-button {
+        &:not(.p-button-icon-only) {
+            padding: 1.2rem 1.6rem 1rem;
+            &.p-button-sm {
+                padding: 1rem 1.2rem 0.8rem;
+            }
+            &.p-button-lg {
+                padding: 1.6rem 2rem 1.4rem;
+            }
+        }
+        &:not(.p-button-link, .p-button-text, .p-button-outlined) {
+            background: var(--primary);
+            border: 1px solid var(--primary);
+            color: var(--white);
+            &:hover {
+                color: var(--white);
+            }
+            &.p-button-primary-dark {
+                background: var(--primary-dark);
+                border: 1px solid var(--primary-dark);
+            }
+            &.p-button-secondary {
+                background: var(--secondary);
+                border: 1px solid var(--secondary);
+            }
+            &.p-button-success {
+                background: var(--success);
+                border: 1px solid var(--success);
+            }
+            &.p-button-info {
+                background: var(--info);
+                border: 1px solid var(--info);
+            }
+            &.p-button-warning {
+                background: var(--warning);
+                border: 1px solid var(--warning);
+            }
+            &.p-button-danger {
+                background: var(--error);
+                border: 1px solid var(--error);
+            }
+            &.p-button-plain {
+                background: var(--gray);
+                border: 1px solid var(--gray);
+            }
+        }
+        &.p-button-icon-only {
+            &.p-button-rounded {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        &.p-button-link,
+        &.p-button-text,
+        &.p-button-outlined {
+            color: var(--primary);
+            .p-button-label {
+                color: var(--primary);
+            }
+            &:hover {
+                color: var(--primary);
+                background-color: transparent !important;
+            }
+            &.p-button-secondary {
+                color: var(--secondary);
+                .p-button-label {
+                    color: var(--secondary);
+                }
+                &:hover {
+                    color: var(--secondary);
+                }
+            }
+            &.p-button-primary-dark {
+                color: var(--primary-dark);
+                .p-button-label {
+                    color: var(--primary-dark);
+                }
+                &:hover {
+                    color: var(--primary-dark);
+                }
+            }
+            &.p-button-success {
+                color: var(--success);
+                .p-button-label {
+                    color: var(--success);
+                }
+                &:hover {
+                    color: var(--success);
+                }
+            }
+            &.p-button-info {
+                color: var(--info);
+                .p-button-label {
+                    color: var(--info);
+                }
+                &:hover {
+                    color: var(--info);
+                }
+            }
+            &.p-button-warning {
+                color: var(--warning);
+                .p-button-label {
+                    color: var(--warning);
+                }
+                &:hover {
+                    color: var(--warning);
+                }
+            }
+            &.p-button-danger {
+                color: var(--error);
+                .p-button-label {
+                    color: var(--error);
+                }
+                &:hover {
+                    color: var(--error);
+                }
+            }
+            &.p-button-plain {
+                color: var(--gray);
+                .p-button-label {
+                    color: var(--gray);
+                }
+                &:hover {
+                    color: var(--gray);
+                }
+            }
+        }
+        &.p-button-outlined {
+            &.p-button-plain {
+                border-color: var(--gray);
+            }
+        }
+    }
+    .p-button-link,
+    .p-button-icon,
+    .p-button-label {
+        font-size: 1.6rem;
+    }
+    .p-badge {
+        min-width: 1.8rem;
+        height: 1.8rem;
+        line-height: 1.8rem;
+        font-size: 1.2rem;
+        color: var(--primary);
+        &.p-badge-danger {
+            background: var(--error);
+            color: var(--white);
+        }
+    }
 }

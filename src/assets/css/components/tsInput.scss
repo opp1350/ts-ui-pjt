@@ -5,7 +5,7 @@
         // 접두, 접미
         .p-inputgroup-addon {
             // padding:0;
-            background-color: white;
+            background: white;
         }
         input[type=text],
         input[type=number],
@@ -27,7 +27,7 @@
     .p-inputtext {
         padding: 0.8rem 1.2rem;
         font-size: 1.6rem;
-        background-color: var(--background-color-normal);
+        background: var(--background-normal);
         color: var(--font-color-normal);
         border-color: #ABAFC7;
         &::placeholder {
@@ -42,8 +42,12 @@
                 border-color: var(--primary);
             }
         }
+        &:-internal-autofill-selected {
+            background: var(--secondary-light) !important;
+            color: var(--font-color-normal) !important;
+        }
         &:disabled {
-            background-color: var(--light);
+            background: var(--light);
         }
     }
 }
@@ -58,7 +62,7 @@ html[data-mode='dark'] {
                 color: #ABAFC7;
             }
             &:disabled {
-                background-color: #3B4148;
+                background: #3B4148;
             }
         }
     }

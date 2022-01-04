@@ -10,7 +10,8 @@
     --secondary-light:#D5B8FF;
     --success:#0CD68A;
     --info:#0E89FF;
-    --error:#FF895B;
+    --warning:#FF895B;
+    --error:#DD4848;
     // pjt-gray
     --white:#fff;
     --light:#F2F2F2;
@@ -26,7 +27,9 @@
 html[data-mode='dark'] {
     --background-color-normal: #22272D;
     --font-color-normal: #E2E2E3;
-    --primary-dark: #794ABA;
+    --primary-dark: #7138C1;
     --primary:#A46FF0;
+    --secondary:#CAA3FF;
+    --error:#CF6679;
     --secondary-light:rgb(121 74 186 / 40%);
 }
