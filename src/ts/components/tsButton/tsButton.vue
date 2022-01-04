@@ -1,12 +1,5 @@
 <template>
-  <Button 
-    :label="label"
-    :icon="icon"
-    :iconPos="iconPos"
-    :badge="badge"
-    :badgeClass="badgeClass"
-    :loading="loading"
-    :loadingIcon="loadingIcon"
+  <Button :label="label" :icon="icon" :iconPos="iconPos" :badge="badge" :badgeClass="badgeClass" :loading="loading" :loadingIcon="loadingIcon"
     class="ts-button"
   />
 </template>
