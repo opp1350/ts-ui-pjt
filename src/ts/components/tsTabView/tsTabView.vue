@@ -1,8 +1,8 @@
 <template>
     <div class="card">
-    <h5>Default</h5>
+    <!-- <h5>Default</h5> -->
         <TabView :activeIndex="activeIndex" :lazy="lazy" :scrollable="scrollable">
-            <TabPanel v-for="tab in tabs" :key="tab.title" :header="tab.title">
+            <TabPanel v-for="tab in tabs" :key="tab.title" :header="tab.title" :disabled="tab.disabled">
                 <p>{{ tab.content }}</p>
             </TabPanel>
         </TabView>
@@ -36,6 +36,6 @@ export default {
     },
     setup() {
         
-    },
+    }
 }
 </script>
