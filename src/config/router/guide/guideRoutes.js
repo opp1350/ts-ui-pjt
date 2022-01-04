@@ -1,4 +1,3 @@
-// 가이드 라우터만 따로 모을 수 없는지?
 import GuideHome from "@/ui/guide/guideHome.vue";
 import TsInputTextDemo from "@/ui/demo/tsInput/tsInputTextDemo.vue";
 import TsButtonDemo from "@/ui/demo/tsButton/tsButtonDemo.vue";
@@ -17,6 +16,25 @@ import TsScrollPanelDemo from "@/ui/demo/tsScrollPanel/tsScrollPanelDemo.vue";
 import TsSelectButtonDemo from "@/ui/demo/tsSelectButton/tsSelectButtonDemo.vue";
 import TsAccordionDemo from "@/ui/demo/tsAccordion/tsAccordionDemo.vue";
 import TsInputNumberDemo from "@/ui/demo/tsInput/tsInputNumberDemo.vue";
+import TsAutoCompleteDemo from "@/ui/demo/tsAutoComplete/tsAutoCompleteDemo.vue";
+import TsCardDemo from "@/ui/demo/tsCard/tsCardDemo.vue";
+import TsCascadeSelectDemo from "@/ui/demo/tsCascadeSelect/tsCascadeSelectDemo.vue";
+import TsChipsDemo from "@/ui/demo/tsChips/tsChipsDemo.vue";
+import TsColorPickerDemo from "@/ui/demo/tsColorPicker/tsColorPickerDemo.vue";
+import TsDeferredContentDemo from "@/ui/demo/tsDeferredContent/tsDeferredContentDemo.vue";
+import TsDividerDemo from "@/ui/demo/tsDivider/tsDividerDemo.vue";
+import TsDropdownDemo from "@/ui/demo/tsDropdown/tsDropdownDemo.vue";
+import TsEditorDemo from "@/ui/demo/tsEditor/tsEditorDemo.vue";
+import TsFieldsetDemo from "@/ui/demo/tsFieldset/tsFieldsetDemo.vue";
+import TsSliderDemo from "@/ui/demo/tsSlider/tsSliderDemo.vue";
+import TsSpeedDialDemo from "@/ui/demo/tsSpeedDial/tsSpeedDialDemo.vue";
+import TsSplitButtonDemo from "@/ui/demo/tsSplitButton/tsSplitButtonDemo.vue";
+import TsSplitterDemo from "@/ui/demo/tsSplitter/tsSplitterDemo.vue";
+import TsTextareaDemo from "@/ui/demo/tsTextarea/tsTextareaDemo.vue";
+import TsToggleButtonDemo from "@/ui/demo/tsToggleButton/tsToggleButtonDemo.vue";
+import TsToolbarDemo from "@/ui/demo/tsToolbar/tsToolbarDemo.vue";
+import TsTreeSelectDemo from "@/ui/demo/tsTreeSelect/tsTreeSelectDemo.vue";
+import TsTriStateCheckboxDemo from "@/ui/demo/tsTriStateCheckbox/tsTriStateCheckboxDemo.vue";
 
 const routes = [{
         path: "/",
@@ -111,6 +129,101 @@ const routes = [{
                 path: 'tsInputNumber',
                 name: 'tsInputNumber',
                 component: TsInputNumberDemo
+            },
+            {
+                path: 'tsAutoComplete',
+                name: 'tsAutoComplete',
+                component: TsAutoCompleteDemo
+            },
+            {
+                path: 'tsCard',
+                name: 'tsCard',
+                component: TsCardDemo
+            },
+            {
+                path: 'tsCascadeSelect',
+                name: 'tsCascadeSelect',
+                component: TsCascadeSelectDemo
+            },
+            {
+                path: 'tsChips',
+                name: 'tsChips',
+                component: TsChipsDemo
+            },
+            {
+                path: 'tsColorPicker',
+                name: 'tsColorPicker',
+                component: TsColorPickerDemo
+            },
+            {
+                path: 'tsDeferredContent',
+                name: 'tsDeferredContent',
+                component: TsDeferredContentDemo
+            },
+            {
+                path: 'tsDivider',
+                name: 'tsDivider',
+                component: TsDividerDemo
+            },
+            {
+                path: 'tsDropdown',
+                name: 'tsDropdown',
+                component: TsDropdownDemo
+            },
+            {
+                path: 'tsEditor',
+                name: 'tsEditor',
+                component: TsEditorDemo
+            },
+            {
+                path: 'tsFieldset',
+                name: 'tsFieldset',
+                component: TsFieldsetDemo
+            },
+            {
+                path: 'tsSlider',
+                name: 'tsSlider',
+                component: TsSliderDemo
+            },
+            {
+                path: 'tsSpeedDial',
+                name: 'tsSpeedDial',
+                component: TsSpeedDialDemo
+            },
+            {
+                path: 'tsSplitButton',
+                name: 'tsSplitButton',
+                component: TsSplitButtonDemo
+            },
+            {
+                path: 'tsSplitter',
+                name: 'tsSplitter',
+                component: TsSplitterDemo
+            },
+            {
+                path: 'tsTextarea',
+                name: 'tsTextarea',
+                component: TsTextareaDemo
+            },
+            {
+                path: 'tsToggleButton',
+                name: 'tsToggleButton',
+                component: TsToggleButtonDemo
+            },
+            {
+                path: 'tsToolbar',
+                name: 'tsToolbar',
+                component: TsToolbarDemo
+            },
+            {
+                path: 'tsTreeSelect',
+                name: 'tsTreeSelect',
+                component: TsTreeSelectDemo
+            },
+            {
+                path: 'tsTriStateCheckbox',
+                name: 'tsTriStateCheckbox',
+                component: TsTriStateCheckboxDemo
             }
         ]
     }
