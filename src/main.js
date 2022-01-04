@@ -126,7 +126,7 @@ app.component('ts-select-button', tsSelectButton);
 app.component('ts-accordion', tsAccordion);
 app.component('ts-accordiontab', tsAccordionTab);
 app.component('ts-input-number', tsInputNumber);
-app.component('ts-accordion', tsAutoComplete);
+app.component('ts-autocomplete', tsAutoComplete);
 app.component('ts-card', tsCard);
 app.component('ts-cascadeselect', tsCascadeSelect);
 app.component('ts-chips', tsChips);
