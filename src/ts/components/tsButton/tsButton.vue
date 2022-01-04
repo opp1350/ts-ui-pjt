@@ -1,12 +1,12 @@
 <template>
   <Button :label="label" :icon="icon" :iconPos="iconPos" :badge="badge" :badgeClass="badgeClass" :loading="loading" :loadingIcon="loadingIcon"
-    class="ts-button"
-    :class="[{'p-button-rounded' : rounded }, {'p-button-outlined' : outlined }, {'p-button-raised' : raised }, {'p-button-text' : text }, {'p-button-raised' : raised }, {'p-button-link' : link }]"
+  :class="tsButtonClass"
   />
 </template>
 
 <script>
 import Button from 'primevue/button';
+import { computed } from '@vue/reactivity';
 export default {
   name: 'tsButton',
   components: {
@@ -60,9 +60,39 @@ export default {
     link: {
       type: Boolean,
       default: false
-    }
+    },
+    size: {
+      type: String,
+      default: null
+    },
+    color: {
+      type: String,
+      default: null
+    },
   },
-  setup () {
+  setup (props) {
+    const tsButtonClass = computed(() => {
+      return {
+        'ts-button': true,
+        'p-button-rounded': props.rounded,
+        'p-button-outlined': props.outlined,
+        'p-button-raised': props.raised,
+        'p-button-text': props.text,
+        'p-button-link': props.link,
+        'p-button-sm': props.size == 'small',
+        'p-button-lg': props.size == 'large',
+        'p-button-secondary': props.color == 'secondary',
+        'p-button-success': props.color == 'success',
+        'p-button-info': props.color == 'info',
+        'p-button-warning': props.color == 'warning',
+        'p-button-danger': props.color == 'danger',
+        'p-button-primary-dark': props.color == 'primary-dark',
+        'p-button-plain': props.color == 'gray',
+      }
+    })
+    return {
+      tsButtonClass
+    }
   }
 }
 </script>

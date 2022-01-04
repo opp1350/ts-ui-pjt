@@ -3,6 +3,12 @@
     &.p-button {
         &:not(.p-button-icon-only) {
             padding: 1.2rem 1.6rem 1rem;
+            &.p-button-sm {
+                padding: 1rem 1.2rem 0.8rem;
+            }
+            &.p-button-lg {
+                padding: 1.6rem 2rem 1.4rem;
+            }
         }
         &:not(.p-button-link, .p-button-text, .p-button-outlined) {
             background: var(--primary);
@@ -11,35 +17,33 @@
             &:hover {
                 color: var(--white);
             }
-            &.ts-button-primary-dark,
             &.p-button-primary-dark {
                 background: var(--primary-dark);
                 border: 1px solid var(--primary-dark);
             }
-            &.ts-button-secondary,
             &.p-button-secondary {
                 background: var(--secondary);
                 border: 1px solid var(--secondary);
             }
-            &.ts-button-success,
             &.p-button-success {
                 background: var(--success);
                 border: 1px solid var(--success);
             }
-            &.ts-button-info,
             &.p-button-info {
                 background: var(--info);
                 border: 1px solid var(--info);
             }
-            &.ts-button-warning,
             &.p-button-warning {
                 background: var(--warning);
                 border: 1px solid var(--warning);
             }
-            &.ts-button-danger,
             &.p-button-danger {
                 background: var(--error);
                 border: 1px solid var(--error);
+            }
+            &.p-button-plain {
+                background: var(--gray);
+                border: 1px solid var(--gray);
             }
         }
         &.p-button-icon-only {
@@ -51,6 +55,7 @@
         &.p-button-link,
         &.p-button-text,
         &.p-button-outlined {
+            color: var(--primary);
             .p-button-label {
                 color: var(--primary);
             }
@@ -58,7 +63,6 @@
                 color: var(--primary);
                 background-color: transparent !important;
             }
-            &.ts-button-secondary,
             &.p-button-secondary {
                 color: var(--secondary);
                 .p-button-label {
@@ -68,7 +72,6 @@
                     color: var(--secondary);
                 }
             }
-            &.ts-button-primary-dark,
             &.p-button-primary-dark {
                 color: var(--primary-dark);
                 .p-button-label {
@@ -78,7 +81,6 @@
                     color: var(--primary-dark);
                 }
             }
-            &.ts-button-success,
             &.p-button-success {
                 color: var(--success);
                 .p-button-label {
@@ -88,7 +90,6 @@
                     color: var(--success);
                 }
             }
-            &.ts-button-info,
             &.p-button-info {
                 color: var(--info);
                 .p-button-label {
@@ -98,7 +99,6 @@
                     color: var(--info);
                 }
             }
-            &.ts-button-warning,
             &.p-button-warning {
                 color: var(--warning);
                 .p-button-label {
@@ -108,7 +108,6 @@
                     color: var(--warning);
                 }
             }
-            &.ts-button-danger,
             &.p-button-danger {
                 color: var(--error);
                 .p-button-label {
@@ -117,6 +116,20 @@
                 &:hover {
                     color: var(--error);
                 }
+            }
+            &.p-button-plain {
+                color: var(--gray);
+                .p-button-label {
+                    color: var(--gray);
+                }
+                &:hover {
+                    color: var(--gray);
+                }
+            }
+        }
+        &.p-button-outlined {
+            &.p-button-plain {
+                border-color: var(--gray);
             }
         }
     }

@@ -7,7 +7,7 @@
 
         <h5>Link</h5>
         <ts-button label="Link" link />
-        <ts-button label="Link" link class="ts-button-success" />
+        <ts-button label="Link" link color="success" />
 
         <h5>Icons</h5>
         <ts-button icon="pi pi-check" />
@@ -15,85 +15,89 @@
         <ts-button label="Submit" icon="pi pi-check" iconPos="right" />
 
         <h5>Severities</h5>
-        <ts-button label="primary-dark" class="ts-button-primary-dark" />
+        <ts-button label="primary-dark" color="primary-dark" />
         <ts-button label="Primary" />
-        <ts-button label="Secondary" class="ts-button-secondary" />
-        <ts-button label="Success" class="ts-button-success" />
-        <ts-button label="Info" class="ts-button-info" />
-        <ts-button label="Warning" class="ts-button-warning" />
-        <ts-button label="danger" class="ts-button-danger" />
+        <ts-button label="Secondary" color="secondary" />
+        <ts-button label="Success" color="success" />
+        <ts-button label="Info" color="info" />
+        <ts-button label="Warning" color="warning" />
+        <ts-button label="danger" color="danger" />
+        <ts-button label="gray" color="gray" />
 
         <h5>Raised Buttons</h5>
         <ts-button label="Primary"/>
-        <ts-button label="Secondary" raised class="ts-button-secondary" />
-        <ts-button label="Success" raised class="ts-button-success" />
-        <ts-button label="Info" raised class="ts-button-info" />
-        <ts-button label="Warning" raised class="ts-button-warning" />
-        <ts-button label="danger" raised class="ts-button-danger" />
+        <ts-button label="Secondary" raised color="secondary" />
+        <ts-button label="Success" raised color="success" />
+        <ts-button label="Info" raised color="info" />
+        <ts-button label="Warning" raised color="warning" />
+        <ts-button label="danger" raised color="danger" />
+        <ts-button label="gray" raised color="gray" />
 
         <h5>Rounded Buttons</h5>
         <ts-button label="Primary" rounded />
-        <ts-button label="Secondary" rounded class="p-button-secondary" />
-        <ts-button label="Success" rounded class="p-button-success" />
-        <ts-button label="Info" rounded class="p-button-info" />
-        <ts-button label="Warning" rounded class="p-button-warning" />
-        <ts-button label="danger" rounded class="p-button-danger" />
+        <ts-button label="Secondary" rounded color="secondary" />
+        <ts-button label="Success" rounded color="success" />
+        <ts-button label="Info" rounded color="info" />
+        <ts-button label="Warning" rounded color="warning" />
+        <ts-button label="danger" rounded color="danger" />
+        <ts-button label="gray" rounded color="gray" />
         
 
         <h5>Text Buttons</h5>
         <ts-button label="Primary" text />
-        <ts-button label="Secondary" text class="p-button-secondary" />
-        <ts-button label="Success" text class="p-button-success" />
-        <ts-button label="Info" text class="p-button-info" />
-        <ts-button label="Warning" text class="p-button-warning" />
-        <ts-button label="Danger" text class="p-button-danger" />
-        <ts-button label="Plain" text class="p-button-plain" />
+        <ts-button label="Secondary" text color="secondary" />
+        <ts-button label="Success" text color="success" />
+        <ts-button label="Info" text color="info" />
+        <ts-button label="Warning" text color="warning" />
+        <ts-button label="Danger" text color="danger" />
+        <ts-button label="gray" text color="gray" />
 
         <h5>Raised Text Buttons</h5>
         <ts-button label="Primary" raised text />
-        <ts-button label="Secondary" raised text class="p-button-secondary" />
-        <ts-button label="Success" raised text class="p-button-success" />
-        <ts-button label="Info" raised text class="p-button-info" />
-        <ts-button label="Warning" raised text class="p-button-warning" />
-        <ts-button label="Danger" raised text class="p-button-danger" />
-        <ts-button label="Plain" raised text class="p-button-plain" />
+        <ts-button label="Secondary" raised text color="secondary" />
+        <ts-button label="Success" raised text color="success" />
+        <ts-button label="Info" raised text color="info" />
+        <ts-button label="Warning" raised text color="warning" />
+        <ts-button label="Danger" raised text color="danger" />
+        <ts-button label="gray" raised text color="gray" />
 
         <h5>Outlined Buttons</h5>
         <ts-button label="Primary" outlined />
-        <ts-button label="Secondary" outlined class="p-button-secondary" />
-        <ts-button label="Success" outlined class="p-button-success" />
-        <ts-button label="Info" outlined class="p-button-info" />
-        <ts-button label="Warning" outlined class="p-button-warning" />
-        <ts-button label="Danger" outlined class="p-button-danger" />
+        <ts-button label="Secondary" outlined color="secondary" />
+        <ts-button label="Success" outlined color="success" />
+        <ts-button label="Info" outlined color="info" />
+        <ts-button label="Warning" outlined color="warning" />
+        <ts-button label="Danger" outlined color="danger" />
+        <ts-button label="gray" outlined color="gray" />
 
         <h5>Rounded Icon Buttons</h5>
-        <ts-button icon="pi pi-bookmark" rounded class="p-button-secondary" />
-        <ts-button icon="pi pi-search" rounded class="p-button-success" />
-        <ts-button icon="pi pi-user" rounded class="p-button-info" />
-        <ts-button icon="pi pi-bell" rounded class="p-button-warning" />
-        <ts-button icon="pi pi-times" rounded class="p-button-danger" />
+        <ts-button icon="pi pi-bookmark" rounded color="secondary" />
+        <ts-button icon="pi pi-search" rounded color="success" />
+        <ts-button icon="pi pi-user" rounded color="info" />
+        <ts-button icon="pi pi-bell" rounded color="warning" />
+        <ts-button icon="pi pi-times" rounded color="danger" />
         <ts-button icon="pi pi-check" rounded />
 
         <h5>Rounded Text Icon Buttons</h5>
-        <ts-button icon="pi pi-check" rounded text class="p-button-text" />
-        <ts-button icon="pi pi-bookmark" rounded text class="p-button-secondary" />
-        <ts-button icon="pi pi-search" rounded text class="p-button-success" />
-        <ts-button icon="pi pi-user" rounded text class="p-button-info" />
-        <ts-button icon="pi pi-bell" rounded text class="p-button-warning" />
-        <ts-button icon="pi pi-times" rounded text class="p-button-danger" />
-        <ts-button icon="pi pi-filter" rounded text class= "p-button-plain" />
+        <ts-button icon="pi pi-check" rounded text color="text" />
+        <ts-button icon="pi pi-bookmark" rounded text color="secondary" />
+        <ts-button icon="pi pi-search" rounded text color="success" />
+        <ts-button icon="pi pi-user" rounded text color="info" />
+        <ts-button icon="pi pi-bell" rounded text color="warning" />
+        <ts-button icon="pi pi-times" rounded text color="danger" />
+        <ts-button icon="pi pi-filter" rounded text color= "plain" />
 
         <h5>Rounded and Outlined Icon Buttons</h5>
         <ts-button icon="pi pi-check" rounded outlined />
-        <ts-button icon="pi pi-bookmark" rounded outlined class="p-button-secondary" />
-        <ts-button icon="pi pi-search" rounded outlined class="p-button-success" />
-        <ts-button icon="pi pi-user" rounded outlined class="p-button-info" />
-        <ts-button icon="pi pi-bell" rounded outlined class="p-button-warning" />
-        <ts-button icon="pi pi-times" rounded outlined class="p-button-danger" />
+        <ts-button icon="pi pi-bookmark" rounded outlined color="secondary" />
+        <ts-button icon="pi pi-search" rounded outlined color="success" />
+        <ts-button icon="pi pi-user" rounded outlined color="info" />
+        <ts-button icon="pi pi-bell" rounded outlined color="warning" />
+        <ts-button icon="pi pi-times" rounded outlined color="danger" />
 
         <h5>Badges</h5>
         <ts-button type="button" label="Emails" badge="9999" />
-        <ts-button type="button" label="Messages" icon="pi pi-users" class="p-button-warning" badge="8" badgeClass="p-badge-danger" />
+        <ts-button type="button" label="Messages" icon="pi pi-users" color="warning" badge="8" badgeClass="p-badge-danger" />
 
         <h5>Loading</h5>
         <ts-button type="button" label="Search" icon="pi pi-search" :loading="loading[0]" @click="load(0)" />
@@ -105,7 +109,7 @@
         <ts-button type="button" class="p-px-3">
             <img alt="logo" src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png" style="width: 1.5rem"/>
         </ts-button>
-        <ts-button type="button" class="p-button-outlined p-button-success">
+        <ts-button type="button" outlined color="success">
             <img alt="logo" src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png" style="width: 1.5rem" />
             <span class="p-ml-2 p-text-bold">PrimeVue</span>
         </ts-button>
@@ -119,9 +123,9 @@
 
         <h5>Sizes</h5>
         <div class="sizes">
-            <ts-button label="Small" icon="pi pi-check" class="p-button-sm"  />
-            <ts-button label="Normal" icon="pi pi-check" class="p-button"  />
-            <ts-button label="Large" icon="pi pi-check" class="p-button-lg" />
+            <ts-button label="Small" icon="pi pi-check" size="small"  />
+            <ts-button label="Normal" icon="pi pi-check" />
+            <ts-button label="Large" icon="pi pi-check" size="large" />
         </div>
 
         <TsButtonDoc />
