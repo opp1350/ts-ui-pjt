@@ -128,10 +128,6 @@
                     "to": "/components/tsSplitter"
                 },
                 {
-                    "name": "TsSplitter",
-                    "to": "/components/tsSplitter"
-                },
-                {
                     "name": "TsTabView",
                     "to": "/components/tsTabView"
                 },

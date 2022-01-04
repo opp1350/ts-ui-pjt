@@ -1,1 +1,5 @@
-tsCard
+<template>
+    <div>
+        tsCard
+    </div>
+</template>

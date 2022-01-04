@@ -1,1 +1,5 @@
-tsAutoComplete
+<template>
+    <div>
+        tsAutoComplete
+    </div>
+</template>

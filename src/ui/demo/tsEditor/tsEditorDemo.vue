@@ -1,1 +1,5 @@
-tsEditor
+<template>
+    <div>
+        tsEditor
+    </div>
+</template>

@@ -1,1 +1,5 @@
-tsDeferredContent
+<template>
+    <div>
+        tsDeferredContent
+    </div>
+</template>

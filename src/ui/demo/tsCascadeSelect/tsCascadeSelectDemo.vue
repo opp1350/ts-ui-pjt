@@ -1,1 +1,5 @@
-tsCascadeSelect
+<template>
+    <div>
+        tsCascadeSelect
+    </div>
+</template>
