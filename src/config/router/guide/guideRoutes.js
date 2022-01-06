@@ -35,6 +35,7 @@ import TsToggleButtonDemo from "@/ui/demo/tsToggleButton/tsToggleButtonDemo.vue"
 import TsToolbarDemo from "@/ui/demo/tsToolbar/tsToolbarDemo.vue";
 import TsTreeSelectDemo from "@/ui/demo/tsTreeSelect/tsTreeSelectDemo.vue";
 import TsTriStateCheckboxDemo from "@/ui/demo/tsTriStateCheckbox/tsTriStateCheckboxDemo.vue";
+import TsProgressBarDemo from "@/ui/demo/tsProgressBar/tsProgressBarDemo.vue";
 
 const routes = [{
         path: "/",
@@ -224,6 +225,11 @@ const routes = [{
                 path: 'tsTriStateCheckbox',
                 name: 'tsTriStateCheckbox',
                 component: TsTriStateCheckboxDemo
+            },
+            {
+                path: 'tsProgressBar',
+                name: 'tsProgressBar',
+                component: TsProgressBarDemo
             }
         ]
     }

@@ -46,6 +46,7 @@ import tsToggleButton from './ts/components/tsToggleButton/tsToggleButton.vue'
 import tsToolbar from './ts/components/tsToolbar/tsToolbar.vue'
 import tsTreeSelect from './ts/components/tsTreeSelect/tsTreeSelect.vue'
 import tsTriStateCheckbox from './ts/components/tsTriStateCheckbox/tsTriStateCheckbox.vue'
+import tsProgressBar from './ts/components/tsProgressBar/tsProgressBar.vue'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -145,5 +146,6 @@ app.component('ts-togglebutton', tsToggleButton);
 app.component('ts-toolbar', tsToolbar);
 app.component('ts-treeselect', tsTreeSelect);
 app.component('ts-tristatecheckbox', tsTriStateCheckbox);
+app.component('ts-progressbar', tsProgressBar);
 
 app.directive('code', CodeHighlight);

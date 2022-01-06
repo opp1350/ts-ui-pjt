@@ -96,6 +96,10 @@
                     "to": "/components/tsPassword"
                 },
                 {
+                    "name": "TsProgressBar",
+                    "to": "/components/tsProgressBar"
+                },
+                {
                     "name": "TsRadioButton",
                     "to": "/components/tsRadioButton"
                 },
