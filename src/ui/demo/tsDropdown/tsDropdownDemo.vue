@@ -49,15 +49,19 @@
                 </div>
             </template>
         </ts-dropdown>
+
+        <TsDropdownDoc />
     </div>
 </template>
 <script>
 import { ref } from 'vue';
 import Skeleton from 'primevue/skeleton';
+import TsDropdownDoc from './tsDropdownDoc.vue'
 
 export default {
     components: {
-        Skeleton
+        Skeleton,
+        TsDropdownDoc
     },
     setup() {
         const selectedCity1 = ref();

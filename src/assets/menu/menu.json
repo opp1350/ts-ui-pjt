@@ -100,6 +100,10 @@
                     "to": "/components/tsProgressBar"
                 },
                 {
+                    "name": "TsProgressSpinner",
+                    "to": "/components/tsProgressSpinner"
+                },
+                {
                     "name": "TsRadioButton",
                     "to": "/components/tsRadioButton"
                 },
