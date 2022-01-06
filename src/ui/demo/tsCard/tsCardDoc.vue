@@ -7,7 +7,7 @@
 		<h5>Getting Started</h5>
         <p>Card provides <i>header</i>, <i>title</i>, <i>subtitle</i>, <i>content</i> and <i>footer</i> as the named templates to place content.</p>
 <pre v-code><code>
-&lt;Card&gt;
+&lt;ts-card&gt;
     &lt;template #header&gt;
         &lt;img alt="user header" src="demo/images/usercard.png"&gt;
     &lt;/template&gt;
@@ -22,7 +22,7 @@
         &lt;Button icon="pi pi-check" label="Save" /&gt;
         &lt;Button icon="pi pi-times" label="Cancel" class="p-button-secondary" style="margin-left: .5em" /&gt;
     &lt;/template&gt;
-&lt;/Card&gt;
+&lt;/ts-card&gt;
 
 </code></pre>
 
