@@ -1,6 +1,5 @@
 <template>
     <div class="card">
-        <!-- <h3>{{ `2. cusHeader == ${cusHeader}` }}</h3> -->
         <TabView :activeIndex="activeIndex" :lazy="lazy" :scrollable="scrollable">
             <template v-if="cusHeader">
                 <TabPanel v-for="tab in tabs" :key="tab.title" :disabled="tab.disabled">
