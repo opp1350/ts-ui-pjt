@@ -114,6 +114,16 @@
             p {
                 margin: 0 0 1rem 0;
             }
+            // 가이드 문서 내부에만 적용되는 컴포넌트 css 
+            *[class*=p-field] {
+                & + *[class*=p-field]  {
+                    margin-top: 1.2rem;
+                }
+                label {
+                    display: block;
+                    margin-bottom: 0.4rem;
+                }
+            }
             .p-tabview {
                 margin-top: 4.8rem;
                 .p-tabview-panels {

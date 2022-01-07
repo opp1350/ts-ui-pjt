@@ -8,6 +8,7 @@
             height: 2.4rem;
             border-radius: 50%;
             border-color: #CCCCCC;
+            background: var(--background-color-normal);
             // 체크 아이콘 기본스타일
             .p-checkbox-icon {
                 display: inline-block;
@@ -54,13 +55,14 @@
         // disabled
         &.p-checkbox-disabled {
             .p-checkbox-box {
-                background: #F2F2F2;
+                // background: #F2F2F2;
             }
             &.p-checkbox-checked {
                 .p-checkbox-box {
                     &.p-highlight {
                         border-color: #ABAFC7;
                         background: #ABAFC7;
+                        opacity: 0.6;
                     }
                 }
             }
