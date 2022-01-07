@@ -1,4 +1,23 @@
+h1 {
+    font-size: 2.8rem;
+}
+h2 {
+    font-size: 2.4rem;
+}
+h3 {
+    font-size: 2.2rem;
+}
+h4 {
+    font-size: 2rem;
+}
+h5 {
+    font-size: 1.8rem;
+}
+.p-link {
+    font-size: var(--font-size-default);
+}
 .p-component {
+    font-size: var(--font-size-default);
     + label {
         margin-left: .8rem;
     }

@@ -1,5 +1,4 @@
 // utilities
-@import "./util/variables.scss";
 @import "./util/root.scss";
 @import "./util/mixins.scss";
 
@@ -9,6 +8,9 @@
 
 // svg
 @import "./util/svg.scss";
+
+//theme
+@import "./theme/dark.scss";
 
 // common
 @import "./util/animations.scss";

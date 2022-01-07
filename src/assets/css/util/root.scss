@@ -15,6 +15,7 @@
     // pjt-gray
     --white:#fff;
     --light:#F2F2F2;
+    --gray-light: #E6E7F3;
     --gray:#ABAFC7;
     --gray-dark:#70798B;
     --dark:#343a40;
@@ -22,6 +23,10 @@
     // theme 컨트롤
     --font-color-normal: #161616;
     --background-color-normal: #ffffff;
+    // line
+    --line-light: #E6E7F3;
+    // font-size
+    --font-size-default: 1.6rem;
 }
 // dark mode
 html[data-mode='dark'] {
@@ -32,4 +37,6 @@ html[data-mode='dark'] {
     --secondary:#CAA3FF;
     --error:#CF6679;
     --secondary-light:rgb(121 74 186 / 40%);
+    // line
+    --gray-light: #444C56;
 }

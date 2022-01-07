@@ -21,7 +21,7 @@
         height: 7.2rem;
         padding: 0 3.6rem;
         background-color: var(--background-color-normal);
-        border-bottom: 1px solid #e2e2e2;
+        border-bottom: 1px solid var(--gray-light);
         box-shadow: 0px 4px 6px rgb(0 0 0 / 4%);
         z-index: 2;
         h1 {
@@ -97,15 +97,30 @@
         .ts-guide-cont {
             width: 100%;
             padding: 2.4rem 3.6rem 2.4rem 27.6rem;
+            .p-tabview {
+                margin-top: 4.8rem;
+                .p-tabview-panels {
+                    padding: 2.4rem 0 0 0;
+                    h5 {
+                        margin-bottom: 1.2rem;
+                        font-size: 2.4rem;
+                        font-weight: bold;
+                    }
+                    // prism.js custom
+                    pre[class*="language-"] {
+                        margin: 1.6rem 0 3.2rem;
+                        & + pre[class*="language-"] {
+                            margin-top: -2rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 // dark mode
 html[data-mode='dark'] {
     .ts-guide {
-        .ts-guide-head {
-            border-bottom: 1px solid #444C56;
-        }
         .ts-guide-body {
             aside {
                 background-color:#1C2127;
@@ -127,6 +142,12 @@ html[data-mode='dark'] {
                             color: #ABAFC7;
                         }
                     }
+                }
+            }
+            .ts-guide-cont {
+                // prism.js custom
+                :not(pre) > code[class*="language-"], pre[class*="language-"] {
+                    background: #17181a;
                 }
             }
         }

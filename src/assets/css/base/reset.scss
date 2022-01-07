@@ -4,8 +4,8 @@
 html {
     font-size: 62.5%; // 1rem => 10px
     body {
-        font-size: 1.6rem; // 기본 16px
-        font-family: "NotoSansKR", sans-serif;
+        font-size: var(--font-size-default); // 기본 16px
+        font-family: "NotoSansKR", sans-serif !important;
         font-weight: normal;
         color: var(--font-color-normal);
         background-color: var(--background-color-normal);

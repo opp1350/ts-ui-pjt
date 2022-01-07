@@ -1,0 +1,50 @@
+.ts-tabview.p-tabview,
+.p-tabview {
+    .p-tabview-nav {
+        background: var(--background-color-normal);
+        border: solid var(--gray-light);
+        border-width: 0 0 1px 0;
+        li {
+            .p-tabview-nav-link {
+                padding: 1.1rem 1.6rem 1rem;
+                background: var(--background-color-normal);
+                border: solid var(--gray-light);
+                border-width: 0 0 2px 0;
+                .p-tabview-title {
+                    font-size: 1.8rem;
+                    color: var(--gray-dark);
+                }
+            }
+            &.p-highlight {
+                .p-tabview-nav-link {
+                    background: var(--background-color-normal);
+                    border-color: var(--primary);
+                    color: var(--primary);
+                    .p-tabview-title {
+                        font-size: 1.8rem;
+                        color: var(--primary);
+                    }
+                }
+            }
+            &:not(.p-highlight) {
+                &:not(.p-disabled) {
+                    &:hover {
+                        .p-tabview-nav-link {
+                            background: var(--background-color-normal);
+                            border: solid var(--gray-light);
+                            border-width: 0 0 1px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .p-tabview-panels {
+        background-color: var(--background-color-normal);
+        color: var(--font-color-normal);
+    }
+}
+
+// dark mode
+html[data-mode='dark'] {
+}

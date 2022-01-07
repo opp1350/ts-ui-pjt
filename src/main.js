@@ -48,8 +48,6 @@ import tsProgressSpinner from './ts/components/tsProgressSpinner/tsProgressSpinn
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
 import 'primevue/resources/primevue.min.css' // primevue core css
-import 'primeicons/primeicons.css' //icons
-import 'prismjs/themes/prism-coy.css' // prismjs
 import './assets/css/style.scss' // ts
 
 const app = createApp(App);

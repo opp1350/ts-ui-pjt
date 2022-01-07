@@ -136,7 +136,7 @@
     .p-button-link,
     .p-button-icon,
     .p-button-label {
-        font-size: 1.6rem;
+        font-size: var(--font-size-default);
     }
     .p-badge {
         min-width: 1.8rem;
