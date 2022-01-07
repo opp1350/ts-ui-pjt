@@ -44,24 +44,8 @@
                     "to": "/components/tsColorPicker"
                 },
                 {
-                    "name": "TsDeferredContent",
-                    "to": "/components/tsDeferredContent"
-                },
-                {
-                    "name": "TsDivider",
-                    "to": "/components/tsDivider"
-                },
-                {
                     "name": "TsDropdown",
                     "to": "/components/tsDropdown"
-                },
-                {
-                    "name": "TsEditor",
-                    "to": "/components/tsEditor"
-                },
-                {
-                    "name": "TsFieldset",
-                    "to": "/components/tsFieldset"
                 },
                 {
                     "name": "TsInputText",

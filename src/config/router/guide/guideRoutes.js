@@ -21,11 +21,7 @@ import TsCardDemo from "@/ui/demo/tsCard/tsCardDemo.vue";
 import TsCascadeSelectDemo from "@/ui/demo/tsCascadeSelect/tsCascadeSelectDemo.vue";
 import TsChipsDemo from "@/ui/demo/tsChips/tsChipsDemo.vue";
 import TsColorPickerDemo from "@/ui/demo/tsColorPicker/tsColorPickerDemo.vue";
-import TsDeferredContentDemo from "@/ui/demo/tsDeferredContent/tsDeferredContentDemo.vue";
-import TsDividerDemo from "@/ui/demo/tsDivider/tsDividerDemo.vue";
 import TsDropdownDemo from "@/ui/demo/tsDropdown/tsDropdownDemo.vue";
-import TsEditorDemo from "@/ui/demo/tsEditor/tsEditorDemo.vue";
-import TsFieldsetDemo from "@/ui/demo/tsFieldset/tsFieldsetDemo.vue";
 import TsSliderDemo from "@/ui/demo/tsSlider/tsSliderDemo.vue";
 import TsSpeedDialDemo from "@/ui/demo/tsSpeedDial/tsSpeedDialDemo.vue";
 import TsSplitButtonDemo from "@/ui/demo/tsSplitButton/tsSplitButtonDemo.vue";
@@ -158,29 +154,9 @@ const routes = [{
                 component: TsColorPickerDemo
             },
             {
-                path: 'tsDeferredContent',
-                name: 'tsDeferredContent',
-                component: TsDeferredContentDemo
-            },
-            {
-                path: 'tsDivider',
-                name: 'tsDivider',
-                component: TsDividerDemo
-            },
-            {
                 path: 'tsDropdown',
                 name: 'tsDropdown',
                 component: TsDropdownDemo
-            },
-            {
-                path: 'tsEditor',
-                name: 'tsEditor',
-                component: TsEditorDemo
-            },
-            {
-                path: 'tsFieldset',
-                name: 'tsFieldset',
-                component: TsFieldsetDemo
             },
             {
                 path: 'tsSlider',

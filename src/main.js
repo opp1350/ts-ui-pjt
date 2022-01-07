@@ -32,11 +32,7 @@ import tsCard from './ts/components/tsCard/tsCard.vue'
 import tsCascadeSelect from './ts/components/tsCascadeSelect/tsCascadeSelect.vue'
 import tsChips from './ts/components/tsChips/tsChips.vue'
 import tsColorPicker from './ts/components/tsColorPicker/tsColorPicker.vue'
-import tsDeferredContent from './ts/components/tsDeferredContent/tsDeferredContent.vue'
-import tsDivider from './ts/components/tsDivider/tsDivider.vue'
 import tsDropdown from './ts/components/tsDropdown/tsDropdown.vue'
-import tsEditor from './ts/components/tsEditor/tsEditor.vue'
-import tsFieldset from './ts/components/tsFieldset/tsFieldset.vue'
 import tsSlider from './ts/components/tsSlider/tsSlider.vue'
 import tsSpeedDial from './ts/components/tsSpeedDial/tsSpeedDial.vue'
 import tsSplitButton from './ts/components/tsSplitButton/tsSplitButton.vue'
@@ -133,11 +129,7 @@ app.component('ts-card', tsCard);
 app.component('ts-cascadeselect', tsCascadeSelect);
 app.component('ts-chips', tsChips);
 app.component('ts-colorpicker', tsColorPicker);
-app.component('ts-deferredcontent', tsDeferredContent);
-app.component('ts-divider', tsDivider);
 app.component('ts-dropdown', tsDropdown);
-app.component('ts-editor', tsEditor);
-app.component('ts-fieldset', tsFieldset);
 app.component('ts-slider', tsSlider);
 app.component('ts-speeddial', tsSpeedDial);
 app.component('ts-splitbutton', tsSplitButton);
