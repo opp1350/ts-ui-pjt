@@ -1,19 +1,36 @@
 table {
-    width: 100%;
     thead {
-        border: solid var(--gray-dark);
-        border-width: 1px 0;
         th {
-            padding: 1.2rem;
-            font-weight: bold;
+            font-size: var(--font-size-default);
         }
     }
     tbody {
         tr {
-            border: solid var(--gray-light);
-            border-width: 0 0 1px 0;
             td {
+                font-size: var(--font-size-default);
+            }
+        }
+    }
+    // 데이트 피커 제외
+    &:not(.p-datepicker-calendar) {
+        width: 100%;
+        thead {
+            border: solid var(--gray-dark);
+            border-width: 1px 0;
+            th {
                 padding: 1.2rem;
+                font-weight: bold;
+                vertical-align: middle;
+            }
+        }
+        tbody {
+            tr {
+                border: solid var(--gray-light);
+                border-width: 0 0 1px 0;
+                td {
+                    padding: 1.2rem;
+                    vertical-align: middle;
+                }
             }
         }
     }
