@@ -7,12 +7,12 @@
 		<h5>Getting Started</h5>
 		<p>A model can be bound using the standard v-model directive.</p>
 <pre v-code><code>
-&lt;Password v-model="value" /&gt;
+&lt;ts-password v-model="value" /&gt;
 
 </code></pre>
 
         <h5>Customization</h5>
-        <p>Password component uses regular expressions for middle and strong passwords with the following defaults.</p>
+        <p>ts-password component uses regular expressions for middle and strong passwords with the following defaults.</p>
 
         <h6>Medium</h6>
         <p><i>^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,}).</i></p>
@@ -36,7 +36,7 @@
         <h5>Templating</h5>
         <p>3 slots are included to customize the overlay. These are <i>header</i>, <i>content</i> and <i>footer</i>. Note that content overrides the default meter.</p>
 <pre v-code><code>
-&lt;Password v-model="value4"&gt;
+&lt;ts-password v-model="value4"&gt;
     &lt;template #header&gt;
         &lt;h6&gt;Pick a password&lt;/h6&gt;
     &lt;/template&gt;
@@ -50,7 +50,7 @@
             &lt;li&gt;Minimum 8 characters&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/template&gt;
-&lt;/Password&gt;
+&lt;/ts-password&gt;
 
 </code></pre>
 

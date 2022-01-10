@@ -5,9 +5,9 @@
                 <TabPanel header="Documentation">
 
 		<h5>Getting Started</h5>
-		<p>MultiSelect requires a value to bind and a collection of arbitrary objects along with the <i>optionLabel</i> property to specify the label property of the option.</p>
+		<p>ts-multi-select requires a value to bind and a collection of arbitrary objects along with the <i>optionLabel</i> property to specify the label property of the option.</p>
 <pre v-code><code>
-&lt;MultiSelect v-model="selectedCars" :options="cars" optionLabel="brand" placeholder="Select Brands" /&gt;
+&lt;ts-multi-select v-model="selectedCars" :options="cars" optionLabel="brand" placeholder="Select Brands" /&gt;
 
 </code></pre>
 
@@ -34,7 +34,7 @@ data() {
         <h5>Chips Display</h5>
         <p>A comma separated list is used by default to display selected items whereas alternative chip mode is provided using the <i>display</i> property to visualize the items as tokens.</p>
 <pre v-code><code>
-&lt;MultiSelect v-model="selectedCars" :options="cars" optionLabel="brand" placeholder="Select Brands" display="chip"/&gt;
+&lt;ts-multi-select v-model="selectedCars" :options="cars" optionLabel="brand" placeholder="Select Brands" display="chip"/&gt;
 
 </code></pre>
 
@@ -78,9 +78,9 @@ export default {
 </code></pre>
 
 <pre v-code><code><template v-pre>
-&lt;MultiSelect v-model="selectedGroupedCities" :options="groupedCities"
+&lt;ts-multi-select v-model="selectedGroupedCities" :options="groupedCities"
         optionLabel="label" optionGroupLabel="label" optionGroupChildren="items"&gt;
-&lt;/MultiSelect&gt;
+&lt;/ts-multi-select&gt;
 </template>
 </code></pre>
 
@@ -90,7 +90,7 @@ export default {
         to define the search algorithm. Valid values are "contains" (default), "startsWith" and "endsWith".</p>
 
 <pre v-code><code>
-&lt;MultiSelect v-model="selectedCars" :options="cars" :filter="true" optionLabel="brand" placeholder="Select Brands"/&gt;
+&lt;ts-multi-select v-model="selectedCars" :options="cars" :filter="true" optionLabel="brand" placeholder="Select Brands"/&gt;
 
 </code></pre>
 
@@ -98,7 +98,7 @@ export default {
 		<p>Label of an option is used as the display text of an item by default, for custom content support define an <i>option</i> template that gets the option instance as a parameter.
         In addition <i>value</i>, <i>optiongroup</i>, <i>chip</i>, <i>header</i>, <i>footer</i>, <i>emptyfilter</i> and <i>empty</i> slots are provided for further customization.</p>
 <pre v-code><code><template v-pre>
-&lt;MultiSelect v-model="selectedCars2" :options="cars" optionLabel="brand" placeholder="Select a Car"&gt;
+&lt;ts-multi-select v-model="selectedCars2" :options="cars" optionLabel="brand" placeholder="Select a Car"&gt;
 	&lt;template #value="slotProps"&gt;
 		&lt;div class="p-multiselect-car-token" v-for="option of slotProps.value" :key="option.brand"&gt;
 			&lt;img :alt="option.brand" :src="'demo/images/car/' + option.brand + '.png'" /&gt;
@@ -114,7 +114,7 @@ export default {
 			&lt;span&gt;{{slotProps.option.brand}}&lt;/span&gt;
 		&lt;/div&gt;
 	&lt;/template&gt;
-&lt;/MultiSelect&gt;
+&lt;/ts-multi-select&gt;
 </template>
 </code></pre>
 

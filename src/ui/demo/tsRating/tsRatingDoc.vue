@@ -1,36 +1,27 @@
 <template>
-	<AppDoc name="RatingDemo" :sources="sources" github="rating/RatingDemo.vue" >
-        <h5>Import via Module</h5>
-<pre v-code.script><code>
-import Rating from 'primevue/rating';
-
-</code></pre>
-
-        <h5>Import via CDN</h5>
-<pre v-code><code>
-&lt;script src="https://unpkg.com/primevue@^3/core/core.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/primevue@^3/rating/rating.min.js"&gt;&lt;/script&gt;
-
-</code></pre>
+    <div>
+        <div class="card">
+            <TabView>
+                <TabPanel header="Documentation">
 
 		<h5>Getting Started</h5>
 		<p>Two-way value binding is defined using v-model.</p>
 <pre v-code><code>
-&lt;Rating v-model="val" /&gt;
+&lt;ts-rating v-model="val" /&gt;
 
 </code></pre>
 
 		<h5>Number of Stars</h5>
 		<p>Number of stars to display is defined with <i>stars</i> property, default is 5.</p>
 <pre v-code><code>
-&lt;Rating v-model="val" :stars="7"/&gt;
+&lt;ts-rating v-model="val" :stars="7"/&gt;
 
 </code></pre>
 
 		<h5>Cancel</h5>
 		<p>A cancel icon is displayed to reset the value by default, set <i>cancel</i> as false to remove this option.</p>
 <pre v-code><code>
-&lt;Rating v-model="val" :cancel="false" /&gt;
+&lt;ts-rating v-model="val" :cancel="false" /&gt;
 
 </code></pre>
 
@@ -135,118 +126,72 @@ import Rating from 'primevue/rating';
 
 		<h5>Dependencies</h5>
 		<p>None.</p>
-    </AppDoc>
-</template>
-
-<script>
-export default {
-    data() {
-        return {
-            sources: {
-                'options-api': {
-                    tabName: 'Options API Source',
-                    content: `
-<template>
-    <div>
-        <h5>Basic {{val1}}</h5>
-        <Rating v-model="val1" />
-
-        <h5>Without Cancel</h5>
-        <Rating v-model="val2" :cancel="false" />
-
-        <h5>ReadOnly</h5>
-        <Rating :modelValue="5" :readonly="true" :stars="10" :cancel="false" />
-
-        <h5>Disabled</h5>
-        <Rating :modelValue="8" :disabled="true" :stars="10" />
+                </TabPanel>
+                <TabPanel header="Compositon API Source">
+                    <pre v-code><code>
+                            {{ content }}
+                        </code></pre>
+                </TabPanel>
+            </TabView>
+        </div>
     </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+export default {
+    setup() {
+        const source = ref(`
+<template>
+    <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>Rating</h1>
+                <p>Rating component is a star based selection input.</p>
+            </div>
+        </div>
+
+        <div class="content-section implementation">
+            <div class="card">
+                <h5>Basic {{val1}}</h5>
+                <ts-rating v-model="val1" />
+
+                <h5>Without Cancel</h5>
+                <ts-rating v-model="val2" :cancel="false" />
+
+                <h5>ReadOnly</h5>
+                <ts-rating :modelValue="5" :readonly="true" :stars="10" :cancel="false" />
+
+                <h5>Disabled</h5>
+                <ts-rating :modelValue="8" :disabled="true" :stars="10" />
+            </div>
+        </div>
+
+        <TsRatingDoc/>
+    </div>
+</template>
+
+<script>
+import TsRatingDoc from './tsRatingDoc';
+
 export default {
     data() {
         return {
             val1: null,
             val2: 3,
         }
+    },
+    components: {
+        TsRatingDoc
     }
 }
 <\\/script>
-`
-                },
-                'composition-api': {
-                    tabName: 'Composition API Source',
-                    content: `
-<template>
-    <div>
-        <h5>Basic {{val1}}</h5>
-        <Rating v-model="val1" />
-
-        <h5>Without Cancel</h5>
-        <Rating v-model="val2" :cancel="false" />
-
-        <h5>ReadOnly</h5>
-        <Rating :modelValue="5" :readonly="true" :stars="10" :cancel="false" />
-
-        <h5>Disabled</h5>
-        <Rating :modelValue="8" :disabled="true" :stars="10" />
-    </div>
-</template>
-
-<script>
-import { ref } from 'vue';
-
-export default {
-    setup() {
-        const val1 = ref();
-        const val2 = ref(3);
-
-        return { val1, val2 }
-    }
-}
-<\\/script>
-`
-                },
-                'browser-source': {
-                    tabName: 'Browser Source',
-                    imports: `<script src="https://unpkg.com/primevue@^3/rating/rating.min.js"><\\/script>`,
-                    content: `<div id="app">
-            <h5>Basic {{val1}}</h5>
-            <p-rating v-model="val1"></p-rating>
-
-            <h5>Without Cancel</h5>
-            <p-rating v-model="val2" :cancel="false"></p-rating>
-
-            <h5>ReadOnly</h5>
-            <p-rating :model-value="5" :readonly="true" :stars="10" :cancel="false"></p-rating>
-
-            <h5>Disabled</h5>
-            <p-rating :model-value="8" :disabled="true" :stars="10"></p-rating>
-        </div>
-
-        <script type="module">
-        const { createApp, ref } = Vue;
-
-        const App = {
-            setup() {
-                const val1 = ref();
-                const val2 = ref(3);
-
-                return { val1, val2 }
-            },
-            components: {
-                "p-rating": primevue.rating
-            }
-        };
-
-        createApp(App)
-            .use(primevue.config.default)
-            .mount("#app");
-        <\\/script>
-`
-                }
-            }
+`)
+        // eslint-disable-next-line no-useless-escape
+        const content = ref(source.value.replace('<\\/script>', '<\/script>'))
+        return {
+            content
         }
-    }
+    },
 }
 </script>

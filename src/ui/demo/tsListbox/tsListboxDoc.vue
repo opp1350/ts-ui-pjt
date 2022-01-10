@@ -5,9 +5,9 @@
                 <TabPanel header="Documentation">
 
 		<h5>Getting Started</h5>
-		<p>Listbox requires a value to bind and a collection of arbitrary objects along with the <i>optionLabel</i> property to specify the label property of the option.</p>
+		<p>ts-listbox requires a value to bind and a collection of arbitrary objects along with the <i>optionLabel</i> property to specify the label property of the option.</p>
 <pre v-code><code>
-&lt;Listbox v-model="selectedCity" :options="cities" optionLabel="name" /&gt;
+&lt;ts-listbox v-model="selectedCity" :options="cities" optionLabel="name" /&gt;
 
 </code></pre>
 
@@ -28,11 +28,11 @@ data() {
 </code></pre>
 
 		<h5>Selection</h5>
-		<p>Listbox allows selection of either single or multiple items. In single case, model should be a single object reference whereas in multiple case should be an array. Multiple items can either be selected
+		<p>ts-listbox allows selection of either single or multiple items. In single case, model should be a single object reference whereas in multiple case should be an array. Multiple items can either be selected
 			using metaKey or toggled individually depending on the value of <i>metaKeySelection</i> property value which is true by default. On touch enabled
 			devices metaKeySelection is turned off automatically.</p>
 <pre v-code><code>
-&lt;Listbox v-model="selectedCity" :options="cities" optionLabel="name" :multiple="true"/&gt;
+&lt;ts-listbox v-model="selectedCity" :options="cities" optionLabel="name" :multiple="true"/&gt;
 
 </code></pre>
 
@@ -76,9 +76,9 @@ export default {
 </code></pre>
 
 <pre v-code><code><template v-pre>
-&lt;Listbox v-model="selectedGroupedCity" :options="groupedCities"
+&lt;ts-listbox v-model="selectedGroupedCity" :options="groupedCities"
         optionLabel="label" optionGroupLabel="label" optionGroupChildren="items"&gt;
-&lt;/Listbox&gt;
+&lt;/ts-listbox&gt;
 </template>
 </code></pre>
 
@@ -87,7 +87,7 @@ export default {
         optionLabel is used when searching and <i>filterFields</i> can be used to customize the fields being utilized. Furthermore, <i>filterMatchMode</i> is available
         to define the search algorithm. Valid values are "contains" (default), "startsWith" and "endsWith".</p>
 <pre v-code><code>
-&lt;Listbox v-model="selectedCity" :options="cities" optionLabel="name" :filter="true"/&gt;
+&lt;ts-listbox v-model="selectedCity" :options="cities" optionLabel="name" :filter="true"/&gt;
 
 </code></pre>
 
@@ -95,14 +95,14 @@ export default {
 		<p>Label of an option is used as the display text of an item by default, for custom content support define an <i>option</i> template that gets the option instance as a parameter.
         In addition <i>optiongroup</i>, <i>header</i>, <i>footer</i>, <i>emptyfilter</i> and <i>empty</i> slots are provided for further customization.</p>
 <pre v-code><code><template v-pre>
-&lt;Listbox v-model="selectedCars" :options="cars" :multiple="true" :filter="true" optionLabel="brand" listStyle="max-height:250px" style="width:15em"&gt;
+&lt;ts-listbox v-model="selectedCars" :options="cars" :multiple="true" :filter="true" optionLabel="brand" listStyle="max-height:250px" style="width:15em"&gt;
     &lt;template #option="slotProps"&gt;
 		&lt;div&gt;
 			&lt;img :alt="slotProps.option.brand" :src="'demo/images/car/' + slotProps.option.brand + '.png'" /&gt;
 			&lt;span&gt;{{slotProps.option.brand}}&lt;/span&gt;
 		&lt;/div&gt;
 	&lt;/template&gt;
-&lt;/Listbox&gt;
+&lt;/ts-listbox&gt;
 </template>
 </code></pre>
 

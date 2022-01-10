@@ -5,46 +5,46 @@
                 <TabPanel header="Documentation">
 
 		<h5>Getting Started</h5>
-		<p>Panel is a container component that accepts content as its children.</p>
+		<p>ts-panel is a container component that accepts content as its children.</p>
 <pre v-code><code>
-&lt;Panel header="Header"&gt;
+&lt;ts-panel header="Header"&gt;
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-&lt;/Panel&gt;
+&lt;/ts-panel&gt;
 
 </code></pre>
 
         <h5>Custom Header</h5>
         <p>Header of the panel is either defined with the <i>header</i> property or the header template.</p>
 <pre v-code><code>
-&lt;Panel&gt;
+&lt;ts-panel&gt;
     &lt;template #header&gt;
         Header Content
     &lt;/template&gt;
 	Content
-&lt;/Panel&gt;
+&lt;/ts-panel&gt;
 
 </code></pre>
 
 		<h5>Toggleable</h5>
 		<p>Content of the panel can be expanded and collapsed using <i>toggleable</i> option.</p>
 <pre v-code><code>
-&lt;Panel header="Header" :toggleable="true"&gt;
+&lt;ts-panel header="Header" :toggleable="true"&gt;
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-&lt;/Panel&gt;
+&lt;/ts-panel&gt;
 
 </code></pre>
 
         <p>To control the initial state of the toggleable panel, use the <i>collapsed</i> property.</p>
 <pre v-code><code>
-&lt;Panel header="Header Text" :toggleable="true" :collapsed="true"&gt;
+&lt;ts-panel header="Header Text" :toggleable="true" :collapsed="true"&gt;
 	Content
-&lt;/Panel&gt;
+&lt;/ts-panel&gt;
 
 </code></pre>
 
@@ -52,9 +52,9 @@
 
 <pre v-code><code>
 &lt;button type="button" @click="isCollapsed = !isCollapsed">Toggle Programmatically&lt;/button&gt;
-&lt;Panel header="Header Text" :toggleable="true" v-model:collapsed="isCollapsed"&gt;
+&lt;ts-panel header="Header Text" :toggleable="true" v-model:collapsed="isCollapsed"&gt;
 	Content
-&lt;/Panel&gt;
+&lt;/ts-panel&gt;
 
 </code></pre>
 
@@ -63,14 +63,14 @@
         class to your icons.</p>
 <pre v-code><code>
 &lt;h5&gt;Advanced&lt;/h5&gt;
-&lt;Panel header="Header"&gt;
+&lt;ts-panel header="Header"&gt;
     &lt;template #icons&gt;
         &lt;button class="p-panel-header-icon p-link p-mr-2" @click="toggle"&gt;
             &lt;span class="pi pi-cog"&gt;&lt;/span&gt;
         &lt;/button&gt;
         &lt;Menu id="config_menu" ref="menu" :model="items" :popup="true" /&gt;
     &lt;/template&gt;
-&lt;/Panel&gt;
+&lt;/ts-panel&gt;
 
 </code></pre>
 
