@@ -2,6 +2,7 @@
     <div class="ts-guide">
         <header class="ts-guide-head">
             <a class="menu-trigger" :class="{open : show}" @click="show = !show"  href="javascript:void(0);">
+                <span class="hidden" v-html="show? '메뉴 닫기' : '메뉴 열기'"></span>
                 <div class="icon-wrapper">
                     <span></span>
                     <span></span>

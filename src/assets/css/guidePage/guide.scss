@@ -29,6 +29,7 @@
             font-weight: bold;
         }
         .menu-trigger {
+            display: none;
             padding: 1rem;
             .icon-wrapper {
                 position: relative;
@@ -290,23 +291,27 @@ html[data-mode='dark'] {
         .ts-guide-head {
             height: 5.7rem;
             padding: 0 1.6rem;
-        }
-        .menu-trigger {
-            & + h1 {
-                margin-left: 1.6rem;
+            .menu-trigger {
+                display: block;
+                & + h1 {
+                    margin-left: 1.6rem;
+                }
             }
         }
         .ts-guide-body {
             position: relative;
             padding-top: 5.7rem;
             aside {
-                transition: all 0.6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
                 position: fixed;
-                width: 70%;
-                left: - 70%;
+                left: -32rem;
+                width: 26rem;
+                height: calc(100vh - 5.7rem);
                 padding: 2.4rem 1.6rem;
+                box-shadow: 4px 0px 6px rgb(0 0 0 / 10%);
+                transition: all 0.6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+                z-index: 2;
                 &.open {
-                    left: 0%;
+                    left: 0;
                 }
             }
             .ts-guide-cont {
