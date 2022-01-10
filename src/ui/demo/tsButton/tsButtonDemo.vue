@@ -139,15 +139,16 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { getCurrentInstance, ref } from 'vue';
 import TsButtonDoc from './tsButtonDoc.vue'
-import axios from 'axios'
+
 export default {
     components: {
         TsButtonDoc
     },
     setup() {
         const loading = ref([false, false, false]);
+        const {proxy} = getCurrentInstance();
         const load = (index) => {
             loading.value[index] = true;
             setTimeout(() => loading.value[index] = false, 1000);
@@ -161,7 +162,7 @@ export default {
             param.useYn = 'Y';
             param.regUser = 'admin';
             
-            axios.post('/service/addSample', param).then(function (response) {
+            proxy.$http.post('/service/addSample', param).then(function (response) {
                 console.log(response.data);
             })
             .catch(function(error) {

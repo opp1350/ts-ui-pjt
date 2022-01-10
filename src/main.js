@@ -48,6 +48,7 @@ import tsProgressSpinner from './ts/components/tsProgressSpinner/tsProgressSpinn
 import Tooltip from 'primevue/tooltip'
 import Ripple from 'primevue/ripple'
 import StyleClass from 'primevue/styleclass'
+import axios from 'axios'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -56,6 +57,7 @@ import 'primeicons/primeicons.css' //icons
 import './assets/css/style.scss' // ts
 
 const app = createApp(App);
+app.config.globalProperties.$http = axios;
 app.use(PrimeVue, {
     ripple: true,
     locale: {
