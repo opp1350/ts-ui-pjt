@@ -2,7 +2,7 @@
 <template>
     <div>
         <h5>Basic</h5>
-        <ts-button label="ts-Button" />
+        <ts-button label="ts-Button" @click="clickBtn()"/>
         <ts-button label="Disabled" disabled="disabled" />
 
         <h5>Link</h5>
@@ -135,6 +135,7 @@
 <script>
 import { ref } from 'vue';
 import TsButtonDoc from './tsButtonDoc.vue'
+import axios from 'axios'
 export default {
     components: {
         TsButtonDoc
@@ -145,8 +146,24 @@ export default {
             loading.value[index] = true;
             setTimeout(() => loading.value[index] = false, 1000);
         }
+        const clickBtn = () => {
+            
+            let param = {};
+            param.id = 'hong';
+            param.name = '홍길동';
+            param.description = 'testtesttest';
+            param.useYn = 'Y';
+            param.regUser = 'admin';
+            
+            axios.post('/service/addSample', param).then(function (response) {
+                console.log(response.data);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+        }
 
-        return {loading, load};
+        return {loading, load, clickBtn};
     }
 }
 </script>
