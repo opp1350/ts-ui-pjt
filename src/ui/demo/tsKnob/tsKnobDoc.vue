@@ -1,22 +1,13 @@
 <template>
-	<AppDoc name="KnobDemo" :sources="sources" github="knob/KnobDemo.vue">
-        <h5>Import via Module</h5>
-<pre v-code.script><code>
-import Knob from 'primevue/knob';
-
-</code></pre>
-
-        <h5>Import via CDN</h5>
-<pre v-code><code>
-&lt;script src="https://unpkg.com/primevue@^3/core/core.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/primevue@^3/knob/knob.min.js"&gt;&lt;/script&gt;
-
-</code></pre>
+    <div>
+        <div class="card">
+            <TabView>
+                <TabPanel header="Documentation">
 
 		<h5>Getting Started</h5>
-		<p>Knob is an input component and used with the standard <i>v-model</i> directive.</p>
+		<p>ts-knob is an input component and used with the standard <i>v-model</i> directive.</p>
 <pre v-code><code>
-&lt;Knob v-model="value" /&gt;
+&lt;ts-knob v-model="value" /&gt;
 
 </code></pre>
 <pre v-code.script><code>
@@ -31,14 +22,14 @@ data() {
 		<h5>Minimum and Maximum</h5>
 		<p>Boundaries are configured with the <i>min</i> and <i>max</i> values whose defaults are 0 and 100 respectively.</p>
 <pre v-code><code>
-&lt;Knob v-model="value" :min="-50" :max="10" /&gt;
+&lt;ts-knob v-model="value" :min="-50" :max="10" /&gt;
 
 </code></pre>
 
 		<h5>Step</h5>
 		<p>Step factor is 1 by default and can be customized with <i>step</i> option.</p>
 <pre v-code><code>
-&lt;Knob v-model="value" :step="10" /&gt;
+&lt;ts-knob v-model="value" :step="10" /&gt;
 
 </code></pre>
 
@@ -46,14 +37,14 @@ data() {
 		<p><i>valueColor</i> defines the value color, <i>rangeColor</i> defines the range background and similarly <i>textColor</i> configures the color of the value text. 
 		In addition, <i>strokeWidth</i> is used to determine the width of the stroke of range and value sections.</p>
 <pre v-code><code>
-&lt;Knob v-model="value" valueColor="SlateGray" rangeColor="MediumTurquoise"  /&gt;
+&lt;ts-knob v-model="value" valueColor="SlateGray" rangeColor="MediumTurquoise"  /&gt;
 
 </code></pre>
 
 		<h5>Size</h5>
-		<p>Default size of the Knob is 100 pixels for width and height, use the <i>size</i> property to customize it per your requirements.</p>
+		<p>Default size of the ts-knob is 100 pixels for width and height, use the <i>size</i> property to customize it per your requirements.</p>
 <pre v-code><code>
-&lt;Knob v-model="value" :size="200" /&gt;
+&lt;ts-knob v-model="value" :size="200" /&gt;
 
 </code></pre>
 
@@ -205,65 +196,74 @@ data() {
 
 		<h5>Dependencies</h5>
 		<p>None.</p>
-
-        <h5>Knob Vue</h5>
-        <p>PrimeVue Knob has no dependency however implementation is derived and inspired from <a href="https://github.com/kramer99/vue-knob-control">vue-knob-control</a> 
-            component authored by <a href="https://github.com/kramer99">kramer99</a>.</p>
-    </AppDoc>
-</template>
-
-<script>
-export default {
-    data() {
-        return {
-            sources: {
-                'options-api': {
-                    tabName: 'Options API Source',
-                    content: `
-<template>
-    <div>
-        <div class="p-grid p-formgrid p-text-center">
-            <div class="p-field p-col-12 p-md-4">
-                <h5>Basic</h5>
-                <Knob v-model="value1" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5>Readonly</h5>
-                <Knob v-model="value2" readonly />
-            </div>
-             <div class="p-field p-col-12 p-md-4">
-                 <h5>Disabled</h5>
-                <Knob v-model="value3" disabled />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Min/Max</h5>
-                <Knob v-model="value4" :min="-50" :max="50" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Step</h5>
-                <Knob v-model="value5" :step="10" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                 <h5 class="p-mt-3">Template</h5>
-                <Knob v-model="value6" valueTemplate="{value}%" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Stroke</h5>
-                <Knob v-model="value7" :strokeWidth="5" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Size</h5>
-                <Knob v-model="value8" :size="200"/>
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Color</h5>
-                <Knob v-model="value9" valueColor="SlateGray" rangeColor="MediumTurquoise"  />
-            </div>
+                </TabPanel>
+                <TabPanel header="Compositon API Source">
+                    <pre v-code><code>
+                            {{ content }}
+                        </code></pre>
+                </TabPanel>
+            </TabView>
         </div>
     </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+export default {
+    setup() {
+        const source = ref(`
+<template>
+    <div>
+        <div class="content-section implementation">
+            <div class="card">
+                <div class="p-grid p-formgrid p-text-center">
+                    <div class="p-field p-col-12 p-md-4">
+                        <h5>Basic</h5>
+                        <ts-knob v-model="value1" />
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <h5>Readonly</h5>
+                        <ts-knob v-model="value2" readonly />
+                    </div>
+                     <div class="p-field p-col-12 p-md-4">
+                         <h5>Disabled</h5>
+                        <ts-knob v-model="value3" disabled />
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <h5 class="p-mt-3">Min/Max</h5>
+                        <ts-knob v-model="value4" :min="-50" :max="50" />
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <h5 class="p-mt-3">Step</h5>
+                        <ts-knob v-model="value5" :step="10" />
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                         <h5 class="p-mt-3">Template</h5>
+                        <ts-knob v-model="value6" valueTemplate="{value}%" />
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <h5 class="p-mt-3">Stroke</h5>
+                        <ts-knob v-model="value7" :strokeWidth="5" />
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <h5 class="p-mt-3">Size</h5>
+                        <ts-knob v-model="value8" :size="200"/>
+                    </div>
+                    <div class="p-field p-col-12 p-md-4">
+                        <h5 class="p-mt-3">Color</h5>
+                        <ts-knob v-model="value9" valueColor="SlateGray" rangeColor="MediumTurquoise"  />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <TsKnobDoc />
+    </div>
+</template>
+
+<script>
+import TsKnobDoc from './tsKnobDoc';
+
 export default {
     data() {
         return {
@@ -277,151 +277,18 @@ export default {
             value8: 60,
             value9: 50,
         }
+    },
+    components: {
+        TsKnobDoc
     }
 }
 <\\/script>
-`
-                },
-                'composition-api': {
-                    tabName: 'Composition API Source',
-                    content: `
-<template>
-    <div>
-        <div class="p-grid p-formgrid p-text-center">
-            <div class="p-field p-col-12 p-md-4">
-                <h5>Basic</h5>
-                <Knob v-model="value1" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5>Readonly</h5>
-                <Knob v-model="value2" readonly />
-            </div>
-             <div class="p-field p-col-12 p-md-4">
-                 <h5>Disabled</h5>
-                <Knob v-model="value3" disabled />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Min/Max</h5>
-                <Knob v-model="value4" :min="-50" :max="50" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Step</h5>
-                <Knob v-model="value5" :step="10" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                 <h5 class="p-mt-3">Template</h5>
-                <Knob v-model="value6" valueTemplate="{value}%" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Stroke</h5>
-                <Knob v-model="value7" :strokeWidth="5" />
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Size</h5>
-                <Knob v-model="value8" :size="200"/>
-            </div>
-            <div class="p-field p-col-12 p-md-4">
-                <h5 class="p-mt-3">Color</h5>
-                <Knob v-model="value9" valueColor="SlateGray" rangeColor="MediumTurquoise"  />
-            </div>
-        </div>
-    </div>
-</template>
-
-<script>
-import { ref } from 'vue';
-export default {
-    setup() {
-        const value1 = ref(0);
-        const value2 = ref(50);
-        const value3 = ref(75);
-        const value4 = ref(10);
-        const value5 = ref(40);
-        const value6 = ref(60);
-        const value7 = ref(40);
-        const value8 = ref(60);
-        const value9 = ref(50);
-
-        return { value1, value2, value3, value4, value5, value6, value7, value8, value9 }
-    }
-}
-<\\/script>
-`
-                },
-                'browser-source': {
-                    tabName: 'Browser Source',
-                    imports: `<script src="https://unpkg.com/primevue@^3/knob/knob.min.js"><\\/script>`,
-                    content: `<div id="app">
-            <div class="p-grid p-formgrid p-text-center">
-                <div class="p-field p-col-12 p-md-4">
-                    <h5>Basic</h5>
-                    <p-knob v-model="value1"></p-knob>
-                </div>
-                <div class="p-field p-col-12 p-md-4">
-                    <h5>Readonly</h5>
-                    <p-knob v-model="value2" readonly></p-knob>
-                </div>
-                <div class="p-field p-col-12 p-md-4">
-                    <h5>Disabled</h5>
-                    <p-knob v-model="value3" disabled></p-knob>
-                </div>
-                <div class="p-field p-col-12 p-md-4">
-                    <h5 class="p-mt-3">Min/Max</h5>
-                    <p-knob v-model="value4" :min="-50" :max="50"></p-knob>
-                </div>
-                <div class="p-field p-col-12 p-md-4">
-                    <h5 class="p-mt-3">Step</h5>
-                    <p-knob v-model="value5" :step="10"></p-knob>
-                </div>
-                <div class="p-field p-col-12 p-md-4">
-                    <h5 class="p-mt-3">Template</h5>
-                    <p-knob v-model="value6" value-template="{value}%"></p-knob>
-                </div>
-                <div class="p-field p-col-12 p-md-4">
-                    <h5 class="p-mt-3">Stroke</h5>
-                    <p-knob v-model="value7" :stroke-width="5"></p-knob>
-                </div>
-                <div class="p-field p-col-12 p-md-4">
-                    <h5 class="p-mt-3">Size</h5>
-                    <p-knob v-model="value8" :size="200"></p-knob>
-                </div>
-                <div class="p-field p-col-12 p-md-4">
-                    <h5 class="p-mt-3">Color</h5>
-                    <p-knob v-model="value9" value-color="SlateGray" range-color="MediumTurquoise"></p-knob>
-                </div>
-            </div>
-        </div>
-
-        <script type="module">
-        const { createApp, ref } = Vue;
-
-        const App = {
-            setup() {
-                const value1 = ref(0);
-                const value2 = ref(50);
-                const value3 = ref(75);
-                const value4 = ref(10);
-                const value5 = ref(40);
-                const value6 = ref(60);
-                const value7 = ref(40);
-                const value8 = ref(60);
-                const value9 = ref(50);
-
-                return { value1, value2, value3, value4, value5, value6, value7, value8, value9 }
-            },
-            components: {
-                "p-knob": primevue.knob
-            }
-        };
-
-        createApp(App)
-            .use(primevue.config.default)
-            .mount("#app");
-        <\\/script>
-`
-                }
-            }
+`)
+        // eslint-disable-next-line no-useless-escape
+        const content = ref(source.value.replace('<\\/script>', '<\/script>'))
+        return {
+            content
         }
-    }
+    },
 }
 </script>

@@ -1,5 +1,11 @@
 <template>
     <div>
+         <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsAutoComplete</h1>
+                <p>AutoComplete is an input component that provides real-time suggestions when being typed.</p>
+            </div>
+        </div>
         <h5>Basic</h5>
         <ts-autocomplete v-model="selectedCountry1" :suggestions="filteredCountries" @complete="searchCountry($event)" field="name" />
 

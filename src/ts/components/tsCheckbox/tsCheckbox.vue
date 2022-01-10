@@ -19,6 +19,7 @@ export default {
   components: {
       Checkbox
   },
+  emits: ['click', 'update:modelValue', 'change', 'input'],
   props: {
     value: null,
     modelValue: null,
