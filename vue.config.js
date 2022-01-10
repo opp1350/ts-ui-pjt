@@ -1,4 +1,5 @@
 module.exports = {
+  productionSourceMap: false,
   devServer: {
     proxy: { // 이부분 추가
       '/': {
