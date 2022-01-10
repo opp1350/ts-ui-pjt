@@ -30,6 +30,30 @@ table {
                 td {
                     padding: 1.2rem;
                     vertical-align: middle;
+                    word-break: break-all;
+                }
+            }
+        }
+    }
+}
+// mobile & tablet
+@media (max-width: 767px) {
+    table {
+        // 데이트 피커 제외
+        &:not(.p-datepicker-calendar) {
+            width: 100%;
+            thead {
+                border: solid var(--gray-dark);
+                border-width: 1px 0;
+                th {
+                    padding: 0.8rem;
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        padding: 0.8rem;
+                    }
                 }
             }
         }

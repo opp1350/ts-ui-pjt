@@ -1,5 +1,5 @@
 <template>
-    <div class="switch:check">
+    <div class="mode-trigger">
         <div class="p-field-checkbox">
             <ts-checkbox ref="switchRef" id="darkModeSwitch" :binary="true" @change="switchEvent" v-model="darkMode" :label="darkMode ? '라이트 모드로 변경' : '다크 모드로 변경'"/>
         </div>
@@ -12,44 +12,40 @@ export default defineComponent({
     setup(){
         const darkMode = ref(false)
         const switchRef = ref(null)
+        const changeLight = () => {
+            document.documentElement.setAttribute('data-mode', 'light')
+            document.body.classList.remove('darker')
+            document.body.classList.add('lighter')
+            localStorage.setItem('preferredDarkMode', 'false')
+        }
+        const changeDark = () => {
+            document.documentElement.setAttribute('data-mode', 'dark')
+            document.body.classList.remove('lighter')
+            document.body.classList.add('darker')
+            localStorage.setItem('preferredDarkMode', 'true')
+        }
 
-        // localStorage로 캐시저장 => 새로고침을 해도 다크모드가 초기화 되지 않음
-        // 다크모드가 true일 때
-        if(localStorage.getItem('preferredDarkMode') && localStorage.getItem('preferredDarkMode') === 'true') {
-            console.log(`nextTick 작동 이전 다크모드 = ${localStorage.getItem('preferredDarkMode')}`) // true
-            console.log(`nextTick 이전 darkMode.value = ${darkMode.value}`) // darkMode.value가 false로 초기화 됨
+        console.log(`localStorage.getItem('preferredDarkMode')의 값은 null이 아닌가요? ==> ${localStorage.getItem('preferredDarkMode') !== null}`)
+        // localStorage의 다크모드가 true일 때
+        if(localStorage.getItem('preferredDarkMode') !== null && localStorage.getItem('preferredDarkMode') === 'true') {
             nextTick(() => {
                 darkMode.value = true // darkMode.value가 false인 현상을 수정
-                darkAttrs()
+                changeDark()
             })
-        // 다크모드가 false일 때
+        // localStorage의 값이 없거나(최초 접근) 다크모드가 false일 때 : 유저 설정에 따름
         } else {
-            if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                nextTick(() => {
-                    darkAttrs()
-                })
-            }
-        }
-        const darkAttrs = () => {
-            if(darkMode.value) {
-                document.documentElement.setAttribute('data-mode', 'dark')
-                document.body.classList.remove('lighter')
-                document.body.classList.add('darker')
-                localStorage.setItem('preferredDarkMode', 'true')
+            if(localStorage.getItem('preferredDarkMode') === null) {
+                window.matchMedia("(prefers-color-scheme: dark)").matches ? (changeDark(), darkMode.value = true) : changeLight()
             } else {
-                document.documentElement.setAttribute('data-mode', 'light')
-                document.body.classList.remove('darker')
-                document.body.classList.add('lighter')
-                localStorage.setItem('preferredDarkMode', 'false')
+                localStorage.getItem('preferredDarkMode') === 'false' ? changeLight() : (changeDark(), darkMode.value = true)
             }
-            
         }
         const switchToggle = () => {
             if (darkMode.value) {
-                darkAttrs()
+                changeDark()
                 window.alert('테마를 다크모드로 변경합니다.')
             } else {
-                darkAttrs()
+                changeLight()
                 window.alert('테마를 라이트모드로 변경합니다.')
             }
         }
@@ -61,7 +57,9 @@ export default defineComponent({
         return {
             switchRef,
             switchEvent,
-            darkMode
+            darkMode,
+            changeLight,
+            changeDark
         }
     }
 })

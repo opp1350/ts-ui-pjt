@@ -1,7 +1,5 @@
-@media(prefers-color-scheme: dark) {
-    [data-mode='dark'] {
-        @import './prism/prism-okaidia';
-    }
+[data-mode='dark'] {
+    @import './prism/prism-okaidia';
 }
 [data-mode='light'] {
     @import './prism/prism';
