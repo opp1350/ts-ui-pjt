@@ -1,17 +1,8 @@
 <template>
-	<AppDoc name="PasswordDemo" :sources="sources" github="password/PasswordDemo.vue">
-        <h5>Import via Module</h5>
-<pre v-code.script><code>
-import Password from 'primevue/password';
-
-</code></pre>
-
-        <h5>Import via CDN</h5>
-<pre v-code><code>
-&lt;script src="https://unpkg.com/primevue@^3/core/core.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/primevue@^3/password/password.min.js"&gt;&lt;/script&gt;
-
-</code></pre>
+    <div>
+        <div class="card">
+            <TabView>
+                <TabPanel header="Documentation">
 
 		<h5>Getting Started</h5>
 		<p>A model can be bound using the standard v-model directive.</p>
@@ -241,189 +232,125 @@ import Password from 'primevue/password';
 
 		<h5>Dependencies</h5>
 		<p>None.</p>
-    </AppDoc>
-</template>
-
-<script>
-export default {
-    data() {
-        return {
-            sources: {
-                'options-api': {
-                    tabName: 'Options API Source',
-                    content: `
-<template>
-    <div>
-        <h5>Basic</h5>
-        <Password v-model="value1" :feedback="false" />
-
-        <h5>Password Meter</h5>
-        <Password v-model="value2" />
-
-        <h5>Show Password</h5>
-        <Password v-model="value3" toggleMask></Password>
-
-        <h5>Templating</h5>
-        <Password v-model="value4">
-            <template #header>
-                <h6>Pick a password</h6>
-            </template>
-            <template #footer="sp">
-                {{sp.level}}
-                <Divider />
-                <p class="p-mt-2">Suggestions</p>
-                <ul class="p-pl-2 p-ml-2 p-mt-0" style="line-height: 1.5">
-                    <li>At least one lowercase</li>
-                    <li>At least one uppercase</li>
-                    <li>At least one numeric</li>
-                    <li>Minimum 8 characters</li>
-                </ul>
-            </template>
-        </Password>
+                </TabPanel>
+                <TabPanel header="Compositon API Source">
+                    <pre v-code><code>
+                            {{ content }}
+                        </code></pre>
+                </TabPanel>
+            </TabView>
+        </div>
     </div>
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            value1: null,
-            value2: null,
-            value3: null,
-            value4: null
-        }
-    }
-}
-<\\/script>
-
-<style lang="scss" scoped>
-::v-deep(.p-password input) {
-    width: 15rem
-}
-</style>
-`
-                },
-                'composition-api': {
-                    tabName: 'Composition API Source',
-                    content: `
-<template>
-    <div>
-        <h5>Basic</h5>
-        <Password v-model="value1" :feedback="false" />
-
-        <h5>Password Meter</h5>
-        <Password v-model="value2" />
-
-        <h5>Show Password</h5>
-        <Password v-model="value3" toggleMask></Password>
-
-        <h5>Templating</h5>
-        <Password v-model="value4">
-            <template #header>
-                <h6>Pick a password</h6>
-            </template>
-            <template #footer="sp">
-                {{sp.level}}
-                <Divider />
-                <p class="p-mt-2">Suggestions</p>
-                <ul class="p-pl-2 p-ml-2 p-mt-0" style="line-height: 1.5">
-                    <li>At least one lowercase</li>
-                    <li>At least one uppercase</li>
-                    <li>At least one numeric</li>
-                    <li>Minimum 8 characters</li>
-                </ul>
-            </template>
-        </Password>
-    </div>
-</template>
-
-<script>
-import { ref } from 'vue';
-
+import { ref } from 'vue'
 export default {
     setup() {
-        const value1 = ref();
-        const value2 = ref();
-        const value3 = ref();
-        const value4 = ref();
+        const source = ref(`
+<template>
+    <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>Panel</h1>
+                <p>Panel is a container with the optional content toggle feature.</p>
+            </div>
+        </div>
 
-        return { value1, value2, value3, value4 }
+        <div class="content-section implementation">
+            <h5>Regular</h5>
+            <ts-panel header="Header">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </ts-panel>
+
+            <h5>Advanced</h5>
+            <ts-panel header="Header" :toggleable="true">
+                <template #icons>
+                    <button class="p-panel-header-icon p-link p-mr-2" @click="toggle">
+                        <span class="pi pi-cog"></span>
+                    </button>
+                    <Menu id="config_menu" ref="menu" :model="items" :popup="true" />
+                </template>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </ts-panel>
+        </div>
+
+        <TsPanelDoc/>
+    </div>
+</template>
+<script>
+import TsPanelDoc from './tsPanelDoc';
+
+export default {
+    data() {
+        return {
+            collapsed: true,
+            items: [
+                {
+                    label: 'Options',
+                    items: [{
+                        label: 'Update',
+                        icon: 'pi pi-refresh',
+                        command: () => {
+                            this.$toast.add({severity:'success', summary:'Updated', detail:'Data Updated', life: 3000});
+                        }
+                    },
+                    {
+                        label: 'Delete',
+                        icon: 'pi pi-times',
+                        command: () => {
+                            this.$toast.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted', life: 3000});
+                        }
+                    }
+                ]},
+                {
+                    label: 'Navigate',
+                    items: [{
+                        label: 'Vue Website',
+                        icon: 'pi pi-external-link',
+                        url: 'https://vuejs.org/'
+                    },
+                    {
+                        label: 'Router',
+                        icon: 'pi pi-upload',
+                        to: '/fileupload'
+                    }
+                ]}
+            ]
+        }
+    },
+    methods: {
+        toggle(event) {
+            this.$refs.menu.toggle(event);
+        },
+        save() {
+            this.$toast.add({severity: 'success', summary: 'Success', detail: 'Data Saved', life: 3000});
+        }
+    },
+    components: {
+        TsPanelDoc
     }
 }
 <\\/script>
 
 <style lang="scss" scoped>
-::v-deep(.p-password input) {
-    width: 15rem
+.p-panel p {
+    line-height: 1.5;
+    margin: 0;
 }
 </style>
-`
-                },
-                'browser-source': {
-                    tabName: 'Browser Source',
-                    imports: `<script src="https://unpkg.com/primevue@^3/password/password.min.js"><\\/script>
-        <script src="https://unpkg.com/primevue@^3/divider/divider.min.js"><\\/script>`,
-                    content: `<div id="app">
-            <h5>Basic</h5>
-            <p-password v-model="value1" :feedback="false"></p-password>
-
-            <h5>p-password Meter</h5>
-            <p-password v-model="value2"></p-password>
-
-            <h5>Show p-password</h5>
-            <p-password v-model="value3" toggle-mask></p-password>
-
-            <h5>Templating</h5>
-            <p-password v-model="value4">
-                <template #header>
-                    <h6>Pick a password</h6>
-                </template>
-                <template #footer="sp">
-                    {{sp.level}}
-                    <p-divider></p-divider>
-                    <p class="p-mt-2">Suggestions</p>
-                    <ul class="p-pl-2 p-ml-2 p-mt-0" style="line-height: 1.5">
-                        <li>At least one lowercase</li>
-                        <li>At least one uppercase</li>
-                        <li>At least one numeric</li>
-                        <li>Minimum 8 characters</li>
-                    </ul>
-                </template>
-            </p-password>
-        </div>
-
-        <script type="module">
-        const { createApp, ref } = Vue;
-
-        const App = {
-            setup() {
-                const value1 = ref();
-                const value2 = ref();
-                const value3 = ref();
-                const value4 = ref();
-
-                return { value1, value2, value3, value4 }
-            },
-            components: {
-                "p-password": primevue.password,
-                "p-divider": primevue.divider
-            }
-        };
-
-        createApp(App)
-            .use(primevue.config.default)
-            .mount("#app");
-        <\\/script>
-
-        <style>
-        .p-password input {
-            width: 15rem
+`)
+        // eslint-disable-next-line no-useless-escape
+        const content = ref(source.value.replace('<\\/script>', '<\/script>'))
+        return {
+            content
         }
-        </style>
-`
-                }
-            }
-        }
-    }
+    },
 }
 </script>

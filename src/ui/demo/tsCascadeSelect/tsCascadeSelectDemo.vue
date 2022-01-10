@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsCascadeSelect</h1>
+                <p>CascadeSelect displays a nested structure of options.</p>
+            </div>
+        </div>
         <h5>Basic</h5>
         <ts-cascadeselect v-model="selectedCity1" :options="countries" optionLabel="cname" optionGroupLabel="name"
                 :optionGroupChildren="['states', 'cities']" style="minWidth: 14rem" placeholder="Select a City" />

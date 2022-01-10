@@ -1,6 +1,12 @@
 // tsButton에 대한 Demo 파일
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsButton</h1>
+                <p>Button is an extension to standard button element with icons and theming.</p>
+            </div>
+        </div>
         <h5>Basic</h5>
         <ts-button label="ts-Button" @click="clickBtn()"/>
         <ts-button label="Disabled" disabled="disabled" />

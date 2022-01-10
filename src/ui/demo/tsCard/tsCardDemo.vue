@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsCard</h1>
+                <p>Card is a flexible container component.</p>
+            </div>
+        </div>
         <ts-card style="width: 25rem; margin-bottom: 2em">
             <template #title>
                 Simple Card

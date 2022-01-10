@@ -1,17 +1,8 @@
 <template>
-	<AppDoc name="PanelDemo" :sources="sources" github="panel/PanelDemo.vue">
-        <h5>Import via Module</h5>
-<pre v-code.script><code>
-import Panel from 'primevue/panel';
-
-</code></pre>
-
-        <h5>Import via CDN</h5>
-<pre v-code><code>
-&lt;script src="https://unpkg.com/primevue@^3/core/core.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/primevue@^3/panel/panel.min.js"&gt;&lt;/script&gt;
-
-</code></pre>
+    <div>
+        <div class="card">
+            <TabView>
+                <TabPanel header="Documentation">
 
 		<h5>Getting Started</h5>
 		<p>Panel is a container component that accepts content as its children.</p>
@@ -203,46 +194,61 @@ import Panel from 'primevue/panel';
 
 		<h5>Dependencies</h5>
 		<p>None.</p>
-    </AppDoc>
-</template>
-
-<script>
-export default {
-    data() {
-        return {
-            sources: {
-                'options-api': {
-                    tabName: 'Options API Source',
-                    content: `
-<template>
-    <div>
-        <Toast />
-
-        <h5>Regular</h5>
-        <Panel header="Header">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </Panel>
-
-        <h5>Advanced</h5>
-        <Panel header="Header" :toggleable="true">
-            <template #icons>
-                <button class="p-panel-header-icon p-link p-mr-2" @click="toggle">
-                    <span class="pi pi-cog"></span>
-                </button>
-                <Menu id="config_menu" ref="menu" :model="items" :popup="true" />
-            </template>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </Panel>
+                </TabPanel>
+                <TabPanel header="Compositon API Source">
+                    <pre v-code><code>
+                            {{ content }}
+                        </code></pre>
+                </TabPanel>
+            </TabView>
+        </div>
     </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+export default {
+    setup() {
+        const source = ref(`
+<template>
+    <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>Panel</h1>
+                <p>Panel is a container with the optional content toggle feature.</p>
+            </div>
+        </div>
+
+        <div class="content-section implementation">
+            <h5>Regular</h5>
+            <ts-panel header="Header">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </ts-panel>
+
+            <h5>Advanced</h5>
+            <ts-panel header="Header" :toggleable="true">
+                <template #icons>
+                    <button class="p-panel-header-icon p-link p-mr-2" @click="toggle">
+                        <span class="pi pi-cog"></span>
+                    </button>
+                    <Menu id="config_menu" ref="menu" :model="items" :popup="true" />
+                </template>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </ts-panel>
+        </div>
+
+        <TsPanelDoc/>
+    </div>
+</template>
+<script>
+import TsPanelDoc from './tsPanelDoc';
+
 export default {
     data() {
         return {
@@ -275,9 +281,7 @@ export default {
                     {
                         label: 'Router',
                         icon: 'pi pi-upload',
-                        command: () => {
-                            window.location.hash = "/fileupload"
-                        }
+                        to: '/fileupload'
                     }
                 ]}
             ]
@@ -290,6 +294,9 @@ export default {
         save() {
             this.$toast.add({severity: 'success', summary: 'Success', detail: 'Data Saved', life: 3000});
         }
+    },
+    components: {
+        TsPanelDoc
     }
 }
 <\\/script>
@@ -299,212 +306,13 @@ export default {
     line-height: 1.5;
     margin: 0;
 }
-</style>`
-                },
-                'composition-api': {
-                    tabName: 'Composition API Source',
-                    content: `
-<template>
-    <div>
-        <Toast />
-
-        <h5>Regular</h5>
-        <Panel header="Header">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </Panel>
-
-        <h5>Advanced</h5>
-        <Panel header="Header" :toggleable="true">
-            <template #icons>
-                <button class="p-panel-header-icon p-link p-mr-2" @click="toggle">
-                    <span class="pi pi-cog"></span>
-                </button>
-                <Menu id="config_menu" ref="menu" :model="items" :popup="true" />
-            </template>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </Panel>
-    </div>
-</template>
-
-<script>
-import { ref } from 'vue';
-import { useToast } from 'primevue/usetoast';
-
-export default {
-    setup() {
-        const toast = useToast();
-        const menu = ref(null);
-        const collapsed = ref(true);
-        const items = ref([
-            {
-                label: 'Options',
-                items: [{
-                    label: 'Update',
-                    icon: 'pi pi-refresh',
-                    command: () => {
-                        toast.add({severity:'success', summary:'Updated', detail:'Data Updated', life: 3000});
-                    }
-                },
-                {
-                    label: 'Delete',
-                    icon: 'pi pi-times',
-                    command: () => {
-                        toast.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted', life: 3000});
-                    }
-                }
-            ]},
-            {
-                label: 'Navigate',
-                items: [{
-                    label: 'Vue Website',
-                    icon: 'pi pi-external-link',
-                    url: 'https://vuejs.org/'
-                },
-                {
-                    label: 'Router',
-                    icon: 'pi pi-upload',
-                    command: () => {
-                        window.location.hash = "/fileupload"
-                    }
-                }
-            ]}
-        ]);
-
-        const toggle = (event) => {
-            menu.value.toggle(event);
-        };
-
-        const save = () => {
-            toast.add({severity: 'success', summary: 'Success', detail: 'Data Saved', life: 3000});
+</style>
+`)
+        // eslint-disable-next-line no-useless-escape
+        const content = ref(source.value.replace('<\\/script>', '<\/script>'))
+        return {
+            content
         }
-
-        return { menu, collapsed, items, toggle, save }
-    }
-}
-<\\/script>
-
-<style lang="scss" scoped>
-.p-panel p {
-    line-height: 1.5;
-    margin: 0;
-}
-</style>`
-                },
-                'browser-source': {
-                    tabName: 'Browser Source',
-                    imports: `<script src="https://unpkg.com/primevue@^3/panel/panel.min.js"><\\/script>
-        <script src="https://unpkg.com/primevue@^3/toast/toast.min.js"><\\/script>
-        <script src="https://unpkg.com/primevue@^3/toastservice/toastservice.min.js"><\\/script>
-        <script src="https://unpkg.com/primevue@^3/menu/menu.min.js"><\\/script>`,
-                    content: `<div id="app">
-            <p-toast></p-toast>
-
-            <h5>Regular</h5>
-            <p-panel header="Header">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </p-panel>
-
-            <h5>Advanced</h5>
-            <p-panel header="Header" :toggleable="true">
-                <template #icons>
-                    <p-button class="p-panel-header-icon p-link p-mr-2" @click="toggle">
-                        <span class="pi pi-cog"></span>
-                    </p-button>
-                    <p-menu id="config_menu" ref="menu" :model="items" :popup="true"></p-menu>
-                </template>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </p-panel>
-        </div>
-
-        <script type="module">
-        const { createApp, ref } = Vue;
-        const { useToast } = primevue.usetoast;
-
-        const App = {
-            setup() {
-                const toast = useToast();
-                const menu = ref(null);
-                const collapsed = ref(true);
-                const items = ref([
-                    {
-                        label: 'Options',
-                        items: [{
-                            label: 'Update',
-                            icon: 'pi pi-refresh',
-                            command: () => {
-                                toast.add({severity:'success', summary:'Updated', detail:'Data Updated', life: 3000});
-                            }
-                        },
-                        {
-                            label: 'Delete',
-                            icon: 'pi pi-times',
-                            command: () => {
-                                toast.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted', life: 3000});
-                            }
-                        }
-                    ]},
-                    {
-                        label: 'Navigate',
-                        items: [{
-                            label: 'Vue Website',
-                            icon: 'pi pi-external-link',
-                            url: 'https://vuejs.org/'
-                        },
-                        {
-                            label: 'Router',
-                            icon: 'pi pi-upload',
-                            command: () => {
-                                window.location.hash = "/fileupload"
-                            }
-                        }
-                    ]}
-                ]);
-
-                const toggle = (event) => {
-                    menu.value.toggle(event);
-                };
-
-                const save = () => {
-                    toast.add({severity: 'success', summary: 'Success', detail: 'Data Saved', life: 3000});
-                }
-
-                return { menu, collapsed, items, toggle, save }
-            },
-            components: {
-                "p-panel": primevue.panel,
-                "p-toast": primevue.toast,
-                "p-menu": primevue.menu,
-                "p-button": primevue.button
-            }
-        };
-
-        createApp(App)
-            .use(primevue.config.default)
-            .use(primevue.toastservice)
-            .mount("#app");
-        <\\/script>
-
-        <style>
-        .p-panel p {
-            line-height: 1.5;
-            margin: 0;
-        }
-        </style>`
-                }
-            }    
-        }
-    }
+    },
 }
 </script>
