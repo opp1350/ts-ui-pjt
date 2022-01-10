@@ -1,29 +1,34 @@
 <template>
-    <div>
-		<!-- <Toast /> -->
+   <div>
+      <div>
+      <!-- <Toast /> -->
+         <h5>Basic</h5>
+         <ts-splitbutton label="Save" icon="pi pi-plus" @click="save" :model="items"></ts-splitbutton>
 
-        <h5>Basic</h5>
-		<ts-splitbutton label="Save" icon="pi pi-plus" @click="save" :model="items"></ts-splitbutton>
+         <h5>Nested</h5>
+         <ts-splitbutton label="Save" icon="pi pi-plus" @click="save" :model="nestedItems"></ts-splitbutton>
 
-        <h5>Nested</h5>
-        <ts-splitbutton label="Save" icon="pi pi-plus" @click="save" :model="nestedItems"></ts-splitbutton>
-
-        <h5>Severities</h5>
-        <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-mb-2"></ts-splitbutton>
-        <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-secondary p-mb-2"></ts-splitbutton>
-        <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-success p-mb-2"></ts-splitbutton>
-        <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-info p-mb-2"></ts-splitbutton>
-        <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-warning p-mb-2"></ts-splitbutton>
-        <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-help p-mb-2"></ts-splitbutton>
-        <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-danger p-mb-2"></ts-splitbutton>
-    </div>
+         <h5>Severities</h5>
+         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-mb-2"></ts-splitbutton>
+         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-secondary p-mb-2"></ts-splitbutton>
+         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-success p-mb-2"></ts-splitbutton>
+         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-info p-mb-2"></ts-splitbutton>
+         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-warning p-mb-2"></ts-splitbutton>
+         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-help p-mb-2"></ts-splitbutton>
+         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-danger p-mb-2"></ts-splitbutton>
+      </div>
+      <TsSplitButtonDoc/>
+   </div>
 </template>
 
 <script>
-import { ref } from "vue";
-// import { useToast } from "primevue/usetoast";
+import { ref } from "vue"
+import TsSplitButtonDoc from './tsSplitButtonDoc.vue'
 
 export default {
+   components: {
+      TsSplitButtonDoc
+   },
     setup() {
 		// const toast = useToast();
         const items = ref([

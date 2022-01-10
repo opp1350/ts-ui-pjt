@@ -134,9 +134,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.p-multiselect {
-    width: 18rem;
-}
+// .p-multiselect {
+//     width: 18rem;
+// }
 
 ::v-deep(.multiselect-custom) {
     .p-multiselect-label:not(.p-placeholder) {

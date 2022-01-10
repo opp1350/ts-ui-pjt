@@ -1,18 +1,20 @@
 .p-link {
     font-size: var(--font-size-default);
 }
+
 .p-radiobutton-disabled,
 .p-disabled,
 .p-component.p-disabled {
     opacity: 0.4;
-
 }
+
 .p-component {
     font-size: var(--font-size-default);
-    + label {
+    +label {
         margin-left: .8rem;
     }
 }
+
 // dark mode
 html[data-mode='dark'] {
     .p-radiobutton-disabled,

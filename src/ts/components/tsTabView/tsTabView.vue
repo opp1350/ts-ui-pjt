@@ -12,7 +12,7 @@
             </template>
             <template v-else>
                 <TabPanel v-for="tab in tabs" :key="tab.title" :header="tab.title" :disabled="tab.disabled">
-                    <p>{{ tab.content }}</p>
+                    <slot :tabItem="tab"></slot>
                 </TabPanel>
             </template>
         </TabView>

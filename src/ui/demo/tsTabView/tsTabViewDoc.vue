@@ -268,18 +268,30 @@ export default {
     <div>
         <div class="card">
 			<h5>1. Default</h5>
-            <ts-tabview :tabs="tabs"></ts-tabview>
+            <ts-tabview :tabs="tabs">
+                <template #default="{ tabItem }">
+                    <p>{{ tabItem.content }}</p>
+                </template>
+            </ts-tabview>
         </div>
 		<div>
 			<h5>2. Programmatic</h5>
             <ts-button @click="active1 = 0" label="Activate 1st"></ts-button>
             <ts-button @click="active1 = 1" label="Activate 2nd"></ts-button>
             <ts-button @click="active1 = 2" label="Activate 3rd"></ts-button>
-			<ts-tabview :tabs="tabs" v-model:activeIndex="active1"></ts-tabview>
+			<ts-tabview :tabs="tabs" v-model:activeIndex="active1">
+                <template #default="{ tabItem }">
+                    <p>{{ tabItem.content }}</p>
+                </template>
+            </ts-tabview>
 		</div>
 		<div>
 			<h5>3. Disabled</h5>
-			<ts-tabview :tabs="tabs1"></ts-tabview>
+			<ts-tabview :tabs="tabs1">
+                <template #default="{ tabItem }">
+                    <p>{{ tabItem.content }}</p>
+                </template>
+            </ts-tabview>
 		</div>
 		<div>
 			<h5>4. Custom Headers</h5>
@@ -293,6 +305,9 @@ export default {
 				<ts-button @click="active2 = 49" label="Activate 50th"></ts-button>
 			</div>
 			<ts-tabview :tabs="tabs2" v-model:activeIndex="active2" :scrollable="true">
+                <template #default="{ tabItem }">
+                    <p>{{ tabItem.content }}</p>
+                </template>
 			</ts-tabview>
 		</div>
         <TsTabViewDoc />
@@ -363,6 +378,30 @@ export default {
     },
 }
 <\\/script>
+
+
+<style lang="scss" scoped>
+.p-button {
+    margin-right: .5rem;
+    margin-top: 1rem;
+}
+
+.tabview-custom {
+    i, span {
+        vertical-align: middle;
+    }
+
+    span {
+        margin: 0 .5rem;
+    }
+}
+
+.p-tabview p {
+    line-height: 1.5;
+    margin: 0;
+}
+</style>
+
         `)
 
         // eslint-disable-next-line no-useless-escape

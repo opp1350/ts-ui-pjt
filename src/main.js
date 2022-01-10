@@ -45,6 +45,10 @@ import tsTriStateCheckbox from './ts/components/tsTriStateCheckbox/tsTriStateChe
 import tsProgressBar from './ts/components/tsProgressBar/tsProgressBar.vue'
 import tsProgressSpinner from './ts/components/tsProgressSpinner/tsProgressSpinner.vue'
 
+import Tooltip from 'primevue/tooltip'
+import Ripple from 'primevue/ripple'
+import StyleClass from 'primevue/styleclass'
+
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
 import 'primevue/resources/primevue.min.css' // primevue core css
@@ -98,6 +102,12 @@ app.use(PrimeVue, {
         emptyMessage: 'No available options'
     }
 });
+
+// primevue directive
+app.directive('tooltip', Tooltip);
+app.directive('ripple', Ripple);
+app.directive('styleclass', StyleClass);
+
 app.use(router).mount('#app');
 // components
 app.component('ts-button', tsButton);

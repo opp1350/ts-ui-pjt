@@ -45,12 +45,17 @@
                 </template>
             </ts-splitter>
         </div>
+        <TsSplitterDoc />>
     </div>
 </template>
 
 <script>
 import { ref } from 'vue'
+import TsSplitterDoc from './tsSplitterDoc.vue'
 export default {
+    components: {
+        TsSplitterDoc
+    },
     setup() {
         const splitPanel = ref([
             {class: 'p-d-flex p-ai-center p-jc-center',
