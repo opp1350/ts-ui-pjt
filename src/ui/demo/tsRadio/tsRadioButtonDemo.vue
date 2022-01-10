@@ -1,6 +1,11 @@
-// tsRadio에 대한 Demo 파일
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsRadioButton</h1>
+                <p>RadioButton is an extension to standard radio button element with theming.</p>
+            </div>
+        </div>
         <h5>Basic</h5>
         <div class="p-field-radiobutton">
             <ts-radio-button id="city1" name="city" value="Chicago" v-model="city" label="Chicago"/>

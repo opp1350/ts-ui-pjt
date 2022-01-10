@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsInputMask</h1>
+                <p>InputMask component is used to enter input in a certain format such as numeric, date, currency, email and phone.</p>
+            </div>
+        </div>
         <div class="p-fluid p-formgrid p-grid">
             <div class="p-field p-col-12 p-md-4">
                 <label for="basic">Basic</label>

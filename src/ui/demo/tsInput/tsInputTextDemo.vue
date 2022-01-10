@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsInputText</h1>
+                <p>InputText renders a text field to enter data.</p>
+            </div>
+        </div>
         <h5>Basic</h5>
         <ts-input-text type="text" v-model="value1" />
         <span :style="{marginLeft: '.5em'}">{{value1}}</span>

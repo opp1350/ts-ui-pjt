@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsKnob</h1>
+                <p>Knob is a form component to define number inputs with a dial.</p>
+            </div>
+        </div>
         <div class="content-section implementation">
             <div class="card">
                 <div class="p-grid p-formgrid p-text-center">

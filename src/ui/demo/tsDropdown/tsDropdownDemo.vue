@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsDropdown</h1>
+                <p>Dropdown is used to select an item from a list of options.</p>
+            </div>
+        </div>
         <h5>Basic</h5>
         <ts-dropdown v-model="selectedCity1" :options="cities" optionLabel="name" optionValue="code" placeholder="Select a City" />
 

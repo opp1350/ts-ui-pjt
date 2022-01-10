@@ -1,5 +1,11 @@
 <template>
     <div class="p-fluid">
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsChips</h1>
+                <p>Chips is used to enter multiple values on an input field.</p>
+            </div>
+        </div>
         <div class="card">
             <h5>Basic</h5>
             <ts-chips v-model="value1" />

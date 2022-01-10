@@ -1,6 +1,11 @@
-// tsCheckbox에 대한 Demo 파일
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsCheckbox</h1>
+                <p>Checkbox is an extension to standard checkbox element with theming.</p>
+            </div>
+        </div>
         <h5>Basic</h5>
         <div class="p-field-checkbox">
             <ts-checkbox id="binary" v-model="checked" :binary="true" :label="checked"></ts-checkbox>

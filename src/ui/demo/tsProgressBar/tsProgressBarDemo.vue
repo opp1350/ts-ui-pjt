@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsProgressBar</h1>
+                <p>ProgressBar is a process status indicator.</p>
+            </div>
+        </div>
         <h5>Dynamic</h5>
         <ts-progressbar :value="value1" />
 

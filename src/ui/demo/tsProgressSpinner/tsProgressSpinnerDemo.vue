@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsProgressSpinner</h1>
+                <p>ProgressSpinner is a process status indicator.</p>
+            </div>
+        </div>
         <h5>Basic</h5>
         <ts-progress-spinner />
 

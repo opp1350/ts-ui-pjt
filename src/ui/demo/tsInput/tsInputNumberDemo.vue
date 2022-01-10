@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsInputNumber</h1>
+                <p>InputNumber is an input component to provide numerical input.</p>
+            </div>
+        </div>
         <h5>Numerals</h5>
         <div class="p-fluid p-grid p-formgrid">
             <div class="p-field p-col-12 p-md-3">
