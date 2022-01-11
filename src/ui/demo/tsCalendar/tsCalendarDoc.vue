@@ -595,7 +595,7 @@ export default {
 		<h5>Dependencies</h5>
 		<p>None.</p>
                 </TabPanel>
-                <TabPanel header="Compositon API Source">
+                <TabPanel header="Composition API Source">
                     <pre v-code><code>
                             {{ content }}
                         </code></pre>
