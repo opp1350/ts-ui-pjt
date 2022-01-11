@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsTabView</h1>
+                <p>TabView is a container component to group content with tabs.</p>
+            </div>
+        </div>
         <div class="card">
 			<h5>1. Default</h5>
             <ts-tabview :tabs="tabs">

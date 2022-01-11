@@ -1,15 +1,19 @@
 <template>
     <div>
-        <div>
-            <h5>Single</h5>
-            <ts-treeselect v-model="selectedNode" :options="nodes" placeholder="Select Item"></ts-treeselect>
-            
-            <h5>Multiple</h5>
-            <ts-treeselect v-model="selectedNodes1" :options="nodes" selectionMode="multiple" :metaKeySelection="false" placeholder="Select Items"></ts-treeselect>
-
-            <h5>Checkbox</h5>
-            <ts-treeselect v-model="selectedNodes2" :options="nodes" display="chip" selectionMode="checkbox"  placeholder="Select Items"></ts-treeselect>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsTreeSelect</h1>
+                <p>TreeSelect is a form component to choose from hierarchical data.</p>
+            </div>
         </div>
+        <h5>Single</h5>
+        <ts-treeselect v-model="selectedNode" :options="nodes" placeholder="Select Item"></ts-treeselect>
+        
+        <h5>Multiple</h5>
+        <ts-treeselect v-model="selectedNodes1" :options="nodes" selectionMode="multiple" :metaKeySelection="false" placeholder="Select Items"></ts-treeselect>
+
+        <h5>Checkbox</h5>
+        <ts-treeselect v-model="selectedNodes2" :options="nodes" display="chip" selectionMode="checkbox"  placeholder="Select Items"></ts-treeselect>
         <TsTreeSelectDoc />
     </div>
 </template>

@@ -1,53 +1,57 @@
 <template>
     <div>
-        <div>
-            <!-- <Toast /> -->
-            <div class="card">
-                <h5>Linear</h5>
-                <div class="speeddial-linear-demo" :style="{ position: 'relative', height: '500px' }">
-                    <ts-speeddial :model="items" direction="up" />
-                    <ts-speeddial :model="items" direction="down" />
-                    <ts-speeddial :model="items" direction="left" />
-                    <ts-speeddial :model="items" direction="right" />
-                </div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsSpeedDial</h1>
+                <p>When pressed, a floating action button can display multiple primary actions that can be performed on a page.</p>
             </div>
-
-            <div class="card">
-                <h5>Circle, Semi-Circle and Quarter-Circle</h5>
-                <div class="speeddial-circle-demo" :style="{ position: 'relative', height: '500px' }">
-                    <ts-speeddial :model="items" radius="80" type="circle" buttonClass="p-button-warning" />
-                    <ts-speeddial :model="items" :radius="80" direction="up" type="semi-circle" />
-                    <ts-speeddial :model="items" :radius="80" direction="down" type="semi-circle" />
-                    <ts-speeddial :model="items" :radius="80" direction="left" type="semi-circle" />
-                    <ts-speeddial :model="items" :radius="80" direction="right" type="semi-circle" />
-                    <ts-speeddial :model="items" :radius="120" direction="up-left" type="quarter-circle" buttonClass="p-button-success" />
-                    <ts-speeddial :model="items" :radius="120" direction="up-right" type="quarter-circle" buttonClass="p-button-success" />
-                    <ts-speeddial :model="items" :radius="120" direction="down-left" type="quarter-circle" buttonClass="p-button-success" />
-                    <ts-speeddial :model="items" :radius="120" direction="down-right" type="quarter-circle" buttonClass="p-button-success" />
-                </div>
+        </div>
+        <!-- <Toast /> -->
+        <div class="card">
+            <h5>Linear</h5>
+            <div class="speeddial-linear-demo" :style="{ position: 'relative', height: '500px' }">
+                <ts-speeddial :model="items" direction="up" />
+                <ts-speeddial :model="items" direction="down" />
+                <ts-speeddial :model="items" direction="left" />
+                <ts-speeddial :model="items" direction="right" />
             </div>
+        </div>
 
-            <div class="card">
-                <h5>Tooltip</h5>
-                <div class="speeddial-tooltip-demo" :style="{ position: 'relative', height: '350px' }">
-                    <ts-speeddial :model="items" direction="up" class="speeddial-right" buttonClass="p-button-danger" :tooltipOptions="{position: 'left'}" />
-
-                    <ts-speeddial :model="items" direction="up" class="speeddial-left" buttonClass="p-button-help" :tooltipOptions="{position: 'right'}" />
-                </div>
+        <div class="card">
+            <h5>Circle, Semi-Circle and Quarter-Circle</h5>
+            <div class="speeddial-circle-demo" :style="{ position: 'relative', height: '500px' }">
+                <ts-speeddial :model="items" radius="80" type="circle" buttonClass="p-button-warning" />
+                <ts-speeddial :model="items" :radius="80" direction="up" type="semi-circle" />
+                <ts-speeddial :model="items" :radius="80" direction="down" type="semi-circle" />
+                <ts-speeddial :model="items" :radius="80" direction="left" type="semi-circle" />
+                <ts-speeddial :model="items" :radius="80" direction="right" type="semi-circle" />
+                <ts-speeddial :model="items" :radius="120" direction="up-left" type="quarter-circle" buttonClass="p-button-success" />
+                <ts-speeddial :model="items" :radius="120" direction="up-right" type="quarter-circle" buttonClass="p-button-success" />
+                <ts-speeddial :model="items" :radius="120" direction="down-left" type="quarter-circle" buttonClass="p-button-success" />
+                <ts-speeddial :model="items" :radius="120" direction="down-right" type="quarter-circle" buttonClass="p-button-success" />
             </div>
+        </div>
 
-            <div class="card">
-                <h5>Transition Duration, Icon and No Rotate Animation</h5>
-                <div class="speeddial-delay-demo" :style="{ position: 'relative', height: '350px' }">
-                    <ts-speeddial :model="items" direction="up" :transitionDelay="80" showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClass="p-button-outlined" />
-                </div>
+        <div class="card">
+            <h5>Tooltip</h5>
+            <div class="speeddial-tooltip-demo" :style="{ position: 'relative', height: '350px' }">
+                <ts-speeddial :model="items" direction="up" class="speeddial-right" buttonClass="p-button-danger" :tooltipOptions="{position: 'left'}" />
+
+                <ts-speeddial :model="items" direction="up" class="speeddial-left" buttonClass="p-button-help" :tooltipOptions="{position: 'right'}" />
             </div>
+        </div>
 
-            <div class="card">
-                <h5>Mask</h5>
-                <div class="speeddial-mask-demo" :style="{ position: 'relative', height: '350px' }">
-                    <ts-speeddial :model="items" :direction="up" mask />
-                </div>
+        <div class="card">
+            <h5>Transition Duration, Icon and No Rotate Animation</h5>
+            <div class="speeddial-delay-demo" :style="{ position: 'relative', height: '350px' }">
+                <ts-speeddial :model="items" direction="up" :transitionDelay="80" showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClass="p-button-outlined" />
+            </div>
+        </div>
+
+        <div class="card">
+            <h5>Mask</h5>
+            <div class="speeddial-mask-demo" :style="{ position: 'relative', height: '350px' }">
+                <ts-speeddial :model="items" :direction="up" mask />
             </div>
         </div>
         <TsSpeedDialDoc />

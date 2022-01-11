@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsSplitter</h1>
+                <p>Splitter is utilized to separate and resize panels.</p>
+            </div>
+        </div>
         <div class="card">
             <h5>Horizontal</h5>
             <ts-splitter style="height: 300px" class="p-mb-5" :splitPanel="splitPanel">

@@ -1,21 +1,25 @@
 <template>
     <div>
-        <div>
-            <ts-toolbar>
-                <template #start>
-                    <ts-button label="New" icon="pi pi-plus" class="p-mr-2" />
-                    <ts-button label="Upload" icon="pi pi-upload" class="p-button-success" />
-                    <i class="pi pi-bars p-toolbar-separator p-mr-2" />
-                    <ts-splitbutton label="Save" icon="pi pi-check" :model="items" class="p-button-warning"></ts-splitbutton>
-                </template>
-
-                <template #end>
-                    <ts-button icon="pi pi-search" class="p-mr-2" />
-                    <ts-button icon="pi pi-calendar" class="p-button-success p-mr-2" />
-                    <ts-button icon="pi pi-times" class="p-button-danger" />
-                </template>
-            </ts-toolbar>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsToolbar</h1>
+                <p>Toolbar is a grouping component for buttons and other content.</p>
+            </div>
         </div>
+        <ts-toolbar>
+            <template #start>
+                <ts-button label="New" icon="pi pi-plus" class="p-mr-2" />
+                <ts-button label="Upload" icon="pi pi-upload" class="p-button-success" />
+                <i class="pi pi-bars p-toolbar-separator p-mr-2" />
+                <ts-splitbutton label="Save" icon="pi pi-check" :model="items" class="p-button-warning"></ts-splitbutton>
+            </template>
+
+            <template #end>
+                <ts-button icon="pi pi-search" class="p-mr-2" />
+                <ts-button icon="pi pi-calendar" class="p-button-success p-mr-2" />
+                <ts-button icon="pi pi-times" class="p-button-danger" />
+            </template>
+        </ts-toolbar>
         <TsToolbarDoc />
     </div>
 </template>

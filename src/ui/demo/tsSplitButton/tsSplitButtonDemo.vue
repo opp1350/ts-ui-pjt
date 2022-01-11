@@ -1,22 +1,26 @@
 <template>
    <div>
-      <div>
-      <!-- <Toast /> -->
-         <h5>Basic</h5>
-         <ts-splitbutton label="Save" icon="pi pi-plus" @click="save" :model="items"></ts-splitbutton>
-
-         <h5>Nested</h5>
-         <ts-splitbutton label="Save" icon="pi pi-plus" @click="save" :model="nestedItems"></ts-splitbutton>
-
-         <h5>Severities</h5>
-         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-mb-2"></ts-splitbutton>
-         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-secondary p-mb-2"></ts-splitbutton>
-         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-success p-mb-2"></ts-splitbutton>
-         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-info p-mb-2"></ts-splitbutton>
-         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-warning p-mb-2"></ts-splitbutton>
-         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-help p-mb-2"></ts-splitbutton>
-         <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-danger p-mb-2"></ts-splitbutton>
+      <div class="content-section introduction">
+         <div class="feature-intro">
+               <h1>TsSplitButton</h1>
+               <p>SplitButton groups a set of commands in an overlay with a default command.</p>
+         </div>
       </div>
+      <!-- <Toast /> -->
+      <h5>Basic</h5>
+      <ts-splitbutton label="Save" icon="pi pi-plus" @click="save" :model="items"></ts-splitbutton>
+
+      <h5>Nested</h5>
+      <ts-splitbutton label="Save" icon="pi pi-plus" @click="save" :model="nestedItems"></ts-splitbutton>
+
+      <h5>Severities</h5>
+      <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-mb-2"></ts-splitbutton>
+      <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-secondary p-mb-2"></ts-splitbutton>
+      <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-success p-mb-2"></ts-splitbutton>
+      <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-info p-mb-2"></ts-splitbutton>
+      <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-warning p-mb-2"></ts-splitbutton>
+      <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-help p-mb-2"></ts-splitbutton>
+      <ts-splitbutton label="Save" icon="pi pi-plus" :model="items" class="p-button-danger p-mb-2"></ts-splitbutton>
       <TsSplitButtonDoc/>
    </div>
 </template>
