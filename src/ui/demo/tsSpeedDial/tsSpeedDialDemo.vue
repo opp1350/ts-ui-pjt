@@ -4,18 +4,18 @@
             <!-- <Toast /> -->
             <div class="card">
                 <h5>Linear</h5>
-                <div :class="speeddial-linear-demo" :style="{ position: 'relative', height: '500px' }">
-                    <ts-speeddial :model="items" :direction="up" />
-                    <ts-speeddial :model="items" :direction="down" />
-                    <ts-speeddial :model="items" :direction="left" />
-                    <ts-speeddial :model="items" :direction="right" />
+                <div class="speeddial-linear-demo" :style="{ position: 'relative', height: '500px' }">
+                    <ts-speeddial :model="items" direction="up" />
+                    <ts-speeddial :model="items" direction="down" />
+                    <ts-speeddial :model="items" direction="left" />
+                    <ts-speeddial :model="items" direction="right" />
                 </div>
             </div>
 
             <div class="card">
                 <h5>Circle, Semi-Circle and Quarter-Circle</h5>
-                <div :class="speeddial-circle-demo" :style="{ position: 'relative', height: '500px' }">
-                    <ts-speeddial :model="items" :radius="80" type="circle" buttonClass="p-button-warning" />
+                <div class="speeddial-circle-demo" :style="{ position: 'relative', height: '500px' }">
+                    <ts-speeddial :model="items" radius="80" type="circle" buttonClass="p-button-warning" />
                     <ts-speeddial :model="items" :radius="80" direction="up" type="semi-circle" />
                     <ts-speeddial :model="items" :radius="80" direction="down" type="semi-circle" />
                     <ts-speeddial :model="items" :radius="80" direction="left" type="semi-circle" />
@@ -29,7 +29,7 @@
 
             <div class="card">
                 <h5>Tooltip</h5>
-                <div :class="speeddial-tooltip-demo" :style="{ position: 'relative', height: '350px' }">
+                <div class="speeddial-tooltip-demo" :style="{ position: 'relative', height: '350px' }">
                     <ts-speeddial :model="items" direction="up" class="speeddial-right" buttonClass="p-button-danger" :tooltipOptions="{position: 'left'}" />
 
                     <ts-speeddial :model="items" direction="up" class="speeddial-left" buttonClass="p-button-help" :tooltipOptions="{position: 'right'}" />
@@ -38,7 +38,7 @@
 
             <div class="card">
                 <h5>Transition Duration, Icon and No Rotate Animation</h5>
-                <div :class="speeddial-delay-demo" :style="{ position: 'relative', height: '350px' }">
+                <div class="speeddial-delay-demo" :style="{ position: 'relative', height: '350px' }">
                     <ts-speeddial :model="items" direction="up" :transitionDelay="80" showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClass="p-button-outlined" />
                 </div>
             </div>

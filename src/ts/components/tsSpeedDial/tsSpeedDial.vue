@@ -1,15 +1,15 @@
 <template>
   <SpeedDial :model="model" :visible="visible" :direction="direction" :transitionDelay="transitionDelay" :type="type" :radius="radius" :mask="mask" :disabled="disabled"
   :hideOnClickOutside="hideOnClickOutside" :buttonClass="buttonClass" :maskStyle="maskStyle" :maskClass="maskClass" :showIcon="showIcon" :hideIcon="hideIcon" 
-  :rotateAnimation="rotateAnimation" :tooltipOptions="tooltipOptions" :style="style"
-  @click="$emit('click', $event)"
+  :rotateAnimation="rotateAnimation" :tooltipOptions="tooltipOptions" :style="style" @click="$emit('click', $event)"
   @show="$emit('show', $event)"
   @hide="$emit('hide', $event)"
-  class="ts-speed-dial" />
+  :class="tsSpeedDialClass" />
 </template>
- 
+
 <script>
 import SpeedDial from 'primevue/speeddial';
+import { computed } from '@vue/reactivity';
 export default {
   name: 'tsSpeedDial',
   emits: ['click', 'show', 'hide'],
@@ -63,8 +63,17 @@ export default {
       default: true
     },
     tooltipOptions: null,
-    style: null,
-    class: null
+    style: null
+  },
+  setup () {
+    const tsSpeedDialClass = computed(() => {
+      return {
+        'ts-speed-dial': true,
+      }
+    })
+    return {
+      tsSpeedDialClass
+    }
   }
 }
 </script>
