@@ -44,6 +44,9 @@ import tsTreeSelect from './ts/components/tsTreeSelect/tsTreeSelect.vue'
 import tsTriStateCheckbox from './ts/components/tsTriStateCheckbox/tsTriStateCheckbox.vue'
 import tsProgressBar from './ts/components/tsProgressBar/tsProgressBar.vue'
 import tsProgressSpinner from './ts/components/tsProgressSpinner/tsProgressSpinner.vue'
+import tsDataTable from './ts/components/tsDataTable/tsDataTable.vue'
+import tsColumn from './ts/components/tsColumn/tsColumn.vue'
+import tsColumnGroup from './ts/components/tsColumnGroup/tsColumnGroup.vue'
 
 import Tooltip from 'primevue/tooltip'
 import Ripple from 'primevue/ripple'
@@ -152,5 +155,8 @@ app.component('ts-treeselect', tsTreeSelect);
 app.component('ts-tristatecheckbox', tsTriStateCheckbox);
 app.component('ts-progressbar', tsProgressBar);
 app.component('ts-progress-spinner', tsProgressSpinner);
+app.component('ts-data-table', tsDataTable);
+app.component('ts-column', tsColumn);
+app.component('ts-column-group', tsColumnGroup);
 
 app.directive('code', CodeHighlight);

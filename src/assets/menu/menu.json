@@ -44,6 +44,10 @@
                     "to": "/components/tsColorPicker"
                 },
                 {
+                    "name": "TsDataTable",
+                    "to": "/components/tsDataTable"
+                },
+                {
                     "name": "TsDropdown",
                     "to": "/components/tsDropdown"
                 },

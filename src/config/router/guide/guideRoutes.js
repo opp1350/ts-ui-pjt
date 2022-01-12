@@ -33,6 +33,7 @@ import TsTreeSelectDemo from "@/ui/demo/tsTreeSelect/tsTreeSelectDemo.vue";
 import TsTriStateCheckboxDemo from "@/ui/demo/tsTriStateCheckbox/tsTriStateCheckboxDemo.vue";
 import TsProgressBarDemo from "@/ui/demo/tsProgressBar/tsProgressBarDemo.vue";
 import TsProgressSpinnerDemo from "@/ui/demo/tsProgressSpinner/tsProgressSpinnerDemo.vue";
+import TsDataTableDemo from "@/ui/demo/tsDataTable/tsDataTableDemo.vue";
 
 const routes = [{
         path: "/",
@@ -212,6 +213,11 @@ const routes = [{
                 path: 'tsProgressSpinner',
                 name: 'tsProgressSpinner',
                 component: TsProgressSpinnerDemo
+            },
+            {
+                path: 'tsDataTable',
+                name: 'tsDataTable',
+                component: TsDataTableDemo
             }
         ]
     }
