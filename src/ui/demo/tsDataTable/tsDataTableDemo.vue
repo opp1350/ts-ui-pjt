@@ -34,10 +34,37 @@
             </div>
             <div>
                 <h2>Scroll Pagination</h2>
-                <ts-data-table :value="customers" :paginator="true" :rows="10"
-                    paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
-                    :rowsPerPageOptions="[10,20,50]" responsiveLayout="scroll"
-                    currentPageReportTemplate="Showing {first} to {last} of {totalRecords}">
+                <ts-data-table 
+                    :value="customers" scrollable scrollHeight="400px" :virtualScrollerOptions="{ lazy: true, onLazyLoad: loadCarsLazy, itemSize: 46, delay: 200, showLoader: true, loading: lazyLoading, numToleratedItems: 10 }">
+                    <ts-column field="name" header="Name" style="min-width: '200px'">
+                    <template #loading>
+                        <div class="p-d-flex p-ai-center" :style="{height: '17px', 'flex-grow': '1', overflow: 'hidden'}">
+                            <Skeleton width="60%" height="1rem" />
+                        </div>
+                    </template>
+                    </ts-column>
+                    <ts-column field="country.name" header="Country" style="min-width: '200px'">
+                        <template #loading>
+                            <div class="p-d-flex p-ai-center" :style="{height: '17px', 'flex-grow': '1', overflow: 'hidden'}">
+                                <Skeleton width="40%" height="1rem" />
+                            </div>
+                        </template>
+                    </ts-column>
+                    <ts-column field="company" header="Company" style="min-width: '200px'">
+                        <template #loading>
+                            <div class="p-d-flex p-ai-center" :style="{height: '17px', 'flex-grow': '1', overflow: 'hidden'}">
+                                <Skeleton width="30%" height="1rem" />
+                            </div>
+                        </template>
+                    </ts-column>
+                    <ts-column field="representative.name" header="Representative" style="min-width: '200px'">
+                        <template #loading>
+                            <div class="p-d-flex p-ai-center" :style="{height: '17px', 'flex-grow': '1', overflow: 'hidden'}">
+                                <Skeleton width="40%" height="1rem" />
+                            </div>
+                        </template>
+                    </ts-column>
+<!--                     
                     <ts-column field="name" header="Name"></ts-column>
                     <ts-column field="country.name" header="Country"></ts-column>
                     <ts-column field="company" header="Company"></ts-column>
@@ -47,7 +74,7 @@
                     </template>
                     <template #paginatorend>
                         <ts-button type="button" icon="pi pi-cloud" class="p-button-text" />
-                    </template>
+                    </template> -->
                 </ts-data-table>
             </div>
         </div>
@@ -56,10 +83,14 @@
 
 <script>
 import { ref } from 'vue';
+import Skeleton from 'primevue/skeleton';
 import productData from '@/assets/data/products-small.json';
 import customerData from '@/assets/data/customers-large.json';
 
 export default {
+    components: {
+        Skeleton
+    },
     setup() {
 
         const products = ref([...productData.data]);
@@ -73,8 +104,33 @@ export default {
 
         const customers = ref([...customerData.data]);
         // const customerService = ref(new CustomerService());
+        const lazyLoading = ref(false);
+        const loadLazyTimeout = ref();
 
-        return { products, columns, selectedProducts3, customers }
+        const loadCarsLazy = (event) => {
+            !lazyLoading.value && (lazyLoading.value = true);
+
+            if (loadLazyTimeout.value) {
+                clearTimeout(loadLazyTimeout.value);
+            }
+
+            //simulate remote connection with a timeout
+            loadLazyTimeout.value = setTimeout(() => {
+                let _virtualCars = [...customers.value];
+                let { first, last } = event;
+
+                //load data of required page
+                const loadedCars = customers.value.slice(first, last);
+
+                //populate page of virtual cars
+                Array.prototype.splice.apply(_virtualCars, [...[first, last - first], ...loadedCars]);
+
+                customers.value = _virtualCars;
+                lazyLoading.value = false;
+            }, Math.random() * 1000 + 250);
+        }
+
+        return { products, columns, selectedProducts3, customers, lazyLoading, loadCarsLazy }
     }
 }
 </script>         
