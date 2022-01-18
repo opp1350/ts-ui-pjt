@@ -2,7 +2,7 @@
     <div>
         <div class="content-section introduction">
             <div class="feature-intro">
-                <h1>Listbox</h1>
+                <h1>TsListbox</h1>
                 <p>Listbox is used to select one or more values from a list of items.</p>
             </div>
         </div>

@@ -2,7 +2,7 @@
 	<div>
         <div class="content-section introduction">
 			<div class="feature-intro">
-				<h1>DataTable</h1>
+				<h1>TsDataTable</h1>
 				<p>DataTable displays data in tabular format.</p>
 			</div>
 		</div>

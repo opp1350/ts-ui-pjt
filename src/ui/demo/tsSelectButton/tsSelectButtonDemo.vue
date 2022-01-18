@@ -2,10 +2,9 @@
     <div>
         <div class="content-section introduction">
             <div class="feature-intro">
-                <h1>SelectButton</h1>
+                <h1>TsSelectButton</h1>
                 <p>SelectButton is a form component to choose a value from a list of options using button elements.</p>
             </div>
-            <AppDemoActions />
         </div>
 
         <div class="content-section implementation">

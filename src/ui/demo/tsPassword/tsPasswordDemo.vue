@@ -2,7 +2,7 @@
     <div>
         <div class="content-section introduction">
             <div class="feature-intro">
-                <h1>Password</h1>
+                <h1>TsPassword</h1>
                 <p>Password displays strength indicator for password fields.</p>
             </div>
         </div>

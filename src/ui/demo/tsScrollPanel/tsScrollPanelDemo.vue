@@ -2,10 +2,9 @@
     <div>
         <div class="content-section introduction">
             <div class="feature-intro">
-                <h1>ScrollPanel</h1>
+                <h1>TsScrollPanel</h1>
                 <p>ScrollPanel is a cross browser, lightweight and themable alternative to native browser scrollbar.</p>
             </div>
-            <AppDemoActions />
         </div>
 
         <div class="content-section implementation">

@@ -1,22 +1,13 @@
 <template>
-	<AppDoc name="SelectButtonDemo" :sources="sources" github="selectbutton/SelectButtonDemo.vue" >
-        <h5>Import via Module</h5>
-<pre v-code.script><code>
-import SelectButton from 'primevue/selectbutton';
-
-</code></pre>
-
-        <h5>Import via CDN</h5>
-<pre v-code><code>
-&lt;script src="https://unpkg.com/primevue@^3/core/core.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/primevue@^3/selectbutton/selectbutton.min.js"&gt;&lt;/script&gt;
-
-</code></pre>
+    <div>
+        <div class="card">
+            <TabView>
+                <TabPanel header="Documentation">
 
 		<h5>Getting Started</h5>
 		<p>SelectButton requires a value to bind and a collection of arbitrary objects along with the <i>optionLabel</i> property to specify the label property of the option.</p>
 <pre v-code><code>
-&lt;SelectButton v-model="selectedCity" :options="cities" optionLabel="name" /&gt;
+&lt;ts-select-button v-model="selectedCity" :options="cities" optionLabel="name" /&gt;
 
 </code></pre>
 
@@ -39,21 +30,21 @@ export default {
 		<h5>Multiple</h5>
 		<p>SelectButton allows selecting only one item by default and setting <i>multiple</i> option enables choosing more than one item. In multiple case, model property should be an array.</p>
 <pre v-code><code>
-&lt;SelectButton v-model="selectedCity" :options="cities" optionLabel="brand" :multiple="true" /&gt;
+&lt;ts-select-button v-model="selectedCity" :options="cities" optionLabel="brand" :multiple="true" /&gt;
 
 </code></pre>
 
 		<h5>Templating</h5>
 		<p>Label of an option is used as the display text of an item by default, for custom content support define an <i>option</i> template that gets the option instance as a parameter.</p>
 <pre v-code><code><template v-pre>
-&lt;SelectButton v-model="selectedCar" :options="cars" optionLabel="brand"&gt;
+&lt;ts-select-button v-model="selectedCar" :options="cars" optionLabel="brand"&gt;
 	&lt;template #option="slotProps"&gt;
         &lt;div class="car-option"&gt;
             &lt;img :alt="slotProps.option.brand" :src="'demo/images/car/' + slotProps.option.brand + '.png'" /&gt;
             &lt;div&gt;{{slotProps.option.brand}}&lt;/div&gt;
         &lt;/div&gt;
 	&lt;/template&gt;
-&lt;/SelectButton&gt;
+&lt;/ts-select-button&gt;
 </template>
 </code></pre>
 
@@ -180,35 +171,55 @@ export default {
 
 		<h5>Dependencies</h5>
 		<p>None.</p>
-    </AppDoc>
-</template>
-
-<script>
-export default {
-    data() {
-        return {
-            sources: {
-                'options-api': {
-                    tabName: 'Options API Source',
-                    content: `
-<template>
-    <div>
-        <h5>Single Selection</h5>
-        <SelectButton v-model="value1" :options="options" />
-
-        <h5>Multiple Selection</h5>
-        <SelectButton v-model="value2" :options="paymentOptions" optionLabel="name" multiple />
-
-        <h5>Custom Content</h5>
-        <SelectButton v-model="value3" :options="justifyOptions" dataKey="value">
-            <template #option="slotProps">
-                <i :class="slotProps.option.icon"></i>
-            </template>
-        </SelectButton>
+                </TabPanel>
+                <TabPanel header="Composition API Source">
+                    <pre v-code><code>
+                            {{ content }}
+                        </code></pre>
+                </TabPanel>
+            </TabView>
+        </div>
     </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+export default {
+    setup() {
+        const source = ref(`
+<template>
+    <div>
+        <div class="content-section introduction">
+            <div class="feature-intro">
+                <h1>TsSelectButton</h1>
+                <p>SelectButton is a form component to choose a value from a list of options using button elements.</p>
+            </div>
+        </div>
+
+        <div class="content-section implementation">
+            <div class="card">
+                <h5>Single Selection</h5>
+                <ts-select-button v-model="value1" :options="options" />
+
+                <h5>Multiple Selection</h5>
+                <ts-select-button v-model="value2" :options="paymentOptions" optionLabel="name" multiple />
+
+                <h5>Custom Content</h5>
+                <ts-select-button v-model="value3" :options="justifyOptions" dataKey="value">
+                    <template #option="slotProps">
+                        <i :class="slotProps.option.icon"></i>
+                    </template>
+                </ts-select-button>
+            </div>
+        </div>
+
+        <TsSelectButtonDoc/>
+    </div>
+</template>
+
+<script>
+import TsSelectButtonDoc from './tsSelectButtonDoc';
+
 export default {
     data() {
         return {
@@ -227,112 +238,18 @@ export default {
                 {icon: 'pi pi-align-center', value: 'Center'},
                 {icon: 'pi pi-align-justify', value: 'Justify'}]
         }
+    },
+    components: {
+        TsSelectButtonDoc
     }
 }
 <\\/script>
-`
-                },
-                'composition-api': {
-                    tabName: 'Composition API Source',
-                    content: `
-<template>
-    <div>
-        <h5>Single Selection</h5>
-        <SelectButton v-model="value1" :options="options" />
-
-        <h5>Multiple Selection</h5>
-        <SelectButton v-model="value2" :options="paymentOptions" optionLabel="name" multiple />
-
-        <h5>Custom Content</h5>
-        <SelectButton v-model="value3" :options="justifyOptions" dataKey="value">
-            <template #option="slotProps">
-                <i :class="slotProps.option.icon"></i>
-            </template>
-        </SelectButton>
-    </div>
-</template>
-
-<script>
-import { ref } from 'vue';
-
-export default {
-    setup() {
-        const value1 = ref('Off');
-        const value2 = ref();
-        const value3 = ref();
-        const options = ref(['Off', 'On']);
-        const paymentOptions = ref([
-            {name: 'Option 1', value: 1},
-            {name: 'Option 2', value: 2},
-            {name: 'Option 3', value: 3}
-        ]);
-        const justifyOptions = ref([
-            {icon: 'pi pi-align-left', value: 'left'},
-            {icon: 'pi pi-align-right', value: 'Right'},
-            {icon: 'pi pi-align-center', value: 'Center'},
-            {icon: 'pi pi-align-justify', value: 'Justify'}
-        ]);
-
-        return { value1, value2, value3, options, paymentOptions, justifyOptions }
-    }
-}
-<\\/script>
-`
-                },
-                'browser-source': {
-                    tabName: 'Browser Source',
-                    imports: `<script src="https://unpkg.com/primevue@^3/selectbutton/selectbutton.min.js"><\\/script>`,
-                    content: `<div id="app">
-            <h5>Single Selection</h5>
-            <p-selectbutton v-model="value1" :options="options"></p-selectbutton>
-
-            <h5>Multiple Selection</h5>
-            <p-selectbutton v-model="value2" :options="paymentOptions" option-label="name" multiple></p-selectbutton>
-
-            <h5>Custom Content</h5>
-            <p-selectbutton v-model="value3" :options="justifyOptions" data-key="value">
-                <template #option="slotProps">
-                    <i :class="slotProps.option.icon"></i>
-                </template>
-            </p-selectbutton>
-        </div>
-
-        <script type="module">
-        const { createApp, ref } = Vue;
-
-        const App = {
-            setup() {
-                const value1 = ref('Off');
-                const value2 = ref();
-                const value3 = ref();
-                const options = ref(['Off', 'On']);
-                const paymentOptions = ref([
-                    {name: 'Option 1', value: 1},
-                    {name: 'Option 2', value: 2},
-                    {name: 'Option 3', value: 3}
-                ]);
-                const justifyOptions = ref([
-                    {icon: 'pi pi-align-left', value: 'left'},
-                    {icon: 'pi pi-align-right', value: 'Right'},
-                    {icon: 'pi pi-align-center', value: 'Center'},
-                    {icon: 'pi pi-align-justify', value: 'Justify'}
-                ]);
-
-                return { value1, value2, value3, options, paymentOptions, justifyOptions }
-            },
-            components: {
-                "p-selectbutton": primevue.selectbutton
-            }
-        };
-
-        createApp(App)
-            .use(primevue.config.default)
-            .mount("#app");
-        <\\/script>
-`
-                }
-            }
+`)
+        // eslint-disable-next-line no-useless-escape
+        const content = ref(source.value.replace('<\\/script>', '<\/script>'))
+        return {
+            content
         }
-    }
+    },
 }
 </script>

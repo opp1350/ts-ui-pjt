@@ -2,7 +2,7 @@
     <div>
         <div class="content-section introduction">
             <div class="feature-intro">
-                <h1>MultiSelect</h1>
+                <h1>TsMultiSelect</h1>
                 <p>MultiSelect is used to multiple values from a list of options.</p>
             </div>
         </div>

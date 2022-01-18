@@ -2,7 +2,7 @@
     <div>
         <div class="content-section introduction">
             <div class="feature-intro">
-                <h1>Rating</h1>
+                <h1>TsRating</h1>
                 <p>Rating component is a star based selection input.</p>
             </div>
         </div>

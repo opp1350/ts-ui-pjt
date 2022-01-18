@@ -2,7 +2,7 @@
     <div>
         <div class="content-section introduction">
             <div class="feature-intro">
-                <h1>Panel</h1>
+                <h1>TsPanel</h1>
                 <p>Panel is a container with the optional content toggle feature.</p>
             </div>
         </div>
