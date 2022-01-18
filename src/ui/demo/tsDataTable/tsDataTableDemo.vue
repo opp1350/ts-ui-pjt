@@ -7,14 +7,6 @@
 			</div>
 		</div>
         <div class="content-section implementation">
-            <!-- <div class="card">
-                <ts-data-table :value="products" responsiveLayout="scroll">
-                    <ts-column field="code" header="Code"></ts-column>
-                    <ts-column field="name" header="Name"></ts-column>
-                    <ts-column field="category" header="Category"></ts-column>
-                    <ts-column field="quantity" header="Quantity"></ts-column>
-                </ts-data-table>
-            </div> -->
             <h2>Basic</h2>
             <div>
                 <ts-data-table responsiveLayout="scroll" removableSort v-model:selection="selectedProducts3" dataKey="id"
@@ -24,60 +16,24 @@
                     currentPageReportTemplate="Showing {first} to {last} of {totalRecords}">
                     <ts-column selectionMode="multiple" headerStyle="width: 3em"></ts-column>
                     <ts-column v-for="col of columns" :field="col.field" :header="col.header" :key="col.field" :sortable="true"></ts-column>
-                    <template #paginatorstart>
-                        <ts-button type="button" icon="pi pi-refresh" class="p-button-text" />
-                    </template>
-                    <template #paginatorend>
-                        <ts-button type="button" icon="pi pi-cloud" class="p-button-text" />
-                    </template>
                 </ts-data-table>
             </div>
             <div>
                 <h2>Scroll Pagination</h2>
                 <ts-data-table 
                     :value="customers" scrollable scrollHeight="400px" :virtualScrollerOptions="{ lazy: true, onLazyLoad: loadCarsLazy, itemSize: 46, delay: 200, showLoader: true, loading: lazyLoading, numToleratedItems: 10 }">
-                    <ts-column field="name" header="Name" style="min-width: '200px'">
-                    <template #loading>
+                    <ts-column v-for="col of columns" :field="col.field" :header="col.header" :key="col.field" :sortable="true" style="min-width: '200px'">
+                        <template #loading>
                         <div class="p-d-flex p-ai-center" :style="{height: '17px', 'flex-grow': '1', overflow: 'hidden'}">
                             <Skeleton width="60%" height="1rem" />
                         </div>
                     </template>
                     </ts-column>
-                    <ts-column field="country.name" header="Country" style="min-width: '200px'">
-                        <template #loading>
-                            <div class="p-d-flex p-ai-center" :style="{height: '17px', 'flex-grow': '1', overflow: 'hidden'}">
-                                <Skeleton width="40%" height="1rem" />
-                            </div>
-                        </template>
-                    </ts-column>
-                    <ts-column field="company" header="Company" style="min-width: '200px'">
-                        <template #loading>
-                            <div class="p-d-flex p-ai-center" :style="{height: '17px', 'flex-grow': '1', overflow: 'hidden'}">
-                                <Skeleton width="30%" height="1rem" />
-                            </div>
-                        </template>
-                    </ts-column>
-                    <ts-column field="representative.name" header="Representative" style="min-width: '200px'">
-                        <template #loading>
-                            <div class="p-d-flex p-ai-center" :style="{height: '17px', 'flex-grow': '1', overflow: 'hidden'}">
-                                <Skeleton width="40%" height="1rem" />
-                            </div>
-                        </template>
-                    </ts-column>
-<!--                     
-                    <ts-column field="name" header="Name"></ts-column>
-                    <ts-column field="country.name" header="Country"></ts-column>
-                    <ts-column field="company" header="Company"></ts-column>
-                    <ts-column field="representative.name" header="Representative"></ts-column>
-                    <template #paginatorstart>
-                        <ts-button type="button" icon="pi pi-refresh" class="p-button-text" />
-                    </template>
-                    <template #paginatorend>
-                        <ts-button type="button" icon="pi pi-cloud" class="p-button-text" />
-                    </template> -->
                 </ts-data-table>
             </div>
         </div>
+
+        <TsDataTableDoc />
 	</div>
 </template>
 
@@ -86,10 +42,12 @@ import { ref } from 'vue';
 import Skeleton from 'primevue/skeleton';
 import productData from '@/assets/data/products-small.json';
 import customerData from '@/assets/data/customers-large.json';
+import TsDataTableDoc from './tsDataTableDoc.vue';
 
 export default {
     components: {
-        Skeleton
+        Skeleton,
+        TsDataTableDoc
     },
     setup() {
 
