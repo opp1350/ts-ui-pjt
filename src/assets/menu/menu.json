@@ -146,6 +146,14 @@
                 {
                     "name": "TsTriStateCheckbox",
                     "to": "/components/tsTriStateCheckbox"
+                },
+                {
+                    "name": "TsConfirmDialog",
+                    "to": "/components/tsConfirmDialog"
+                },
+                {
+                    "name": "TsDialog",
+                    "to": "/components/tsDialog"
                 }
 
             ],

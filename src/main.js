@@ -47,11 +47,14 @@ import tsProgressSpinner from './ts/components/tsProgressSpinner/tsProgressSpinn
 import tsDataTable from './ts/components/tsDataTable/tsDataTable.vue'
 import tsColumn from './ts/components/tsColumn/tsColumn.vue'
 import tsColumnGroup from './ts/components/tsColumnGroup/tsColumnGroup.vue'
+import tsConfirmDialog from './ts/components/tsConfirmDialog/tsConfirmDialog.vue'
+import tsDialog from './ts/components/tsDialog/tsDialog.vue'
 
 import Tooltip from 'primevue/tooltip'
 import Ripple from 'primevue/ripple'
 import StyleClass from 'primevue/styleclass'
 import axios from 'axios'
+import ConfirmationService from 'primevue/confirmationservice'
 
 // css
 import 'primevue/resources/themes/saga-blue/theme.css' // default theme
@@ -108,6 +111,9 @@ app.use(PrimeVue, {
     }
 });
 
+// primevue
+app.use(ConfirmationService);
+
 // primevue directive
 app.directive('tooltip', Tooltip);
 app.directive('ripple', Ripple);
@@ -158,5 +164,7 @@ app.component('ts-progress-spinner', tsProgressSpinner);
 app.component('ts-data-table', tsDataTable);
 app.component('ts-column', tsColumn);
 app.component('ts-column-group', tsColumnGroup);
+app.component('ts-confirm-dialog', tsConfirmDialog);
+app.component('ts-dialog', tsDialog);
 
 app.directive('code', CodeHighlight);

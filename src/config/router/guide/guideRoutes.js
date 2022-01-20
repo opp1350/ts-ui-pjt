@@ -34,6 +34,8 @@ import TsTriStateCheckboxDemo from "@/ui/demo/tsTriStateCheckbox/tsTriStateCheck
 import TsProgressBarDemo from "@/ui/demo/tsProgressBar/tsProgressBarDemo.vue";
 import TsProgressSpinnerDemo from "@/ui/demo/tsProgressSpinner/tsProgressSpinnerDemo.vue";
 import TsDataTableDemo from "@/ui/demo/tsDataTable/tsDataTableDemo.vue";
+import TsConfirmDialogDemo from "@/ui/demo/tsConfirmDialog/tsConfirmDialogDemo.vue";
+import TsDialogDemo from "@/ui/demo/tsDialog/tsDialogDemo.vue";
 
 const routes = [{
         path: "/",
@@ -218,6 +220,16 @@ const routes = [{
                 path: 'tsDataTable',
                 name: 'tsDataTable',
                 component: TsDataTableDemo
+            },
+            {
+                path: 'tsConfirmDialog',
+                name: 'tsConfirmDialog',
+                component: TsConfirmDialogDemo
+            },
+            {
+                path: 'tsDialog',
+                name: 'tsDialog',
+                component: TsDialogDemo
             }
         ]
     }
